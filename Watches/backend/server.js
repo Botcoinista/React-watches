@@ -8,7 +8,7 @@ require("dotenv").config();
 //Set port and listen, connect to mongoDB
 const PORT = process.env.PORT || 8081;
 
-app.listen(PORT, () => console.log("Server is running on port" + PORT));
+app.listen(PORT, () => console.log("Server is running on port http://localhost:" + PORT));
 
 mongoose
   .connect(process.env.MONGO_URI)
