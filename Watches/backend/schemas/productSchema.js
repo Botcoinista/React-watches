@@ -21,14 +21,17 @@ const productSchema = new Schema(
       type: Number,
       required: true,
     },
+    //Unique IMG on mongodb, else error, why?
     imgURL: {
       type: String,
       required: true,
     },
-    quantity: {
-      type: Number,
-      required: true,
-    },
+
+    // //Is this necessery? In that case, why?
+    // quantity: {
+    //   type: Number,
+    //   required: true,
+    // },
   },
 
   { timestamps: true }
