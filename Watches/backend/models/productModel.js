@@ -6,9 +6,9 @@ const mongoose = require("mongoose");
 //Create new product
 const createNewProduct = async (req, res) => {
   try {
-    const { name, category, description, price, imgURL, quantity } = req.body;
+    const { name, category, description, price, imgURL } = req.body;
 
-    if (!name || !category || !description || !price || !imgURL || !quantity) {
+    if (!name || !category || !description || !price || !imgURL ) {
       return res
         .status(400).json({ 
             message: "All product fields are required" });
