@@ -154,21 +154,78 @@
   font-size: 1.5rem;
   background-color: rgb(202, 28, 28);
   color: #fff;
-  text-decoration: none; /* removes underline from buttons */
-  text-transform: capitalize;
-  text-align: center;
+  text-transform: uppercase;
   border: none;
   padding: 15px 25px;
 }
 .homeHero .container .leftText .btn-hero:hover {
   background: #b60d0d;
-  text-decoration: none;
 }
 .homeHero .container .rightImage {
   height: 625px;
   width: 647px;
-  background-color: gray;
+  background-color: #c5bebe;
   margin: 40px 0; /* adds space between the two columns */
+}
+
+.watchCollection .container {
+  padding: 0 8rem;
+  background-color: #f1f1f1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.watchCollection .container .upperText {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 4rem;
+}
+.watchCollection .container .upperText h1 {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+.watchCollection .container .upperText ul {
+  display: flex;
+  margin-bottom: 2rem;
+}
+.watchCollection .container .upperText ul a {
+  text-decoration: none;
+  color: #000;
+}
+.watchCollection .container .upperText ul li {
+  list-style: none;
+  padding-right: 1rem;
+}
+.watchCollection .container .product-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+.watchCollection .container .product-list .card {
+  margin: 0.8rem 0;
+}
+.watchCollection .container .product-list .card .image {
+  height: 270px;
+  width: 295px;
+  background-color: #c5bebe;
+}
+.watchCollection .container .product-list .card p {
+  padding: 0.4rem 0 0 0;
+}
+.watchCollection .container .btn-load {
+  width: 240px;
+  margin: 2rem 0;
+  font-size: 1rem;
+  text-transform: uppercase;
+  border: 1px solid black;
+  padding: 15px 25px;
+}
+.watchCollection .container .btn-load:hover {
+  background-color: #ebd5d5;
 }
 
 .productDetailsHero {
