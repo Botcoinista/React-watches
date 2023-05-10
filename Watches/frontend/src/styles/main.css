@@ -10,7 +10,21 @@
 }
 
 .contactHero {
-  color: rgb(221, 34, 34);
+  background-color: lightgray;
+  width: 1920px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.contactHero h1 {
+  margin-bottom: 1rem;
+}
+.contactHero .separate {
+  display: flex;
+  gap: 1.5rem;
+  font-weight: 400;
 }
 
 .contactForm {

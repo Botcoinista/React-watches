@@ -3,7 +3,13 @@ import React from 'react'
 const ContactHero = () => {
   return (
     <div className='contactHero'>
-      ContactHero 1920x300
+      <div className='container'>
+        <h1>CONTACT</h1>
+        <div className='separate'>
+          <p>HOME</p>
+          <p>CONTACT</p>
+        </div>
+      </div>
     </div>
   )
 }
