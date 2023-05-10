@@ -5,7 +5,8 @@
 @import './partials/contactMap';
 @import "./partials/homeHero";
 @import './partials/footer';
-
+@import './partials/loginForm';
+@import './partials/productDetailsHero';
 
 
 
@@ -143,3 +144,6 @@
 
 
 //Calle
+.productDetailsHero {
+    @include productDetailsHero;
+}
