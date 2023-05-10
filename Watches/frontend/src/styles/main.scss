@@ -1,4 +1,7 @@
 @import './partials/navbar';
+@import './partials/contactHero';
+@import './partials/contactForm';
+@import './partials/contactMap';
 
 * {
     margin: 0;
@@ -10,4 +13,16 @@
 
 .navbar {
     @include navbar
+}
+
+.contactHero {
+    @include contactHero
+}
+
+.contactForm {
+    @include contactForm
+}
+
+.contactMap {
+    @include contactMap
 }

@@ -2,7 +2,9 @@ import React from 'react'
 
 const ContactHero = () => {
   return (
-    <div>ContactHero</div>
+    <div className='contactHero'>
+      ContactHero 1920x300
+    </div>
   )
 }
 
