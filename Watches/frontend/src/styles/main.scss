@@ -1,5 +1,16 @@
+
 @import './partials/navbar';
+
+
+
+
 @import './partials/footer';
+
+
+
+
+
+
 
 * {
     margin: 0;
@@ -15,4 +26,10 @@
 
 .footer {
     @include footer
+}
+
+
+
+.loginForm {
+    @include loginForm
 }
