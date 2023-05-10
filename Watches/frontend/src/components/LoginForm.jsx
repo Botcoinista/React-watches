@@ -1,21 +1,69 @@
-import React from 'react'
-import Footer from './Footer.jsx'
+import React, { useState } from 'react';
 
-const LoginForm = () => {
+
+
+function LoginForm() {
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [keepLoggedIn, setKeepLoggedIn] = useState(false);
+
+  const handleEmailChange = (e) => {
+    setEmail(e.target.value);
+  };
+
+  const handlePasswordChange = (e) => {
+    setPassword(e.target.value);
+  };
+
+  const handleKeepLoggedInChange = (e) => {
+    setKeepLoggedIn(e.target.checked);
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+  };
+
+
   return (
-    <>
-    <div>
-      <p>Please Login to Your Account</p>
-      <form htmlFor="LoginForm">
-        <label htmlFor="email">E-mail*</label>
-        <label htmlFor="password">Password*</label>
-        <p>Forgot your password?</p>
-        <checkbox htmlFor="loggedIn">Plase keep me logged in</checkbox>
-      </form>
-      <button type="submit" classname="submit-btn">Submit</button>
-    </div><Footer />
-    </>
-  )
+    <div className="loginForm">
+    <form onSubmit={handleSubmit}>
+    <p>Please Login To Your Account</p>
+    <br></br>
+    
+
+    <label htmlFor="email">Email*</label>
+    
+    <input
+      type="email"
+      id="email"
+      value={email}
+      onChange={handleEmailChange}
+      required
+    />
+
+<label htmlFor="password">Password*</label>
+      <input
+        type="password"
+        id="password"
+        value={password}
+        onChange={handlePasswordChange}
+        required
+      />
+
+      <label>
+        <input
+          type="checkbox"
+          id="checkbox-grey"
+          checked={keepLoggedIn}
+          onChange={handleKeepLoggedInChange}
+        />
+        <p>Please keep me logged in</p>
+      </label>
+
+      <button type="submit" id="btn-submit">Submit</button>
+    </form>
+    </div>
+  );
 }
 
 export default LoginForm
