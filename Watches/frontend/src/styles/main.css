@@ -1,3 +1,9 @@
+.footer-copyright {
+  font-size: 16px;
+  text-align: center;
+  margin-top: 4px;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -8,7 +14,36 @@
 .navbar {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  height: 100px;
+  padding: 25px 12px;
+  margin-inline: 30px;
 }
 .navbar .right-nav .nav-links {
   display: flex;
+  gap: 20px;
+}
+.navbar .right-nav .nav-links li {
+  list-style: none;
+  padding-right: 10px;
+}
+.navbar .right-nav .nav-links li .fa-plus {
+  margin-left: 0.2rem;
+  color: #fa3150;
+}
+.navbar .right-nav .nav-links a {
+  color: #636363;
+  text-decoration: none;
+  font-size: 15px;
+}
+.navbar .right-nav .nav-links .textLight {
+  color: #aeaeae;
+}
+
+.footer-bottom {
+  background: #292929;
+  padding: 35.5px 0;
+  margin-bottom: 0;
+  color: #A5A5A5;
+  height: 98px;
 }/*# sourceMappingURL=main.css.map */
