@@ -6,5 +6,9 @@
 }
 
 .navbar {
-  color: rgb(131, 119, 119);
+  display: flex;
+  justify-content: space-between;
+}
+.navbar .right-nav .nav-links {
+  display: flex;
 }/*# sourceMappingURL=main.css.map */

@@ -1,3 +1,16 @@
 @mixin navbar {
-        color: rgb(131, 119, 119);
+        display: flex;
+        justify-content: space-between;
+
+        .left-nav {
+
+        }
+
+        .right-nav {
+                .nav-links {
+                        display: flex;
+
+                        li {}
+                }
+        }
 }
