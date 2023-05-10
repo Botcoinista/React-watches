@@ -12,6 +12,19 @@
 }
 
 .navbar {
+<<<<<<< HEAD
+  color: rgb(131, 119, 119);
+}
+
+.footer {
+  background: #292929;
+  padding: 35.5px 0;
+  margin-top: auto;
+  color: #A5A5A5;
+  height: 98px;
+  font-size: 16px;
+  text-align: center;
+=======
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -76,4 +89,5 @@
   margin-bottom: 0;
   color: #A5A5A5;
   height: 98px;
+>>>>>>> eb9fc3b9cc813d41d9e039f34d43902a8b5d2a42
 }/*# sourceMappingURL=main.css.map */

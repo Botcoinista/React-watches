@@ -24,6 +24,13 @@
     @include navbar
 }
 
+.footer {
+    @include footer
+}
+
+.loginForm {
+    @include loginForm
+}
 .contactHero {
     @include contactHero
 }
@@ -40,9 +47,6 @@
 }
 
 
-.footer-bottom {
-    @include footer
-}
 
 //Josef
 
@@ -73,7 +77,7 @@
 
 
 
-//Ullrika
+//Ulrika
 
 
 
