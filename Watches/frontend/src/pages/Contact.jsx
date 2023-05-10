@@ -1,14 +1,8 @@
-import ContactHero from "../components/ContactHero"
-import ContactForm from "../components/ContactForm"
-import ContactMap from "../components/ContactMap"
+import React from 'react'
 
 const Contact = () => {
   return (
-    <div>
-      <ContactHero />
-      <ContactForm />
-      <ContactMap />
-    </div>
+    <div>Contact</div>
   )
 }
 
