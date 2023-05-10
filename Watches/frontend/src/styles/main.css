@@ -11,6 +11,56 @@
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
+<<<<<<< HEAD
+.homeHero .container {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 8rem;
+  background-color: #eeeeee;
+  width: 100%;
+}
+.homeHero .container .leftText {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap; /* aligns text to the left */
+  padding: 0 40px 0 40px;
+}
+.homeHero .container .leftText h6 {
+  font-size: 18px;
+  line-height: 1.2380952381;
+  text-transform: capitalize;
+  font-weight: 400;
+  margin-bottom: 1.5rem;
+}
+.homeHero .container .leftText h1 {
+  font-size: 60px;
+  line-height: 1.2333333333;
+  margin-bottom: 2.5rem;
+}
+.homeHero .container .leftText .btn-hero {
+  width: 30% !important;
+  font-size: 1.5rem;
+  background-color: rgb(202, 28, 28);
+  color: #fff;
+  text-decoration: none; /* removes underline from buttons */
+  text-transform: capitalize;
+  text-align: center;
+  border: none;
+  padding: 15px 25px;
+}
+.homeHero .container .leftText .btn-hero:hover {
+  background: #b60d0d;
+  text-decoration: none;
+}
+.homeHero .container .rightImage {
+  height: 625px;
+  width: 647px;
+  background-color: gray;
+  margin: 40px 0; /* adds space between the two columns */
+}
+
+=======
 .navbar {
 <<<<<<< HEAD
   color: rgb(131, 119, 119);
@@ -83,11 +133,17 @@
   color: tomato;
 }
 
+>>>>>>> 48887bec861088ae7091c9276174e4e0c6ca49ad
 .footer-bottom {
   background: #292929;
   padding: 35.5px 0;
   margin-bottom: 0;
   color: #A5A5A5;
+<<<<<<< HEAD
+  width: 1920px;
+  height: 98px;
+=======
   height: 98px;
 >>>>>>> eb9fc3b9cc813d41d9e039f34d43902a8b5d2a42
+>>>>>>> 48887bec861088ae7091c9276174e4e0c6ca49ad
 }/*# sourceMappingURL=main.css.map */

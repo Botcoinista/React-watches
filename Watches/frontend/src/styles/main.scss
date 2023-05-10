@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+@import "./partials/homeHero";
+
+@import "./partials/navbar";
+@import "./partials/footer";
+=======
 @import './partials/variables';
 @import './partials/navbar';
 @import './partials/contactHero';
@@ -6,6 +12,7 @@
 @import "./partials/homeHero";
 @import './partials/footer';
 
+>>>>>>> 48887bec861088ae7091c9276174e4e0c6ca49ad
 
 
 
@@ -20,6 +27,8 @@
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
+<<<<<<< HEAD
+=======
 .navbar {
     @include navbar
 }
@@ -42,10 +51,16 @@
 .contactMap {
     @include contactMap
 }
+>>>>>>> 48887bec861088ae7091c9276174e4e0c6ca49ad
 .homeHero {
   @include homeHero;
 }
 
+<<<<<<< HEAD
+.footer-bottom {
+  @include footer;
+}
+=======
 
 
 //Josef
@@ -143,3 +158,4 @@
 
 
 //Calle
+>>>>>>> 48887bec861088ae7091c9276174e4e0c6ca49ad
