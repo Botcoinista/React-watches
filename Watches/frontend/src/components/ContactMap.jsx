@@ -1,9 +1,9 @@
 import React from 'react'
 
-const Karta = () => {
+const ContactMap = () => {
   return (
-    <div>Karta</div>
+    <div className='contactMap'>ContactMap</div>
   )
 }
 
-export default Karta
+export default ContactMap

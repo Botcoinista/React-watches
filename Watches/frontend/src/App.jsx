@@ -3,6 +3,7 @@ import RootLayout from './layouts/RootLayout'
 import Home from './pages/Home'
 import ProductDetails from './pages/ProductDetails'
 import Login from './pages/Login'
+import Contact from './pages/Contact'
 
 const App = () => {
 
@@ -23,6 +24,10 @@ const App = () => {
           path: '/login',
           element: <Login />
         },
+        {
+          path: '/contact',
+          element: <Contact />
+        }
       ]
     }
   ])

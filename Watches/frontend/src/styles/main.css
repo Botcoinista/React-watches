@@ -40,6 +40,32 @@
   color: #aeaeae;
 }
 
+.contactHero {
+  background-color: lightgray;
+  width: 1920px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.contactHero h1 {
+  margin-bottom: 1rem;
+}
+.contactHero .separate {
+  display: flex;
+  gap: 1.5rem;
+  font-weight: 400;
+}
+
+.contactForm {
+  color: rgb(236, 9, 9);
+}
+
+.contactMap {
+  color: rgb(221, 34, 34);
+}
+
 .homeHero {
   color: tomato;
 }
