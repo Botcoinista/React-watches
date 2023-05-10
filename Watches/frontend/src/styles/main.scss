@@ -6,7 +6,7 @@
 @import "./partials/homeHero";
 @import './partials/footer';
 @import './partials/loginForm';
-
+@import './partials/productDetailsHero';
 
 
 
@@ -22,38 +22,37 @@
 }
 
 .navbar {
-    @include navbar
+    @include navbar;
 }
 
 
 .footer {
-    @include footer
+    @include footer;
 }
 
 
 .loginForm {
-    @include loginForm
+    @include loginForm;
 }
 
 .contactHero {
-    @include contactHero
+    @include contactHero;
 }
 
 
 .contactForm {
-    @include contactForm
+    @include contactForm;
 }
 
 
 .contactMap {
-    @include contactMap
+    @include contactMap;
 }
 
 
 .homeHero {
   @include homeHero;
 }
-
 
 
 //Josef
@@ -151,3 +150,6 @@
 
 
 //Calle
+.productDetailsHero {
+    @include productDetailsHero;
+}
