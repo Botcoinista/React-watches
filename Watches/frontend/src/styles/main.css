@@ -11,6 +11,7 @@
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
+<<<<<<< HEAD
 .homeHero .container {
   display: flex;
   justify-content: space-between;
@@ -59,11 +60,90 @@
   margin: 40px 0; /* adds space between the two columns */
 }
 
+=======
+.navbar {
+<<<<<<< HEAD
+  color: rgb(131, 119, 119);
+}
+
+.footer {
+  background: #292929;
+  padding: 35.5px 0;
+  margin-top: auto;
+  color: #A5A5A5;
+  height: 98px;
+  font-size: 16px;
+  text-align: center;
+=======
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+  padding: 25px 12px;
+  margin-inline: 30px;
+}
+.navbar .right-nav .nav-links {
+  display: flex;
+  gap: 20px;
+}
+.navbar .right-nav .nav-links li {
+  list-style: none;
+  padding-right: 10px;
+}
+.navbar .right-nav .nav-links li .fa-plus {
+  margin-left: 0.2rem;
+  color: #fa3150;
+}
+.navbar .right-nav .nav-links a {
+  color: #636363;
+  text-decoration: none;
+  font-size: 15px;
+}
+.navbar .right-nav .nav-links .textLight {
+  color: #aeaeae;
+}
+
+.contactHero {
+  background-color: lightgray;
+  width: 100%;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.contactHero h1 {
+  margin-bottom: 1rem;
+}
+.contactHero .separate {
+  display: flex;
+  gap: 1.5rem;
+  font-weight: 400;
+}
+
+.contactForm {
+  color: rgb(236, 9, 9);
+}
+
+.contactMap {
+  color: rgb(221, 34, 34);
+}
+
+.homeHero {
+  color: tomato;
+}
+
+>>>>>>> 48887bec861088ae7091c9276174e4e0c6ca49ad
 .footer-bottom {
   background: #292929;
   padding: 35.5px 0;
   margin-bottom: 0;
   color: #A5A5A5;
+<<<<<<< HEAD
   width: 1920px;
   height: 98px;
+=======
+  height: 98px;
+>>>>>>> eb9fc3b9cc813d41d9e039f34d43902a8b5d2a42
+>>>>>>> 48887bec861088ae7091c9276174e4e0c6ca49ad
 }/*# sourceMappingURL=main.css.map */

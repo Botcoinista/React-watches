@@ -1,7 +1,23 @@
+<<<<<<< HEAD
 @import "./partials/homeHero";
 
 @import "./partials/navbar";
 @import "./partials/footer";
+=======
+@import './partials/variables';
+@import './partials/navbar';
+@import './partials/contactHero';
+@import './partials/contactForm';
+@import './partials/contactMap';
+@import "./partials/homeHero";
+@import './partials/footer';
+
+>>>>>>> 48887bec861088ae7091c9276174e4e0c6ca49ad
+
+
+
+
+
 
 * {
   margin: 0;
@@ -11,10 +27,135 @@
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
+<<<<<<< HEAD
+=======
+.navbar {
+    @include navbar
+}
+
+.footer {
+    @include footer
+}
+
+.loginForm {
+    @include loginForm
+}
+.contactHero {
+    @include contactHero
+}
+
+.contactForm {
+    @include contactForm
+}
+
+.contactMap {
+    @include contactMap
+}
+>>>>>>> 48887bec861088ae7091c9276174e4e0c6ca49ad
 .homeHero {
   @include homeHero;
 }
 
+<<<<<<< HEAD
 .footer-bottom {
   @include footer;
 }
+=======
+
+
+//Josef
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//Ulrika
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//Shahriar
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//Calle
+>>>>>>> 48887bec861088ae7091c9276174e4e0c6ca49ad
