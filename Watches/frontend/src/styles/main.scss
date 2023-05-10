@@ -1,9 +1,6 @@
-
-
-
-@import "./partials/homeHero";
-
+@import './partials/variables';
 @import './partials/navbar';
+@import "./partials/homeHero";
 @import './partials/footer';
 
 
@@ -15,6 +12,9 @@
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
+.navbar {
+    @include navbar
+}
 
 .homeHero {
   @include homeHero;
