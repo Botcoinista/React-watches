@@ -1,9 +1,3 @@
-.footer-copyright {
-  font-size: 16px;
-  text-align: center;
-  margin-top: 4px;
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -38,6 +32,69 @@
 }
 .navbar .right-nav .nav-links .textLight {
   color: #aeaeae;
+}
+
+.footer {
+  background: #292929;
+  padding: 35.5px 0;
+  margin-top: auto;
+  color: #A5A5A5;
+  height: 98px;
+  font-size: 16px;
+  text-align: center;
+}
+
+.loginForm {
+  height: 478px;
+  width: 1138px;
+  background-color: #fff;
+  box-shadow: 0 0 30px #f8f8f8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: #636363;
+  font-size: 16px;
+  font-weight: 400;
+  position: relative;
+  font-family: var(--body-font);
+  margin-top: 31rem;
+  margin-bottom: 38rem;
+}
+.loginForm form {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+.loginForm form label {
+  margin-bottom: 10px;
+  text-align: left;
+}
+.loginForm form input {
+  height: 50px;
+  width: 1062px;
+  background-color: rgb(250, 250, 250);
+  padding: 5px;
+  margin-bottom: 10px;
+  border: none;
+}
+.loginForm form #checkbox-grey {
+  fill: rgb(250, 250, 250);
+  width: 15px;
+}
+.loginForm form #btn-submit {
+  height: 50px;
+  width: 142px;
+  letter-spacing: 0.01em;
+  padding: 0px 45px;
+  background-color: rgb(250, 49, 80);
+  border: none;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 450;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  margin-top: 20px;
 }
 
 .contactHero {
@@ -135,14 +192,111 @@
   color: rgb(221, 34, 34);
 }
 
-.homeHero {
-  color: tomato;
+.homeHero .container {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 8rem;
+  background-color: #eeeeee;
+  width: 100%;
+}
+.homeHero .container .leftText {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap; /* aligns text to the left */
+  padding: 0 40px 0 40px;
+}
+.homeHero .container .leftText h6 {
+  font-size: 18px;
+  line-height: 1.2380952381;
+  text-transform: capitalize;
+  font-weight: 400;
+  margin-bottom: 1.5rem;
+}
+.homeHero .container .leftText h1 {
+  font-size: 60px;
+  line-height: 1.2333333333;
+  margin-bottom: 2.5rem;
+}
+.homeHero .container .leftText .btn-hero {
+  width: 30% !important;
+  font-size: 1.5rem;
+  background-color: rgb(202, 28, 28);
+  color: #fff;
+  text-transform: uppercase;
+  border: none;
+  padding: 15px 25px;
+}
+.homeHero .container .leftText .btn-hero:hover {
+  background: #b60d0d;
+}
+.homeHero .container .rightImage {
+  height: 625px;
+  width: 647px;
+  background-color: #c5bebe;
+  margin: 40px 0; /* adds space between the two columns */
 }
 
-.footer-bottom {
-  background: #292929;
-  padding: 35.5px 0;
-  margin-bottom: 0;
-  color: #A5A5A5;
-  height: 98px;
+.watchCollection .container {
+  padding: 0 8rem;
+  background-color: #f1f1f1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.watchCollection .container .upperText {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 4rem;
+}
+.watchCollection .container .upperText h1 {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+.watchCollection .container .upperText ul {
+  display: flex;
+  margin-bottom: 2rem;
+}
+.watchCollection .container .upperText ul a {
+  text-decoration: none;
+  color: #000;
+}
+.watchCollection .container .upperText ul li {
+  list-style: none;
+  padding-right: 1rem;
+}
+.watchCollection .container .product-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+.watchCollection .container .product-list .card {
+  margin: 0.8rem 0;
+}
+.watchCollection .container .product-list .card .image {
+  height: 270px;
+  width: 295px;
+  background-color: #c5bebe;
+}
+.watchCollection .container .product-list .card p {
+  padding: 0.4rem 0 0 0;
+}
+.watchCollection .container .btn-load {
+  width: 240px;
+  margin: 2rem 0;
+  font-size: 1rem;
+  text-transform: uppercase;
+  border: 1px solid black;
+  padding: 15px 25px;
+}
+.watchCollection .container .btn-load:hover {
+  background-color: #ebd5d5;
+}
+
+.productDetailsHero {
+  height: 300px;
 }/*# sourceMappingURL=main.css.map */
