@@ -1,9 +1,94 @@
-import React from 'react'
+import React from "react";
 
 const WatchCollection = () => {
   return (
-    <div>WatchCollection</div>
-  )
-}
+    <section className="watchCollection">
+      <div className="container">
+        <div className="upperText">
+          <h1>Best Collection</h1>
+          <ul>
+            <a href="#">
+              <li>All /</li>
+            </a>
+            <a href="#">
+              <li>Bags /</li>
+            </a>
+            <a href="#">
+              <li>Dress /</li>
+            </a>
+            <a href="#">
+              <li>Decoration /</li>
+            </a>
+            <a href="#">
+              <li>Essentials /</li>
+            </a>
+            <a href="#">
+              <li>Interior /</li>
+            </a>
+          </ul>
+        </div>
+        <div className="product-list">
+          <div className="card">
+            <div className="image">
+              <img src="#" alt="1st image" />
+            </div>
+            <p>Apple watch series</p>
+            <p>Kr 3000</p>
+          </div>
+          <div className="card">
+            <div className="image">
+              <img src="#" alt="1st image" />
+            </div>
+            <p>Apple watch series</p>
+            <p>Kr 3000</p>
+          </div>
+          <div className="card">
+            <div className="image">
+              <img src="#" alt="1st image" />
+            </div>
+            <p>Apple watch series</p>
+            <p>Kr 3000</p>
+          </div>
+          <div className="card">
+            <div className="image">
+              <img src="#" alt="1st image" />
+            </div>
+            <p>Apple watch series</p>
+            <p>Kr 3000</p>
+          </div>
+          <div className="card">
+            <div className="image">
+              <img src="#" alt="1st image" />
+            </div>
+            <p>Apple watch series</p>
+            <p>Kr 3000</p>
+          </div>
+          <div className="card">
+            <div className="image">
+              <img src="#" alt="1st image" />
+            </div>
+            <p>Apple watch series</p>
+            <p>Kr 3000</p>
+          </div>
+          <div className="card">
+            <div className="image">
+              <img src="#" alt="1st image" />
+            </div>
+            <p>Apple watch series</p>
+            <p>Kr 3000</p>
+          </div>
+          <div className="card">
+            <div className="image">
+              <img src="#" alt="1st image" />
+            </div>
+            <p>Apple watch series</p>
+            <p>Kr 3000</p>
+          </div>
+        </div>
+        <button className="btn btn-load">Load More</button>
+      </div>
+    </section>
+  );
+};
 
-export default WatchCollection
+export default WatchCollection;

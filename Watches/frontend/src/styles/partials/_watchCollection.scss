@@ -1,0 +1,70 @@
+@mixin watchCollection {
+  .container {
+    padding: 0 8rem;
+    background-color: #f1f1f1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .upperText {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 4rem;
+      h1 {
+        font-size: 3rem;
+        margin-bottom: 2rem;
+      }
+
+      ul {
+        display: flex;
+        margin-bottom: 2rem;
+
+        a {
+          text-decoration: none;
+          color: #000;
+        }
+
+        li {
+          list-style: none;
+          padding-right: 1rem;
+        }
+      }
+    }
+
+    .product-list {
+      display: flex;
+      flex-wrap: wrap;
+      //   margin: 0 1rem;
+      gap: 1.5rem;
+      margin-top: 2rem;
+      .card {
+        // border: 1px solid black;
+        margin: 0.8rem 0;
+        .image {
+          height: 270px;
+          width: 295px;
+          background-color: #c5bebe;
+        }
+        p {
+          padding: 0.4rem 0 0 0;
+        }
+      }
+    }
+    .btn-load {
+      //   width: 30% !important;
+      width: 240px;
+      margin: 2rem 0;
+      font-size: 1rem;
+      text-transform: uppercase;
+      border: 1px solid black;
+      padding: 15px 25px;
+    }
+
+    .btn-load:hover {
+      background-color: #ebd5d5;
+    }
+  }
+}
