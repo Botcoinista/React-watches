@@ -1,4 +1,5 @@
 @import './partials/navbar';
+@import './partials/footer';
 
 * {
     margin: 0;
@@ -10,4 +11,8 @@
 
 .navbar {
     @include navbar
+}
+
+.footer-bottom {
+    @include footer
 }
