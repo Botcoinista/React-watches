@@ -1,9 +1,3 @@
-.footer-copyright {
-  font-size: 16px;
-  text-align: center;
-  margin-top: 4px;
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -12,19 +6,6 @@
 }
 
 .navbar {
-<<<<<<< HEAD
-  color: rgb(131, 119, 119);
-}
-
-.footer {
-  background: #292929;
-  padding: 35.5px 0;
-  margin-top: auto;
-  color: #A5A5A5;
-  height: 98px;
-  font-size: 16px;
-  text-align: center;
-=======
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -51,6 +32,69 @@
 }
 .navbar .right-nav .nav-links .textLight {
   color: #aeaeae;
+}
+
+.footer {
+  background: #292929;
+  padding: 35.5px 0;
+  margin-top: auto;
+  color: #A5A5A5;
+  height: 98px;
+  font-size: 16px;
+  text-align: center;
+}
+
+.loginForm {
+  height: 478px;
+  width: 1138px;
+  background-color: #fff;
+  box-shadow: 0 0 30px #f8f8f8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: #636363;
+  font-size: 16px;
+  font-weight: 400;
+  position: relative;
+  font-family: var(--body-font);
+  margin-top: 31rem;
+  margin-bottom: 38rem;
+}
+.loginForm form {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+.loginForm form label {
+  margin-bottom: 10px;
+  text-align: left;
+}
+.loginForm form input {
+  height: 50px;
+  width: 1062px;
+  background-color: rgb(250, 250, 250);
+  padding: 5px;
+  margin-bottom: 10px;
+  border: none;
+}
+.loginForm form #checkbox-grey {
+  fill: rgb(250, 250, 250);
+  width: 15px;
+}
+.loginForm form #btn-submit {
+  height: 50px;
+  width: 142px;
+  letter-spacing: 0.01em;
+  padding: 0px 45px;
+  background-color: rgb(250, 49, 80);
+  border: none;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 450;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  margin-top: 20px;
 }
 
 .contactHero {
@@ -81,13 +125,4 @@
 
 .homeHero {
   color: tomato;
-}
-
-.footer-bottom {
-  background: #292929;
-  padding: 35.5px 0;
-  margin-bottom: 0;
-  color: #A5A5A5;
-  height: 98px;
->>>>>>> eb9fc3b9cc813d41d9e039f34d43902a8b5d2a42
 }/*# sourceMappingURL=main.css.map */

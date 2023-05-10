@@ -5,6 +5,7 @@
 @import './partials/contactMap';
 @import "./partials/homeHero";
 @import './partials/footer';
+@import './partials/loginForm';
 
 
 
@@ -24,24 +25,31 @@
     @include navbar
 }
 
+
 .footer {
     @include footer
 }
 
+
 .loginForm {
     @include loginForm
 }
+
 .contactHero {
     @include contactHero
 }
+
 
 .contactForm {
     @include contactForm
 }
 
+
 .contactMap {
     @include contactMap
 }
+
+
 .homeHero {
   @include homeHero;
 }
