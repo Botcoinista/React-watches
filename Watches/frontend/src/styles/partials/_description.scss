@@ -1,0 +1,70 @@
+@mixin description {
+    display: flex;
+    justify-content: center;
+    padding-top: 40px;
+
+    .wrapper {
+        width: 1002px;
+    }
+
+    ul {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        
+        li {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid $lightGray;
+            list-style: none;
+            height: 48px;
+            padding: 8px 16px;
+
+            &:nth-child(2), &:nth-child(3), &:nth-child(4){
+                border-left: 0;
+            }
+            
+
+            a {
+               color: $navGray;
+               text-decoration: none;
+                font-size: 16px;
+                transition: .4s;
+
+                &:hover {
+                    color: $plusRed;
+                }
+                
+            }
+        }
+    }
+
+    h2 {
+        margin-bottom: 13px;
+        color: $darkHeading;
+        font-weight: 400;
+    }
+
+    .productDescription {
+       display: flex;
+
+        .left {
+            color: $navGray;
+
+        }
+
+        .right {
+
+            .bigImg {
+                width: 469px;
+                height: 356px;
+                background-color: rgba(221, 221, 221, 0.762);
+            }
+
+        }
+    }
+
+}
+
+
+   

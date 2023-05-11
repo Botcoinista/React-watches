@@ -8,6 +8,15 @@
 @import "./partials/footer";
 @import "./partials/loginForm";
 @import "./partials/productDetailsHero";
+@import './partials/footer';
+@import './partials/productDetailsHero';
+@import './partials/loginForm';
+@import './partials/productDetailsSection';
+@import './partials/description';
+
+
+
+
 
 * {
   margin: 0;
@@ -57,4 +66,10 @@
 //Calle
 .productDetailsHero {
   @include productDetailsHero;
+}
+.productDetailsSection {
+    @include productDetailsSection;
+}
+.description {
+    @include description;
 }
