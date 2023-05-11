@@ -15,6 +15,7 @@
 @import './partials/description';
 @import './partials/relatedProducts';
 @import './partials/product270';
+@import './partials/featuredProducts';
 
 
 
@@ -80,4 +81,7 @@
 }
 .product270 {
   @include product270;
+}
+.featuredProducts {
+  @include featuredProducts;
 }

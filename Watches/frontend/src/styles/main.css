@@ -616,4 +616,26 @@
   padding-bottom: 1rem;
   color: #636363;
   border-bottom: 1px solid #e8e6e6;
+}
+
+.featuredProducts {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #F8F8F8;
+}
+.featuredProducts i {
+  padding-inline: 1rem;
+}
+.featuredProducts .wrapper {
+  width: 1002px;
+  display: flex;
+  justify-content: space-between;
+  padding-block: 80px;
+  gap: 2rem;
+}
+.featuredProducts .imgDiv {
+  flex-grow: 1;
+  height: 122px;
+  background-color: #e8e6e6;
 }/*# sourceMappingURL=main.css.map */
