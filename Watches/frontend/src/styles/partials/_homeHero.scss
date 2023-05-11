@@ -30,14 +30,15 @@
       .btn-hero {
         width: 30% !important;
         font-size: 1.5rem;
-        background-color: rgb(202, 28, 28);
+        background-color: $plusRed;
         color: #fff;
         text-transform: uppercase;
         border: none;
         padding: 15px 25px;
+        cursor: pointer;
       }
       .btn-hero:hover {
-        background: #b60d0d;
+        background: $plusRed;
       }
     }
 
