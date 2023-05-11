@@ -1,8 +1,8 @@
 @mixin watchCollection {
   .container {
     padding: 0 8rem;
-    background-color: #f1f1f1;
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -40,12 +40,12 @@
       //   margin: 0 1rem;
       gap: 1.5rem;
       margin-top: 2rem;
-      .card {
+      .card-sm {
         // border: 1px solid black;
         margin: 0.8rem 0;
         .image {
-          height: 270px;
-          width: 295px;
+          width: 270px;
+          height: 295px;
           background-color: #c5bebe;
         }
         p {
