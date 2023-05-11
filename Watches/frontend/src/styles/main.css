@@ -12,6 +12,7 @@
   height: 100px;
   padding: 25px 12px;
   margin-inline: 30px;
+  position: sticky;
 }
 .navbar .right-nav .nav-links {
   display: flex;
@@ -567,4 +568,52 @@
   width: 469px;
   height: 356px;
   background-color: rgba(221, 221, 221, 0.762);
+}
+
+.relatedProducts {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 30px;
+  margin-bottom: 20px;
+}
+.relatedProducts .wrapper {
+  width: 1002px;
+}
+.relatedProducts h3 {
+  margin-bottom: 37px;
+  color: #292929;
+  font-weight: 500;
+  font-size: 24px;
+}
+.relatedProducts .productCards {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.product270 {
+  flex: 1;
+}
+.product270 .productImg {
+  height: 295px;
+  background-image: url("https://images.pexels.com/photos/2494608/pexels-photo-2494608.jpeg");
+  background-size: cover;
+}
+.product270 .title {
+  padding-block: 1rem 0.5rem;
+}
+.product270 .title a {
+  font-size: 18px;
+  font-weight: 500;
+  text-decoration: none;
+  color: #292929;
+  transition: 0.4s;
+}
+.product270 .title a:hover {
+  color: #fa3150;
+}
+.product270 .price {
+  padding-bottom: 1rem;
+  color: #636363;
+  border-bottom: 1px solid #e8e6e6;
 }/*# sourceMappingURL=main.css.map */
