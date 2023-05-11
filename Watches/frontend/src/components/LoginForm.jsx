@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios'
+import { useNavigate } from 'react-router-dom';
 
 
 
 function LoginForm({ user, setUser}) {
 
+  const navigate = useNavigate()
 
   const [formData, setFormData] = useState({
     email: '',
@@ -35,6 +37,7 @@ function LoginForm({ user, setUser}) {
     console.log(res)
     if(res.data) {
       setUser(res.data)
+      navigate('/')
     }
   };
 
