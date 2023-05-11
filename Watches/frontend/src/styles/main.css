@@ -569,7 +569,7 @@
 .productDetailsSection .row .right .wishList:hover {
   color: white;
   background-color: #292929;
-  border: 0;
+  border: 1px solid #292929;
 }
 .productDetailsSection .row .right .categories {
   display: flex;

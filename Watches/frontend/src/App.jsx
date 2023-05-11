@@ -1,4 +1,5 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import { useState} from 'react'
 import RootLayout from './layouts/RootLayout'
 import Home from './pages/Home'
 import ProductDetails from './pages/ProductDetails'
@@ -7,14 +8,16 @@ import Contact from './pages/Contact'
 
 const App = () => {
 
+  const [user, setUser] = useState(null)
+
   const router = createBrowserRouter([
     {
       path: '/',
-      element: <RootLayout />,
+      element: <RootLayout user={user} setUser={setUser}/>,
       children: [
         {
           path: '/',
-          element: <Home />
+          element: <Home user={user}/>
         },
         {
           path: '/products',
@@ -22,7 +25,7 @@ const App = () => {
         },
         {
           path: '/login',
-          element: <Login />
+          element: <Login user={user} setUser={setUser} />
         },
         {
           path: '/contact',
