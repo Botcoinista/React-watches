@@ -1,15 +1,16 @@
 import React from 'react'
+import ContactImage from '../images/WatchSide.jpg';
 
 const ContactHero = () => {
   return (
     <div className='contactHero'>
-      <div className='container'>
+        <img src="" alt="" />
+      <img className='ContactImage' src={ContactImage} alt="Big Watsh" />
         <h1>CONTACT</h1>
         <div className='separate'>
-          <p>HOME</p>
+          <a href="/">HOME</a>
           <p>CONTACT</p>
         </div>
-      </div>
     </div>
   )
 }
