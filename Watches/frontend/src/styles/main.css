@@ -277,6 +277,7 @@
   margin: 40px 0; /* adds space between the two columns */
 }
 
+
 .registerForm {
   height: 478px;
   width: 1138px;
@@ -328,6 +329,7 @@
   cursor: pointer;
   transition: all 0.3s ease-in-out;
   margin-top: 20px;
+
 .watchCollection .container {
   padding: 0 8rem;
   display: flex;
@@ -460,6 +462,7 @@
 .selectedProduct .container .product-list .card-bg-even a {
   text-decoration: none;
   color: black;
+
 }
 
 .productDetailsHero {

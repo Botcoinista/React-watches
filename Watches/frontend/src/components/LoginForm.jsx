@@ -3,6 +3,7 @@ import axios from 'axios'
 import { useNavigate } from 'react-router-dom';
 
 
+
 function LoginForm({ user, setUser}) {
 
   const navigate = useNavigate()
@@ -30,7 +31,7 @@ function LoginForm({ user, setUser}) {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-  
+
     if(formData.email == '' || formData.password == '') {
       return
     }
@@ -38,7 +39,13 @@ function LoginForm({ user, setUser}) {
     console.log(res)
     if(res.data) {
       setUser(res.data)
+
     }
+
+      navigate('/')
+    }
+  };
+
 
 
   //Logging user when updated.
@@ -46,14 +53,16 @@ function LoginForm({ user, setUser}) {
     console.log(user)
   }, [user])
 
-}
+
+
 
 
   return (
     <div className="loginForm">
-      <form onSubmit={handleSubmit}>
-        <div className="login-row">
-          <p>Please Login To Your Account</p>
+    <form onSubmit={handleSubmit}>
+     <div className="login-row">
+    <p>Please Login To Your Account</p>
+    <br></br>
           <p>No Account?</p>
           <a href="/registration">Register Here</a>
         </div>
@@ -95,6 +104,5 @@ function LoginForm({ user, setUser}) {
       </form>
     </div>
   );
-}
 
 export default LoginForm;
