@@ -7,6 +7,8 @@
 @import './partials/footer';
 @import './partials/productDetailsHero';
 @import './partials/loginForm';
+@import './partials/productDetailsSection';
+@import './partials/description';
 
 
 
@@ -144,4 +146,10 @@
 //Calle
 .productDetailsHero {
     @include productDetailsHero;
+}
+.productDetailsSection {
+    @include productDetailsSection;
+}
+.description {
+    @include description;
 }

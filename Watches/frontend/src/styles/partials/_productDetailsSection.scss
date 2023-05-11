@@ -1,0 +1,194 @@
+@mixin productDetailsSection {
+    margin: auto;
+
+    button {
+        cursor: pointer;
+    }
+    
+    .row {
+        display: flex;
+        padding-top: 70px;
+        justify-content: center;
+        margin: auto;
+
+        // & > * {
+        //     border: 1px solid black;
+        // }
+
+        .left {
+            padding-inline: 15px;
+            display: flex;
+            flex-direction: column;
+            gap: 7px;
+
+            .bigImg {
+                width: 501px;
+                height: 430px;
+                background-color: rgba(221, 221, 221, 0.762);
+            }
+
+            .imgCarousel {
+                display: flex;
+                gap: 7px;
+
+
+                .smallImg {
+                    width: 120px;
+                    height: 113px;
+                    background-color: rgba(221, 221, 221, 0.762);
+                }
+            }
+
+            
+        }
+
+        .right {
+            padding-inline: 15px;
+            min-width: 501px;
+            max-width: 501px;
+
+            .detailsDescription {
+
+                h2 {
+                    margin-bottom: 13px;
+                    color: $darkHeading;
+                    font-weight: 400;
+                }
+    
+                p {
+                    margin-bottom: 22px;
+                    padding-bottom: 23px;
+                    color: $navGray;
+                    border-bottom: 1px solid $lightGray;
+                }
+            }
+
+
+            .stars {
+                display: flex;
+                color: $darkHeading;
+                gap: 10px;
+                align-items: center;
+
+                .starDiv {
+
+                    width: 12px;
+                    height: 12px;
+                    background-color: $starYellow;
+                }
+
+            }
+
+            .price {
+                padding-block: 15px;
+            }
+
+            .addCartQty {
+                display: flex;
+                .qty {
+                    display: flex;
+
+                    & > * {
+                        height: 48px;
+                        width: 48px;
+                        background-color: white;
+                        border: 1px solid $lightGray;
+                    }
+                    input {
+                        padding-left: 20px;
+                        border-inline: 0px;
+
+                    }
+
+                }
+
+                .addToCart {
+                    margin-left: 20px;
+                    height: 48px;
+                    padding-inline: 22px;
+                    border: 0;
+                    font-size: 16px;
+                    color: white;
+                    background-color: $darkHeading;
+
+                    transition: .4s;
+
+                    &:hover {
+                        background-color: $plusRed;
+                    }
+                }
+            }
+
+            .colorVariation {
+                display: flex;
+                align-items: center;
+                padding-block: 25px;
+                gap: 35px;
+                
+                .colorsList {
+                    display: flex;
+                    gap: 10px;
+                    li {
+                        
+                        list-style: none;
+                        .colorBtn {
+                            height: 18px;
+                            width: 18px;
+                            border: 0;
+                            border-radius: 1rem;
+
+                            &.color1 {
+                                background-color: $plusRed;
+                            }
+                            &.color2 {
+                                background-color: $starYellow;
+                            }
+                            &.color3 {
+                                background-color: $ash;
+                            }
+                        }
+                    }                    
+                }
+                p {
+                    color: $navGray;
+                }
+            }
+
+            .wishList {
+                background-color: white;
+                border: 1px solid $lightGray;
+                height: 48px;
+                padding-inline: 22px;
+                font-size: 16px;
+                transition: .4s;
+                margin-bottom: 26px;
+
+                &:hover {
+                    color: white;
+                    background-color: $darkHeading;
+                    border: 0;
+                }
+            }
+
+            .categories {
+                display: flex;
+
+                & * {
+                    font-size: 16px;
+                    color: $navGray;
+                    padding-right: 5px;
+                }
+
+                a {
+                    text-decoration: none;
+                    transition: .4s;
+
+                    &:hover {
+                        color: $plusRed;
+                    }
+                }
+            }
+        }
+    }
+
+}
