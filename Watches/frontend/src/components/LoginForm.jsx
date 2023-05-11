@@ -36,7 +36,13 @@ function LoginForm({ user, setUser}) {
     const res = await axios.post('http://localhost:8080/api/users/login', formData)
     console.log(res)
     if(res.data) {
+      //Setting user to the data stored in the MongoDB
       setUser(res.data)
+      //Resets the login-form
+      setFormData({
+        email: '',
+        password: ''
+      })
       navigate('/')
     }
   };
