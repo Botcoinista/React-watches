@@ -1,5 +1,5 @@
-
-@mixin loginForm {
+@mixin registerForm {
+  
     height: 478px;
     width: 1138px;
     background-color: #fff;
@@ -7,6 +7,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
     color: #636363;
     font-size: 16px;
     font-weight: 400;
@@ -19,19 +20,6 @@
       display: flex;
       flex-direction: column;
       align-items: start;
-
-      .login-row p {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        margin-bottom: 10px;
-        
-
-        a {
-          margin-left: 10px;
-          text-decoration: none;
-          color: blue;
-        }
       }
   
       label {
@@ -48,7 +36,7 @@
         border: none;
       }
 
-      #checkbox {
+      #termsConditions {
         fill: rgb(250, 250, 250);
         width: 15px;
       }
@@ -68,7 +56,4 @@
         margin-top: 20px;
       }
     }
-  }
   
-
- 

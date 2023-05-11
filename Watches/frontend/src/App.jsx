@@ -4,6 +4,7 @@ import Home from './pages/Home'
 import ProductDetails from './pages/ProductDetails'
 import Login from './pages/Login'
 import Contact from './pages/Contact'
+import Registration from './pages/Registration'
 
 const App = () => {
 
@@ -27,6 +28,10 @@ const App = () => {
         {
           path: '/contact',
           element: <Contact />
+        },
+        {
+          path: '/registration',
+          element: <Registration />
         }
       ]
     }

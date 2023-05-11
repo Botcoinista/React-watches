@@ -12,6 +12,13 @@
 
 
 
+@import './partials/registerForm';
+
+
+
+
+
+
 
 * {
   margin: 0;
@@ -85,7 +92,9 @@
 
 
 //Ulrika
-
+.registerForm {
+    @include registerForm;
+}
 
 
 
