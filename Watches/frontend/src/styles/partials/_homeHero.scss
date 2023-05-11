@@ -30,24 +30,22 @@
       .btn-hero {
         width: 30% !important;
         font-size: 1.5rem;
-        background-color: rgb(202, 28, 28);
+        background-color: $plusRed;
         color: #fff;
-        text-decoration: none; /* removes underline from buttons */
-        text-transform: capitalize;
-        text-align: center;
+        text-transform: uppercase;
         border: none;
         padding: 15px 25px;
+        cursor: pointer;
       }
       .btn-hero:hover {
-        background: #b60d0d;
-        text-decoration: none;
+        background: $plusRed;
       }
     }
 
     .rightImage {
       height: 625px;
       width: 647px;
-      background-color: gray;
+      background-color: #c5bebe;
       margin: 40px 0; /* adds space between the two columns */
     }
   }

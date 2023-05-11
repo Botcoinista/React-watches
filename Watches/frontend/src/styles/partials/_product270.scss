@@ -1,0 +1,36 @@
+@mixin product270 {
+
+    flex: 1;
+
+    .productImg {
+        // width:270px;
+        
+        height: 295px;
+        background-image: url('https://images.pexels.com/photos/2494608/pexels-photo-2494608.jpeg');
+        background-size: cover;
+    }
+
+    .title {
+
+        padding-block: 1rem .5rem;
+
+        a {
+            font-size: 18px;
+            font-weight: 500;
+            text-decoration: none;
+            color: $darkHeading;
+            transition: .4s;
+    
+                    &:hover {
+                        color: $plusRed;
+                    }
+        }
+    }
+
+    .price {
+        padding-bottom: 1rem;
+        color: $navGray;
+        border-bottom: 1px solid $lightGray;
+    }
+
+}

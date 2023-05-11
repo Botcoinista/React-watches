@@ -1,47 +1,63 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios'
+import { useNavigate } from 'react-router-dom';
 
-function LoginForm() {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+
+
+function LoginForm({ user, setUser}) {
+
+  const navigate = useNavigate()
+
+  const [formData, setFormData] = useState({
+    email: '',
+    password: ''
+  })
+
   const [keepLoggedIn, setKeepLoggedIn] = useState(false);
   const [error, setError] = useState('');
 
-  const handleEmailChange = (e) => {
-    setEmail(e.target.value);
-  };
+  const handleChange = (e) => {
+    e.preventDefault()
 
-  const handlePasswordChange = (e) => {
-    setPassword(e.target.value);
-  };
+    setFormData({
+        ...formData,
+        [e.target.name]: e.target.value
+    })       
+}
 
   const handleKeepLoggedInChange = (e) => {
     setKeepLoggedIn(e.target.checked);
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
-    
-    if (!email || !password) {
-      setError('Please enter both email and password.');
-      return;
+
+
+    if(formData.email == '' || formData.password == '') {
+      return
     }
-
-    // Perform form submission
-    // Make an API request to authenticate the user
-
-    
-    setEmail('');
-    setPassword('');
-    setKeepLoggedIn(false);
-    setError('');
+    const res = await axios.post('http://localhost:8080/api/users/login', formData)
+    console.log(res)
+    if(res.data) {
+      setUser(res.data)
+      navigate('/')
+    }
   };
+
+
+  //Logging user when updated.
+  useEffect(() => {
+    console.log(user)
+  }, [user])
+
 
   return (
     <div className="loginForm">
-      <form onSubmit={handleSubmit}>
-        <div className="login-row">
-          <p>Please Login To Your Account</p>
+    <form onSubmit={handleSubmit}>
+     <div className="login-row">
+    <p>Please Login To Your Account</p>
+    <br></br>
           <p>No Account?</p>
           <a href="/registration">Register Here</a>
         </div>
