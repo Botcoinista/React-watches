@@ -10,6 +10,7 @@
     ul {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
+        margin-bottom: 39px;
         
         li {
             display: flex;
@@ -42,15 +43,22 @@
     h2 {
         margin-bottom: 13px;
         color: $darkHeading;
-        font-weight: 400;
+        font-weight: 500;
     }
 
     .productDescription {
        display: flex;
+       gap: 1rem;
+       padding-bottom: 34px;
+       border-bottom: 1px solid $lightGray;
+       margin-bottom: 42px;
 
         .left {
             color: $navGray;
 
+            p {
+                margin-bottom: 2rem;
+            }
         }
 
         .right {

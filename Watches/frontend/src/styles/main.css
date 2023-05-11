@@ -522,6 +522,7 @@
 .description ul {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
+  margin-bottom: 39px;
 }
 .description ul li {
   display: flex;
@@ -547,13 +548,20 @@
 .description h2 {
   margin-bottom: 13px;
   color: #292929;
-  font-weight: 400;
+  font-weight: 500;
 }
 .description .productDescription {
   display: flex;
+  gap: 1rem;
+  padding-bottom: 34px;
+  border-bottom: 1px solid #e8e6e6;
+  margin-bottom: 42px;
 }
 .description .productDescription .left {
   color: #636363;
+}
+.description .productDescription .left p {
+  margin-bottom: 2rem;
 }
 .description .productDescription .right .bigImg {
   width: 469px;
