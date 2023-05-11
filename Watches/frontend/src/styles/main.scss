@@ -4,6 +4,10 @@
 @import "./partials/contactForm";
 @import "./partials/contactMap";
 @import "./partials/homeHero";
+@import './partials/footer';
+@import './partials/loginForm';
+@import './partials/productDetailsHero';
+@import './partials/registerForm';
 @import "./partials/watchCollection";
 @import "./partials/selectedProduct";
 @import "./partials/footer";
@@ -17,6 +21,7 @@
 @import "./partials/relatedProducts";
 @import "./partials/product270";
 @import "./partials/featuredProducts";
+
 
 * {
   margin: 0;
@@ -52,6 +57,40 @@
 //Josef
 
 //Ulrika
+
+.registerForm {
+    @include registerForm;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 //Shahriar
 .homeHero {
