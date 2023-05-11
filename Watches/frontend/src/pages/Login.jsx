@@ -1,10 +1,10 @@
 import React from 'react'
 import LoginForm from '../components/LoginForm'
 
-const Login = () => {
+const Login = ({ user, setUser }) => {
   return (
     <>
-      <LoginForm />
+      <LoginForm user={user} setUser={setUser}/>
     </>
   )
 }
