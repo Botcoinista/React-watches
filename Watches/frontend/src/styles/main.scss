@@ -13,6 +13,8 @@
 @import './partials/loginForm';
 @import './partials/productDetailsSection';
 @import './partials/description';
+@import './partials/relatedProducts';
+@import './partials/product270';
 
 
 
@@ -72,4 +74,10 @@
 }
 .description {
     @include description;
+}
+.relatedProducts {
+    @include relatedProducts;
+}
+.product270 {
+  @include product270;
 }
