@@ -4,8 +4,10 @@ const Subscription = () => {
   return (
     <div className='subscription-container'>
       <div className="subscribe-form">
-        <input type="text" placeholder='Enter your mail here' />
-        <button className='subscription-btn'>SUBSCRIBE FOR NEWSLETTER</button>
+        <div className='flex'>
+          <input type="text" placeholder='Enter your mail here' />
+          <button className='subscription-btn'>SUBSCRIBE FOR NEWSLETTER</button>
+        </div>
       </div>
     </div>
   )

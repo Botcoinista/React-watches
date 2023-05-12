@@ -48,10 +48,14 @@ function LoginForm({ user, setUser}) {
   };
 
 
+
   //Logging user when updated.
   useEffect(() => {
     console.log(user)
   }, [user])
+
+
+
 
 
   return (
@@ -61,16 +65,15 @@ function LoginForm({ user, setUser}) {
     <br></br>
     
 
-    <label htmlFor="email">Email*</label>
-    
-    <input
-      type="email"
-      id="email"
-      name="email"
-      value={formData.email}
-      onChange={handleChange}
-      required
-    />
+        <label htmlFor="email">Email*</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          value={formData.email}
+          onChange={handleChange}
+          required
+        />
 
 <label htmlFor="password">Password*</label>
       <input
@@ -98,4 +101,4 @@ function LoginForm({ user, setUser}) {
   );
 }
 
-export default LoginForm
+export default LoginForm;

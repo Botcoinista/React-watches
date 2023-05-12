@@ -1,3 +1,6 @@
+
+/*# sourceMappingURL=main.css.map */
+
 .subscription-container {
   display: flex;
   justify-content: center;
@@ -15,10 +18,38 @@
   height: 50%;
   width: 70%;
   background-color: #fff;
+  position: relative;
+}
+.subscribe-form input {
+  padding: 1rem;
+  border-radius: 1.5rem;
+  border: 1px solid lightgray;
+  width: 100%;
+  outline: none;
+  position: relative;
+}
+.subscribe-form input:focus {
+  border: 1px solid rgb(228, 45, 91);
 }
 
 .subscription-btn {
   background-color: red;
+  padding: 1rem;
+  border-radius: 1.5rem;
+  border: none;
+  position: absolute;
+  right: 0;
+  cursor: pointer;
+  color: #fff;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  position: absolute;
+  width: 80%;
 }
 
 * {
@@ -846,3 +877,4 @@
   height: 122px;
   background-color: #e8e6e6;
 }/*# sourceMappingURL=main.css.map */
+
