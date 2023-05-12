@@ -28,56 +28,56 @@ const WatchCollection = () => {
           </ul>
         </div>
         <div className="product-list">
-          <div className="card">
+          <div className="card-sm">
             <div className="image">
               <img src="#" alt="1st image" />
             </div>
             <p>Apple watch series</p>
             <p>Kr 3000</p>
           </div>
-          <div className="card">
+          <div className="card-sm">
             <div className="image">
               <img src="#" alt="1st image" />
             </div>
             <p>Apple watch series</p>
             <p>Kr 3000</p>
           </div>
-          <div className="card">
+          <div className="card-sm">
             <div className="image">
               <img src="#" alt="1st image" />
             </div>
             <p>Apple watch series</p>
             <p>Kr 3000</p>
           </div>
-          <div className="card">
+          <div className="card-sm">
             <div className="image">
               <img src="#" alt="1st image" />
             </div>
             <p>Apple watch series</p>
             <p>Kr 3000</p>
           </div>
-          <div className="card">
+          <div className="card-sm">
             <div className="image">
               <img src="#" alt="1st image" />
             </div>
             <p>Apple watch series</p>
             <p>Kr 3000</p>
           </div>
-          <div className="card">
+          <div className="card-sm">
             <div className="image">
               <img src="#" alt="1st image" />
             </div>
             <p>Apple watch series</p>
             <p>Kr 3000</p>
           </div>
-          <div className="card">
+          <div className="card-sm">
             <div className="image">
               <img src="#" alt="1st image" />
             </div>
             <p>Apple watch series</p>
             <p>Kr 3000</p>
           </div>
-          <div className="card">
+          <div className="card-sm">
             <div className="image">
               <img src="#" alt="1st image" />
             </div>
@@ -86,6 +86,7 @@ const WatchCollection = () => {
           </div>
         </div>
         <button className="btn btn-load">Load More</button>
+        {/* <i class="fa fa-redo-alt" aria-hidden="true"></i> */}
       </div>
     </section>
   );

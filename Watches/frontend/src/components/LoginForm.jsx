@@ -1,69 +1,108 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios'
+import { useNavigate } from 'react-router-dom';
 
 
 
-function LoginForm() {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+function LoginForm({ user, setUser}) {
+
+  const navigate = useNavigate()
+
+  const [formData, setFormData] = useState({
+    email: '',
+    password: ''
+  })
+
   const [keepLoggedIn, setKeepLoggedIn] = useState(false);
+  const [error, setError] = useState('');
 
-  const handleEmailChange = (e) => {
-    setEmail(e.target.value);
-  };
+  const handleChange = (e) => {
+    e.preventDefault()
 
-  const handlePasswordChange = (e) => {
-    setPassword(e.target.value);
-  };
+    setFormData({
+        ...formData,
+        [e.target.name]: e.target.value
+    })       
+}
 
   const handleKeepLoggedInChange = (e) => {
     setKeepLoggedIn(e.target.checked);
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+
+
+
+    if(formData.email == '' || formData.password == '') {
+      return
+    }
+    const res = await axios.post('http://localhost:8080/api/users/login', formData)
+    console.log(res)
+    if(res.data) {
+      //Setting user to the data stored in the MongoDB
+      setUser(res.data)
+      //Resets the login-form
+      setFormData({
+        email: '',
+        password: ''
+      })
+      navigate('/')
+    }
   };
+
+
+  //Logging user when updated.
+  useEffect(() => {
+    console.log(user)
+  }, [user])
 
 
   return (
     <div className="loginForm">
     <form onSubmit={handleSubmit}>
+     <div className="login-row">
     <p>Please Login To Your Account</p>
     <br></br>
-    
+          <p>No Account?</p>
+          <a href="/registration">Register Here</a>
+        </div>
+        <br />
 
-    <label htmlFor="email">Email*</label>
-    
-    <input
-      type="email"
-      id="email"
-      value={email}
-      onChange={handleEmailChange}
-      required
-    />
-
-<label htmlFor="password">Password*</label>
-      <input
-        type="password"
-        id="password"
-        value={password}
-        onChange={handlePasswordChange}
-        required
-      />
-
-      <label>
+        <label htmlFor="email">Email*</label>
         <input
-          type="checkbox"
-          id="checkbox-grey"
-          checked={keepLoggedIn}
-          onChange={handleKeepLoggedInChange}
+          type="email"
+          id="email"
+          value={email}
+          onChange={handleEmailChange}
+          required
         />
-        <p>Please keep me logged in</p>
-      </label>
 
-      <button type="submit" id="btn-submit">Submit</button>
-    </form>
+        <label htmlFor="password">Password*</label>
+        <input
+          type="password"
+          id="password"
+          value={password}
+          onChange={handlePasswordChange}
+          required
+        />
+
+        <label>
+          <input
+            type="checkbox"
+            id="checkbox"
+            checked={keepLoggedIn}
+            onChange={handleKeepLoggedInChange}
+          />
+          Please keep me logged in
+        </label>
+
+        {error && <p className="error">{error}</p>}
+
+        <button type="submit" id="btn-submit">Submit</button>
+      </form>
     </div>
   );
 }
 
-export default LoginForm
+export default LoginForm;

@@ -1,7 +1,10 @@
-import React from 'react'
+import { useState} from 'react'
 import { NavLink, Link } from 'react-router-dom'
 
-const Navbar = () => {
+const Navbar = ({ user, setuser }) => {
+
+ 
+  
   return (
     <div className='navbar'>
       <div className="left-nav">
@@ -13,7 +16,12 @@ const Navbar = () => {
           <li><NavLink to='/products'>PRODUCTS</NavLink><i className="fa-solid fa-plus fa-sm"></i></li>
           <li><NavLink to='/contact'>CONTACT</NavLink></li>
           <li><NavLink className='textLight'><i className="fa-solid fa-magnifying-glass"></i></NavLink></li>
-          <li><NavLink to='/login' className='textLight'>Login</NavLink></li>
+          {user ? (
+              <li><NavLink to='/login' className='textLight'>User</NavLink></li>
+            ) : (
+              <li><NavLink to='/login' className='textLight'>Login</NavLink></li>
+            )
+          }
           <li><NavLink className='textLight'><i className="fa-solid fa-cart-shopping"></i></NavLink></li>
         </ul>
 

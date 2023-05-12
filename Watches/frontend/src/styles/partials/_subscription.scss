@@ -6,15 +6,25 @@
 }
 
 .subscription-container {
-width: 100%;
-height: 300px;
-background-color: lightgray;
-color: rgb(244, 5, 5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 300px;
+    background-color: lightgray;
+    color: rgb(244, 5, 5);
 }
 
 .subscribe-form {
-
+    display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 50%;
+    width: 70%;
+    background-color: #fff;
 }
+
+
 
 .subscription-btn {
     background-color: red;

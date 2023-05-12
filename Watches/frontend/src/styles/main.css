@@ -1,8 +1,20 @@
 .subscription-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   height: 300px;
   background-color: lightgray;
   color: rgb(244, 5, 5);
+}
+
+.subscribe-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50%;
+  width: 70%;
+  background-color: #fff;
 }
 
 .subscription-btn {
@@ -64,7 +76,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
   color: #636363;
   font-size: 16px;
   font-weight: 400;
@@ -78,6 +89,17 @@
   flex-direction: column;
   align-items: start;
 }
+.loginForm form .login-row p {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.loginForm form .login-row p a {
+  margin-left: 10px;
+  text-decoration: none;
+  color: blue;
+}
 .loginForm form label {
   margin-bottom: 10px;
   text-align: left;
@@ -90,7 +112,7 @@
   margin-bottom: 10px;
   border: none;
 }
-.loginForm form #checkbox-grey {
+.loginForm form #checkbox {
   fill: rgb(250, 250, 250);
   width: 15px;
 }
@@ -99,7 +121,7 @@
   width: 142px;
   letter-spacing: 0.01em;
   padding: 0px 45px;
-  background-color: rgb(250, 49, 80);
+  background-color: #fa3150;
   border: none;
   color: #fff;
   font-size: 16px;
@@ -225,6 +247,59 @@
   color: rgb(221, 34, 34);
 }
 
+.registerForm {
+  height: 478px;
+  width: 1138px;
+  background-color: #fff;
+  box-shadow: 0 0 30px #f8f8f8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: #636363;
+  font-size: 16px;
+  font-weight: 400;
+  position: relative;
+  font-family: var(--body-font);
+  margin-top: 31rem;
+  margin-bottom: 38rem;
+}
+.registerForm form {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+.registerForm label {
+  margin-bottom: 10px;
+  text-align: left;
+}
+.registerForm input {
+  height: 50px;
+  width: 1062px;
+  background-color: rgb(250, 250, 250);
+  padding: 5px;
+  margin-bottom: 10px;
+  border: none;
+}
+.registerForm #termsConditions {
+  fill: rgb(250, 250, 250);
+  width: 15px;
+}
+.registerForm #btn-submit {
+  height: 50px;
+  width: 142px;
+  letter-spacing: 0.01em;
+  padding: 0px 45px;
+  background-color: #fa3150;
+  border: none;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 450;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  margin-top: 20px;
+}
+
 .homeHero .container {
   display: flex;
   justify-content: space-between;
@@ -254,14 +329,15 @@
 .homeHero .container .leftText .btn-hero {
   width: 30% !important;
   font-size: 1.5rem;
-  background-color: rgb(202, 28, 28);
+  background-color: #fa3150;
   color: #fff;
   text-transform: uppercase;
   border: none;
   padding: 15px 25px;
+  cursor: pointer;
 }
 .homeHero .container .leftText .btn-hero:hover {
-  background: #b60d0d;
+  background: #fa3150;
 }
 .homeHero .container .rightImage {
   height: 625px;
@@ -272,8 +348,8 @@
 
 .watchCollection .container {
   padding: 0 8rem;
-  background-color: #f1f1f1;
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -307,15 +383,15 @@
   gap: 1.5rem;
   margin-top: 2rem;
 }
-.watchCollection .container .product-list .card {
+.watchCollection .container .product-list .card-sm {
   margin: 0.8rem 0;
 }
-.watchCollection .container .product-list .card .image {
-  height: 270px;
-  width: 295px;
+.watchCollection .container .product-list .card-sm .image {
+  width: 270px;
+  height: 295px;
   background-color: #c5bebe;
 }
-.watchCollection .container .product-list .card p {
+.watchCollection .container .product-list .card-sm p {
   padding: 0.4rem 0 0 0;
 }
 .watchCollection .container .btn-load {
@@ -330,11 +406,131 @@
   background-color: #ebd5d5;
 }
 
+.selectedProduct .container {
+  padding: 0 8rem;
+  background-color: #faefef;
+  min-height: 37rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.selectedProduct .container .product-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin: 4rem 0;
+}
+.selectedProduct .container .product-list .card-bg-odd .image {
+  width: 369px;
+  height: 310px;
+  background-color: #c5bebe;
+}
+.selectedProduct .container .product-list .card-bg-odd .product-brief {
+  background-color: #F8F8F8;
+  height: 7rem;
+  padding: 0 1rem;
+}
+.selectedProduct .container .product-list .card-bg-odd .product-brief .p-text {
+  padding: 1rem 0;
+}
+.selectedProduct .container .product-list .card-bg-odd .product-brief .text-lower {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #ece9e9;
+  color: #888181;
+}
+.selectedProduct .container .product-list .card-bg-odd .product-brief .text-lower .p-price {
+  display: flex;
+  padding: 0.8rem 0;
+  text-align: center;
+}
+.selectedProduct .container .product-list .card-bg-odd .product-brief .text-lower .p-price .p1 {
+  margin-right: 2rem;
+  text-decoration: line-through;
+}
+.selectedProduct .container .product-list .card-bg-even {
+  width: 369px;
+  height: 422px;
+  background-color: white;
+  border: 1px solid #ece9e9;
+  padding: 2rem 4rem;
+  text-align: center;
+}
+.selectedProduct .container .product-list .card-bg-even .p-headline {
+  font-size: 1.5rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #fa3150;
+}
+.selectedProduct .container .product-list .card-bg-even h3 {
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  margin: 1rem 0;
+}
+.selectedProduct .container .product-list .card-bg-even h6 {
+  font-size: 1.4rem;
+}
+.selectedProduct .container .product-list .card-bg-even p {
+  line-height: 1.5;
+  margin: 1.2rem 0;
+}
+.selectedProduct .container .product-list .card-bg-even a {
+  text-decoration: none;
+  color: black;
+}
+
 .subscription {
   width: 100%;
   height: 300px;
   background-color: lightgray;
   color: rgb(244, 5, 5);
+}
+
+.ratings .container {
+  padding: 0 8rem;
+  min-height: 37rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.ratings .container .product-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin: 4rem 0;
+}
+.ratings .container .product-list .card-bg-odd .image {
+  width: 369px;
+  height: 295px;
+  background-color: #c5bebe;
+}
+.ratings .container .product-list .card-bg-odd .product-brief {
+  background-color: #F8F8F8;
+  width: 369px;
+  min-height: 7rem;
+  padding: 0 1rem;
+}
+.ratings .container .product-list .card-bg-odd .product-brief .p-text {
+  padding: 1rem 0;
+}
+.ratings .container .product-list .card-bg-odd .product-brief .p-desc {
+  padding-bottom: 1rem;
+}
+.ratings .container .product-list .card-bg-odd .product-brief .text-lower {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #ece9e9;
+  color: #888181;
+}
+.ratings .container .product-list .card-bg-odd .product-brief .text-lower .p-price {
+  display: flex;
+  padding: 0.8rem 0;
+  text-align: center;
+}
+.ratings .container .product-list .card-bg-odd .product-brief .text-lower .p-price .p1 {
+  margin-right: 2rem;
 }
 
 .productDetailsHero {
@@ -505,7 +701,7 @@
 .productDetailsSection .row .right .wishList:hover {
   color: white;
   background-color: #292929;
-  border: 0;
+  border: 1px solid #292929;
 }
 .productDetailsSection .row .right .categories {
   display: flex;
