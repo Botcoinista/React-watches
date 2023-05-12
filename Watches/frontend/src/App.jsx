@@ -34,7 +34,7 @@ const App = () => {
         },
         {
           path: '/registration',
-          element: <Registration />
+          element: <Registration user={user} setUser={setUser}/>
         }
       ]
     }

@@ -12,10 +12,31 @@ const userSchema = new Schema(
       type: String,
       required: true,
     },
+    streetName: {
+      type: String,
+      required: true,
+    },
+    postalCode: {
+      type: String,
+      required: true,
+    },
+    city: {
+      type: String,
+      required: true,
+    },
+    mobile: {
+      type: String
+    },
+    company: {
+      type: String
+    },
+    profileImage: {
+      type: String
+    },
     email: {
       type: String,
       required: true,
-      unique: true,
+      // unique: true,
     },
     passwordHash: {
       type: String,
