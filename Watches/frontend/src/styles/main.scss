@@ -16,6 +16,7 @@
 @import './partials/relatedProducts';
 @import './partials/product270';
 @import './partials/featuredProducts';
+@import './partials/subscription';
 
 
 
@@ -61,6 +62,9 @@
 }
 
 //Josef
+.subscription {
+  @include subscription;
+}
 
 //Ulrika
 

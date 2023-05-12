@@ -1,0 +1,21 @@
+@mixin subscription {
+    width: 100%;
+    height: 300px;
+    background-color: lightgray;
+    color: rgb(244, 5, 5);
+}
+
+.subscription-container {
+width: 100%;
+height: 300px;
+background-color: lightgray;
+color: rgb(244, 5, 5);
+}
+
+.subscribe-form {
+
+}
+
+.subscription-btn {
+    background-color: red;
+}
