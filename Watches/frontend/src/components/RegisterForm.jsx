@@ -197,15 +197,6 @@ function RegisterForm({ user, setUser}) {
             onChange={handleChange}
           />
   
-          {/* <label htmlFor="profileImage">Upload Profile Image (optional)</label>
-          <input
-            type="file"
-            id="profileImage"
-            name="profileImage"
-            accept="image/*"
-            onChange={handleProfileImageChange}
-          /> */}
-  
           <label></label>
             <input
               type="checkbox"
