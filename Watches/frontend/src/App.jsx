@@ -36,16 +36,12 @@ const App = () => {
         {
           path: '/registration',
 
-          element: <Registration />
+          element: <Registration user={user} setUser={setUser}/>
         },
       {
         path: '/cart',
         element: <Cart />
       }
-
-          element: <Registration user={user} setUser={setUser}/>
-        }
-
       ]
     }
   ])
