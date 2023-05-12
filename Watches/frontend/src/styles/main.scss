@@ -4,47 +4,47 @@
 @import "./partials/contactForm";
 @import "./partials/contactMap";
 @import "./partials/homeHero";
+@import "./partials/footer";
+@import "./partials/loginForm";
+@import "./partials/productDetailsHero";
+@import "./partials/registerForm";
+@import "./partials/watchCollection";
+@import "./partials/selectedProduct";
+@import "./partials/ratings";
+@import "./partials/footer";
+@import "./partials/loginForm";
+@import "./partials/productDetailsHero";
+@import "./partials/footer";
+@import "./partials/productDetailsHero";
+@import "./partials/loginForm";
+@import "./partials/productDetailsSection";
+@import "./partials/description";
+@import "./partials/relatedProducts";
+@import "./partials/product270";
+@import "./partials/featuredProducts";
+@import './partials/registerForm';
+@import "./partials/footer";
+@import "./partials/loginForm";
+@import "./partials/productDetailsHero";
+@import "./partials/registerForm";
+@import "./partials/watchCollection";
+@import "./partials/selectedProduct";
+@import "./partials/ratings";
+@import "./partials/footer";
+@import "./partials/loginForm";
+@import "./partials/productDetailsHero";
 @import './partials/footer';
-@import './partials/loginForm';
 @import './partials/productDetailsHero';
-@import './partials/registerForm';
+@import './partials/loginForm';
+@import './partials/productDetailsSection';
+@import './partials/description';
+@import './partials/relatedProducts';
+@import './partials/product270';
+@import './partials/featuredProducts';
+@import './partials/subscription';
 
 
 
-
-
-
-
-@import "./partials/watchCollection";
-@import "./partials/selectedProduct";
-@import "./partials/footer";
-@import "./partials/loginForm";
-@import "./partials/productDetailsHero";
-@import "./partials/footer";
-@import "./partials/productDetailsHero";
-@import "./partials/loginForm";
-@import "./partials/productDetailsSection";
-@import "./partials/description";
-@import "./partials/relatedProducts";
-@import "./partials/product270";
-@import "./partials/featuredProducts";
-
-
-
-@import './partials/registerForm';
-@import "./partials/watchCollection";
-@import "./partials/selectedProduct";
-@import "./partials/footer";
-@import "./partials/loginForm";
-@import "./partials/productDetailsHero";
-@import "./partials/footer";
-@import "./partials/productDetailsHero";
-@import "./partials/loginForm";
-@import "./partials/productDetailsSection";
-@import "./partials/description";
-@import "./partials/relatedProducts";
-@import "./partials/product270";
-@import "./partials/featuredProducts";
 
 
 
@@ -84,38 +84,8 @@
 //Ulrika
 
 .registerForm {
-    @include registerForm;
+  @include registerForm;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 //Shahriar
 .homeHero {
@@ -126,6 +96,18 @@
 }
 .selectedProduct {
   @include selectedProduct;
+}
+
+//Josef
+.subscription {
+  @include subscription;
+}
+
+//Ulrika
+
+//Shahriar
+.ratings {
+  @include ratings;
 }
 
 //Calle

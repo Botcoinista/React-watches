@@ -12,9 +12,7 @@ function LoginForm({ user, setUser}) {
     email: '',
     password: ''
   })
-
   const [keepLoggedIn, setKeepLoggedIn] = useState(false);
-  const [error, setError] = useState('');
 
   const handleChange = (e) => {
     e.preventDefault()
@@ -38,10 +36,13 @@ function LoginForm({ user, setUser}) {
     const res = await axios.post('http://localhost:8080/api/users/login', formData)
     console.log(res)
     if(res.data) {
+      //Setting user to the data stored in the MongoDB
       setUser(res.data)
-
-    }
-
+      //Resets the login-form
+      setFormData({
+        email: '',
+        password: ''
+      })
       navigate('/')
     }
   };
@@ -60,13 +61,9 @@ function LoginForm({ user, setUser}) {
   return (
     <div className="loginForm">
     <form onSubmit={handleSubmit}>
-     <div className="login-row">
     <p>Please Login To Your Account</p>
     <br></br>
-          <p>No Account?</p>
-          <a href="/registration">Register Here</a>
-        </div>
-        <br />
+    
 
         <label htmlFor="email">Email*</label>
         <input
@@ -78,31 +75,30 @@ function LoginForm({ user, setUser}) {
           required
         />
 
-        <label htmlFor="password">Password*</label>
+<label htmlFor="password">Password*</label>
+      <input
+        type="password"
+        id="password"
+        name="password"
+        value={formData.password}
+        onChange={handleChange}
+        required
+      />
+
+      <label>
         <input
-          type="password"
-          id="password"
-          name="password"
-          value={formData.password}
-          onChange={handleChange}
-          required
+          type="checkbox"
+          id="checkbox-grey"
+          checked={keepLoggedIn}
+          onChange={handleKeepLoggedInChange}
         />
+        <p>Please keep me logged in</p>
+      </label>
 
-        <label>
-          <input
-            type="checkbox"
-            id="checkbox"
-            checked={keepLoggedIn}
-            onChange={handleKeepLoggedInChange}
-          />
-          Please keep me logged in
-        </label>
-
-        {error && <p className="error">{error}</p>}
-
-        <button type="submit" id="btn-submit">Submit</button>
-      </form>
+      <button type="submit" id="btn-submit">Submit</button>
+    </form>
     </div>
   );
+}
 
 export default LoginForm;
