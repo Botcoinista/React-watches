@@ -17,6 +17,7 @@
 @import './partials/product270';
 @import './partials/featuredProducts';
 @import './partials/subscription';
+@import './partials/shoppingCart';
 
 
 
@@ -59,6 +60,10 @@
 
 .registerForm {
   @include registerForm;
+}
+
+.shoppingCart {
+  @include shoppingCart;
 }
 
 //Shahriar

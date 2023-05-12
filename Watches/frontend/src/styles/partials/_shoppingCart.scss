@@ -1,0 +1,62 @@
+@mixin shoppingCart {
+   
+ .heroCart {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url('https://images.pexels.com/photos/876467/pexels-photo-876467.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+    background-size: cover;
+    background-position: center 500px;
+    padding: 111px 0 85px;
+
+        h1 {
+            margin-bottom: 15px;
+            color: $darkHeading
+        }
+
+        ul {
+            display: flex;
+        }
+
+        li {
+            list-style: none;
+            color: $navGray;
+            font-size: 18px;
+
+            &:last-child {
+                padding-left: 15px;
+            }
+
+            a {
+                color: $navGray;
+                text-decoration: none;
+                transition: .4s;
+
+                &:hover {
+                    color: $plusRed;
+                }
+            }
+        }
+    }
+
+    .tableContainer {
+        margin-top: 100px;
+        background-color: #ffffff;
+    }
+
+        table {
+        border-collapse: collapse; 
+        width: 100%;
+    
+        th,
+        td {
+          padding: 15px;
+          text-align: left;
+        }
+    
+        th {
+          background-color: $lightestGray; 
+        }
+      }
+    }
+
