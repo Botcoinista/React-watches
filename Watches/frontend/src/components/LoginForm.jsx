@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios'
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 
 
 
@@ -60,43 +60,50 @@ function LoginForm({ user, setUser}) {
 
   return (
     <div className="loginForm">
-    <form onSubmit={handleSubmit}>
-    <p>Please Login To Your Account</p>
-    <br></br>
-    
+      <div className="wrapper">
 
-        <label htmlFor="email">Email*</label>
-        <input
-          type="email"
-          id="email"
-          name="email"
-          value={formData.email}
-          onChange={handleChange}
-          required
-        />
+      
+        <form onSubmit={handleSubmit}>
+          <div className='loginRegister'>
+            <p>Please Login To Your Account,</p>
+            <Link to="/registration" >Or Register By Clicking Here</Link>
+          </div>
+        <br></br>
+        
 
-<label htmlFor="password">Password*</label>
-      <input
-        type="password"
-        id="password"
-        name="password"
-        value={formData.password}
-        onChange={handleChange}
-        required
-      />
+            <label htmlFor="email">Email*</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              value={formData.email}
+              onChange={handleChange}
+              required
+            />
 
-      <label>
-        <input
-          type="checkbox"
-          id="checkbox-grey"
-          checked={keepLoggedIn}
-          onChange={handleKeepLoggedInChange}
-        />
-        <p>Please keep me logged in</p>
-      </label>
+    <label htmlFor="password">Password*</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            value={formData.password}
+            onChange={handleChange}
+            required
+          />
 
-      <button type="submit" id="btn-submit">Submit</button>
-    </form>
+          <div className='checkbox'>
+            <input
+              type="checkbox"
+              id="checkbox"
+              checked={keepLoggedIn}
+              onChange={handleKeepLoggedInChange}
+            />
+            <label htmlFor='checkbox'>Please keep me logged in</label>
+          </div>
+
+          <button type="submit" id="btn-submit">Submit</button>
+        </form>
+      </div>
     </div>
   );
 }
