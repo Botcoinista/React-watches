@@ -87,8 +87,7 @@ function RegisterForm({ user, setUser}) {
     return (
       <div className="registerForm">
         <form onSubmit={handleSubmit}>
-          <h1>hej</h1>
-          <p>Please Register Your New Account</p>
+        <p>Please Register Your New Account</p>
           <br />
 
           <label htmlFor="firstName">First Name*</label>
@@ -197,15 +196,6 @@ function RegisterForm({ user, setUser}) {
             value={formData.profileImage}
             onChange={handleChange}
           />
-  
-          {/* <label htmlFor="profileImage">Upload Profile Image (optional)</label>
-          <input
-            type="file"
-            id="profileImage"
-            name="profileImage"
-            accept="image/*"
-            onChange={handleProfileImageChange}
-          /> */}
   
           <label></label>
             <input
