@@ -4,12 +4,13 @@
 @import "./partials/contactForm";
 @import "./partials/contactMap";
 @import "./partials/homeHero";
-@import './partials/footer';
-@import './partials/loginForm';
-@import './partials/productDetailsHero';
-@import './partials/registerForm';
+@import "./partials/footer";
+@import "./partials/loginForm";
+@import "./partials/productDetailsHero";
+@import "./partials/registerForm";
 @import "./partials/watchCollection";
 @import "./partials/selectedProduct";
+@import "./partials/ratings";
 @import "./partials/footer";
 @import "./partials/loginForm";
 @import "./partials/productDetailsHero";
@@ -21,7 +22,6 @@
 @import "./partials/relatedProducts";
 @import "./partials/product270";
 @import "./partials/featuredProducts";
-
 
 * {
   margin: 0;
@@ -59,38 +59,8 @@
 //Ulrika
 
 .registerForm {
-    @include registerForm;
+  @include registerForm;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 //Shahriar
 .homeHero {
@@ -101,6 +71,10 @@
 }
 .selectedProduct {
   @include selectedProduct;
+}
+
+.ratings {
+  @include ratings;
 }
 
 //Calle

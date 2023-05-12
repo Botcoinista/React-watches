@@ -464,6 +464,52 @@
   color: black;
 }
 
+.ratings .container {
+  padding: 0 8rem;
+  min-height: 37rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.ratings .container .product-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin: 4rem 0;
+}
+.ratings .container .product-list .card-bg-odd .image {
+  width: 369px;
+  height: 295px;
+  background-color: #c5bebe;
+}
+.ratings .container .product-list .card-bg-odd .product-brief {
+  background-color: #F8F8F8;
+  width: 369px;
+  min-height: 7rem;
+  padding: 0 1rem;
+}
+.ratings .container .product-list .card-bg-odd .product-brief .p-text {
+  padding: 1rem 0;
+}
+.ratings .container .product-list .card-bg-odd .product-brief .p-desc {
+  padding-bottom: 1rem;
+}
+.ratings .container .product-list .card-bg-odd .product-brief .text-lower {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #ece9e9;
+  color: #888181;
+}
+.ratings .container .product-list .card-bg-odd .product-brief .text-lower .p-price {
+  display: flex;
+  padding: 0.8rem 0;
+  text-align: center;
+}
+.ratings .container .product-list .card-bg-odd .product-brief .text-lower .p-price .p1 {
+  margin-right: 2rem;
+}
+
 .productDetailsHero {
   background-image: url("https://images.pexels.com/photos/277320/pexels-photo-277320.jpeg ");
   background-image: url("https://images.pexels.com/photos/1228514/pexels-photo-1228514.jpeg");
