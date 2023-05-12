@@ -350,6 +350,55 @@
   margin-top: 20px;
 }
 
+.shoppingCart .heroCart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url("https://images.pexels.com/photos/876467/pexels-photo-876467.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+  background-size: cover;
+  background-position: center 500px;
+  padding: 111px 0 85px;
+}
+.shoppingCart .heroCart h1 {
+  margin-bottom: 15px;
+  color: #292929;
+}
+.shoppingCart .heroCart ul {
+  display: flex;
+}
+.shoppingCart .heroCart li {
+  list-style: none;
+  color: #636363;
+  font-size: 18px;
+}
+.shoppingCart .heroCart li:last-child {
+  padding-left: 15px;
+}
+.shoppingCart .heroCart li a {
+  color: #636363;
+  text-decoration: none;
+  transition: 0.4s;
+}
+.shoppingCart .heroCart li a:hover {
+  color: #fa3150;
+}
+.shoppingCart .tableContainer {
+  margin-top: 100px;
+  background-color: #ffffff;
+}
+.shoppingCart table {
+  border-collapse: collapse;
+  width: 100%;
+}
+.shoppingCart table th,
+.shoppingCart table td {
+  padding: 15px;
+  text-align: left;
+}
+.shoppingCart table th {
+  background-color: #F8F8F8;
+}
+
 .homeHero .container {
   display: flex;
   justify-content: space-between;
