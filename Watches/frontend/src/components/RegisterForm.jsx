@@ -88,7 +88,6 @@ function RegisterForm({ user, setUser}) {
       <div className="registerForm">
         <form onSubmit={handleSubmit}>
           <h1>hej</h1>
-          <p>Please Register Your New Account</p>
           <br />
 
           <label htmlFor="firstName">First Name*</label>
