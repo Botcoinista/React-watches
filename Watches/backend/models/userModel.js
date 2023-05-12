@@ -6,15 +6,16 @@ const auth = require("../authentication/auth");
 
 //Register a new user
 const registerNewUser = async (req, res) => {
-  const { firstName, lastName, email, password } = req.body;
+  const { firstName, lastName, streetName, postalCode, city, mobile, company, email, password, profileImage } = req.body;
 
-  if (!firstName || !lastName || !email || !password) {
+  if (!firstName || !lastName || !streetName || !postalCode || !city || !email || !password ) {
     return res.status(400).json({
       message: "Please fill in all fields",
     });
   }
 
   const salt = bcrypt.genSaltSync(10);
+
 
   bcrypt.hash(password, salt, (err, hash) => {
     if (err) {
@@ -26,7 +27,13 @@ const registerNewUser = async (req, res) => {
     User.create({
       firstName,
       lastName,
+      streetName,
+      postalCode,
+      city,
+      mobile,
+      company,
       email,
+      profileImage,
       passwordHash: hash,
     }).then((user) => {
       res.status(201).json({
