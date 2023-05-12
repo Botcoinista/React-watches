@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios'
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 
 
 
@@ -12,9 +12,7 @@ function LoginForm({ user, setUser}) {
     email: '',
     password: ''
   })
-
   const [keepLoggedIn, setKeepLoggedIn] = useState(false);
-  const [error, setError] = useState('');
 
   const handleChange = (e) => {
     e.preventDefault()
@@ -31,8 +29,6 @@ function LoginForm({ user, setUser}) {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
-
 
     if(formData.email == '' || formData.password == '') {
       return
@@ -52,55 +48,62 @@ function LoginForm({ user, setUser}) {
   };
 
 
+
   //Logging user when updated.
   useEffect(() => {
     console.log(user)
   }, [user])
 
 
+
+
+
   return (
     <div className="loginForm">
-    <form onSubmit={handleSubmit}>
-     <div className="login-row">
-    <p>Please Login To Your Account</p>
-    <br></br>
-          <p>No Account?</p>
-          <a href="/registration">Register Here</a>
-        </div>
-        <br />
+      <div className="wrapper">
 
-        <label htmlFor="email">Email*</label>
-        <input
-          type="email"
-          id="email"
-          value={email}
-          onChange={handleEmailChange}
-          required
-        />
+      
+        <form onSubmit={handleSubmit}>
+          <div className='loginRegister'>
+            <p>Please Login To Your Account,</p>
+            <Link to="/registration" >Or Register By Clicking Here</Link>
+          </div>
+        <br></br>
+        
 
-        <label htmlFor="password">Password*</label>
-        <input
-          type="password"
-          id="password"
-          value={password}
-          onChange={handlePasswordChange}
-          required
-        />
+            <label htmlFor="email">Email*</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              value={formData.email}
+              onChange={handleChange}
+              required
+            />
 
-        <label>
+    <label htmlFor="password">Password*</label>
           <input
-            type="checkbox"
-            id="checkbox"
-            checked={keepLoggedIn}
-            onChange={handleKeepLoggedInChange}
+            type="password"
+            id="password"
+            name="password"
+            value={formData.password}
+            onChange={handleChange}
+            required
           />
-          Please keep me logged in
-        </label>
 
-        {error && <p className="error">{error}</p>}
+          <div className='checkbox'>
+            <input
+              type="checkbox"
+              id="checkbox"
+              checked={keepLoggedIn}
+              onChange={handleKeepLoggedInChange}
+            />
+            <label htmlFor='checkbox'>Please keep me logged in</label>
+          </div>
 
-        <button type="submit" id="btn-submit">Submit</button>
-      </form>
+          <button type="submit" id="btn-submit">Submit</button>
+        </form>
+      </div>
     </div>
   );
 }
