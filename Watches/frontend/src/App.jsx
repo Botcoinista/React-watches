@@ -35,12 +35,17 @@ const App = () => {
         },
         {
           path: '/registration',
+
           element: <Registration />
         },
       {
         path: '/cart',
         element: <Cart />
       }
+
+          element: <Registration user={user} setUser={setUser}/>
+        }
+
       ]
     }
   ])
