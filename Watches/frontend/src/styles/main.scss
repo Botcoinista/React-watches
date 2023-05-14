@@ -11,18 +11,16 @@
 @import "./partials/watchCollection";
 @import "./partials/selectedProduct";
 @import "./partials/ratings";
-@import './partials/productDetailsSection';
-@import './partials/description';
-@import './partials/relatedProducts';
-@import './partials/product270';
-@import './partials/featuredProducts';
-@import './partials/subscription';
-@import './partials/shoppingCart';
+@import "./partials/productDetailsSection";
+@import "./partials/description";
+@import "./partials/relatedProducts";
+@import "./partials/product270";
+@import "./partials/featuredProducts";
+@import "./partials/subscription";
+@import "./partials/shoppingCart";
 
-
-
-
-
+@import "./partials/carousel";
+@import "./partials/productCard";
 * {
   margin: 0;
   padding: 0;
@@ -87,6 +85,13 @@
 //Shahriar
 .ratings {
   @include ratings;
+}
+
+.carousel {
+  @include carousel;
+}
+.productCard {
+  @include productCard;
 }
 
 //Calle
