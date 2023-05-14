@@ -22,7 +22,8 @@
 @import "./partials/relatedProducts";
 @import "./partials/product270";
 @import "./partials/featuredProducts";
-
+@import "./partials/carousel";
+@import "./partials/productCard";
 * {
   margin: 0;
   padding: 0;
@@ -75,6 +76,13 @@
 
 .ratings {
   @include ratings;
+}
+
+.carousel {
+  @include carousel;
+}
+.productCard {
+  @include productCard;
 }
 
 //Calle

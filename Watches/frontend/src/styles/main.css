@@ -345,7 +345,7 @@
   align-items: center;
   margin-top: 4rem;
 }
-.watchCollection .container .upperText h1 {
+.watchCollection .container .upperText h2 {
   font-size: 3rem;
   margin-bottom: 2rem;
 }
@@ -508,6 +508,59 @@
 }
 .ratings .container .product-list .card-bg-odd .product-brief .text-lower .p-price .p1 {
   margin-right: 2rem;
+}
+
+.carousel .product-carousel {
+  position: relative;
+  overflow: hidden;
+  padding: 26px;
+  margin-top: 3rem;
+}
+.carousel .product-carousel h4 {
+  font-size: 2.5rem;
+  margin-bottom: 4.5rem;
+  text-align: center;
+}
+.carousel .product-carousel .text-underline {
+  border-bottom: 1px solid rgba(240, 233, 230, 0.726);
+  max-width: 20%;
+  padding-bottom: 1.5rem;
+}
+.carousel .product-carousel .product-container {
+  padding: 0 10px;
+  display: flex;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  margin-bottom: 1.5rem;
+}
+.carousel .product-carousel .button {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+.carousel .product-carousel .pre-btn,
+.carousel .product-carousel .next-btn {
+  /* border: none; */
+  font-size: 1.5rem;
+  width: 50px;
+  height: 50px;
+  border-radius: 5px;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0);
+  /* box-shadow: 0px 0px 10px 1px black; */
+  cursor: pointer;
+}
+
+.productCard .card-sm {
+  margin: 0.8rem 0.8rem;
+}
+.productCard .card-sm .image {
+  width: 270px;
+  height: 295px;
+  background-color: #c5bebe;
+}
+.productCard .card-sm p {
+  padding: 0.4rem 0 0 0;
 }
 
 .productDetailsHero {
