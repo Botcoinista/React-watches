@@ -5,7 +5,7 @@ const WatchCollection = () => {
     <section className="watchCollection">
       <div className="container">
         <div className="upperText">
-          <h1>Best Collection</h1>
+          <h2>Best Collection</h2>
           <ul>
             <a href="#">
               <li>All /</li>
