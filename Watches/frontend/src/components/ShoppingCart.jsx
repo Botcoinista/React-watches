@@ -1,12 +1,61 @@
-import React from 'react';
+import { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
-import { useState } from 'react';
+import axios from 'axios';
+
+
+const ShoppingCart = () => {
+  const [items, setItems] = useState([]);
+
+  useEffect(() => {
+    axios.get('http://localhost:8080/watch/products') //Is this right??
+      .then((res) => {
+        const responseData = res.data;
+        console.log(responseData); // Log the response data
+        setProducts(responseData); // Update the products state with the response data
+      })
+      .catch((err) => {
+        console.log('Error retrieving data:', err); 
+      });
+  }, []);
+  
+
+  //Add a item to the cart, if the item already exists in the cart, increase the quantity by 1
+  const addToCart = (item) => {
+    const existingItem = items.find((cartItem) => cartItem.id === item.id);
+    if (existingItem) {
+      const updatedItems = items.map((cartItem) => 
+      cartItem.id === item.id ? { ...cartItem, quantity: cartItem.quantity + 1 } : cartItem
+      );
+      setItems(updatedItems);
+      } else {
+        setItems([...items, { ...item, quantity: 1 }]);
+      }
+};
+
+
+//Remove a item from the cart, if the quantity is greater than 1, decrease the quantity
+const decreaseQuantity = (item) => {
+  const updateItems = items.map((cartItem) =>
+  cartItem.id === item.id ? { ...cartItem, quantity: cartItem.quantity - 1 } : cartItem
+  );
+  setItems(updateItems.filter((cartItem) => cartItem.quantity > 0));
+};
+
+
+//Remove a item from the cart
+const removeFromCart = (item) => {
+  const updateItems = items.filter((cartItem) => cartItem.id !== item.id);
+  setItems(updateItems);
+};
+
+
+//Calculate the total price of the items in the cart
+const calculateTotal = () => {
+  return items.reduce((total, item) => total + item.price * item.quantity, 0);
+};
 
 
 
-
-
-function ShoppingCart() {
   return (
     <div className='shoppingCart'>
     <div className='heroCart'>        
@@ -16,13 +65,32 @@ function ShoppingCart() {
           <li>SHOPPING CART</li>
         </ul>
       </div>
-  
-
-
 
       
+      <div className="cart-container">
+      <h2 className="cart-title">Shopping Cart</h2>
+      <h2 className="item-count">Items in Cart: {items.length}</h2>
+      <div className="item-list">
+        {items.map((item) => (
+          <div className="item-card" key={item.id}>
+            <img className="item-image" src={item.image} alt={item.name} />
+            <h3 className="item-name">{item.name}</h3>
+            <div className="item-details">
+              <button className="quantity-btn" onClick={() => decreaseQuantity(item)}>-</button>
+              <span className="item-quantity">{item.quantity}</span>
+              <button className="quantity-btn" onClick={() => addToCart(item)}>+</button>
+              <button className="remove-btn" onClick={() => removeFromCart(item)}>Remove</button>
+            </div>
+            <p className="item-price">${item.price}</p>
+          </div>
+        ))}
+      </div>
+      <p className="total-price">Total Price: ${calculateTotal()}</p>
+      <button className="clear-cart-btn" onClick={() => setItems([])}>Clear Cart</button>
+      <button className="checkout-btn">Proceed to Checkout</button>
+    </div>
     </div>
   );
-}
+};
 
 export default ShoppingCart;
