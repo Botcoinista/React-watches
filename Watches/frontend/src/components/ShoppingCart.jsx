@@ -13,21 +13,10 @@ function ShoppingCart() {
         </ul>
       </div>
   
-      <div className='tableContainer'>
-      <table>
-        <thead>
-          <tr>
-            <th>Product</th>
-            <th>Price</th>
-            <th>Quantity</th>
-            <th>Total</th>
-          </tr>
-        </thead>
-        <tbody>
-          {/* Add table rows for products */}
-          </tbody>
-      </table>
-    </div>
+
+
+  
+      
     </div>
   );
 }
