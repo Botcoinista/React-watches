@@ -19,7 +19,7 @@ const Carousel = () => {
     const intervalId = setInterval(() => {
       const newIndex = (currentIndex + 1) % products.length;
       setCurrentIndex(newIndex);
-    }, 3000); // Change this value to adjust the time between automatic scrolls
+    }, 1000); // Change this value to adjust the time between automatic scrolls
     return () => clearInterval(intervalId);
   }, [currentIndex, products.length]);
 
