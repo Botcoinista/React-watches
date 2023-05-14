@@ -1,84 +1,102 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios'
+import { useNavigate } from 'react-router-dom'
 
-function RegisterForm() {
-  const [firstName, setFirstName] = useState('');
-  const [lastName, setLastName] = useState('');
-  const [streetName, setStreetName] = useState('');
-  const [postalCode, setPostalCode] = useState('');
-  const [city, setCity] = useState('');
-  const [mobile, setMobile] = useState('');
-  const [company, setCompany] = useState('');
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [confirmPassword, setConfirmPassword] = useState('');
-  const [ProfileImage, setProfileImage] = useState('');
+function RegisterForm({ user, setUser}) {
+
+  const navigate = useNavigate()
+
   const [termsConditions, setTermsConditions] = useState(false);
 
-  const handleFirstNameChange = (e) => {
-    setFirstName(e.target.value);
-  };
+  useEffect(() => {console.log(termsConditions)}, [termsConditions])
+  
+  const [formData, setFormData] = useState({
+    firstName: '',
+    lastName: '',
+    streetName: '',
+    postalCode: '',
+    city: '',
+    mobile: '',
+    company: '',
+    email: '',
+    password: '',
+    confirmPassword: '',
+    profileImage: ''
+  })
 
-  const handleLastNameChange = (e) => {
-    setLastName(e.target.value);
-  };
+    //Toggle value of checkbox
+    const handleTermsConditionsChange = () => {   
+      setTermsConditions(state => !state)
+    };
+  
 
-  const handleStreetNameChange = (e) => {
-    setStreetName(e.target.value);
-  };
 
-  const handlePostalCodeChange = (e) => {
-    setPostalCode(e.target.value);
-  };
+  const handleChange = (e) => {
+    e.preventDefault()
 
-  const handleCityChange = (e) => {
-    setCity(e.target.value);
-  };
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value    
+    })
+  }
 
-  const handleMobileChange = (e) => {
-    setMobile(e.target.value);
-  };
 
-  const handleCompanyChange = (e) => {
-    setCompany(e.target.value);
-  };
-
-  const handleEmailChange = (e) => {
-    setEmail(e.target.value);
-  };
-
-  const handlePasswordChange = (e) => {
-    setPassword(e.target.value);
-  };
-
-  const handleConfirmPasswordChange = (e) => {
-    setConfirmPassword(e.target.value);
-  };
-
-  const handleProfileImageChange = (e) => {
-    setProfileImage(e.target.value);
-  };
-
-  const handleTermsConditionsChange = (e) => {
-    setTermsConditions(e.target.checked);
-  };
-
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     // Add form submission logic here
+
+    if(termsConditions == false) {
+      console.log('You have to accept terms and conditions.')
+      return
+    }
+
+    if(password.value !== confirmPassword.value) {
+      console.log('Passwords does not match.')
+      return
+    }
+
+    const res = await axios.post('http://localhost:8080/api/users/register', formData)
+
+    console.log(res)
+    if(res.data) {
+      setUser(res.data)
+    }
+    setFormData({
+      firstName: '',
+      lastName: '',
+      streetName: '',
+      postalCode: '',
+      city: '',
+      mobile: '',
+      company: '',
+      email: '',
+      password: '',
+      confirmPassword: '',
+      profileImage: ''
+    })
+    navigate('/')
+
   };
+
+  useEffect(() => {
+    console.log(user)
+  }, [user])
+
+
 
     return (
       <div className="registerForm">
         <form onSubmit={handleSubmit}>
-          <p>Please Register Your New Account</p>
+        <p>Please Register Your New Account</p>
           <br />
 
           <label htmlFor="firstName">First Name*</label>
           <input
             type="text"
             id="firstName"
-            value={firstName}
-            onChange={handleFirstNameChange}
+            name="firstName"
+            value={formData.firstName}
+            onChange={handleChange}
             required
           />
 
@@ -86,8 +104,9 @@ function RegisterForm() {
           <input
             type="text"
             id="lastName"
-            value={lastName}
-            onChange={handleLastNameChange}
+            name="lastName"
+            value={formData.lastName}
+            onChange={handleChange}
             required
           />
 
@@ -95,8 +114,9 @@ function RegisterForm() {
           <input
             type="text"
             id="streetName"
-            value={streetName}
-            onChange={handleStreetNameChange}
+            name="streetName"
+            value={formData.streetName}
+            onChange={handleChange}
             required
           />
 
@@ -104,8 +124,9 @@ function RegisterForm() {
           <input
             type="text"
             id="postalCode"
-            value={postalCode}
-            onChange={handlePostalCodeChange}
+            name="postalCode"
+            value={formData.postalCode}
+            onChange={handleChange}
             required
           />
 
@@ -113,8 +134,9 @@ function RegisterForm() {
           <input
             type="text"
             id="city"
-            value={city}
-            onChange={handleCityChange}
+            name="city"
+            value={formData.city}
+            onChange={handleChange}
             required
           />
 
@@ -122,24 +144,27 @@ function RegisterForm() {
           <input
             type="text"
             id="mobile"
-            value={mobile}
-            onChange={handleMobileChange}
+            name="mobile"
+            value={formData.mobile}
+            onChange={handleChange}
           />
 
           <label htmlFor="company">Company (optional)</label>
           <input
             type="text"
             id="company"
-            value={company}
-            onChange={handleCompanyChange}
+            name="company"
+            value={formData.company}
+            onChange={handleChange}
           />
 
           <label htmlFor="email">Email*</label>
           <input
           type="email"
           id="email"
-          value={email}
-          onChange={handleEmailChange}
+          name="email"
+          value={formData.email}
+          onChange={handleChange}
           required
           />
           
@@ -147,39 +172,43 @@ function RegisterForm() {
           <input
           type="password"
           id="password"
-          value={password}
-          onChange={handlePasswordChange}
+          name="password"
+          value={formData.password}
+          onChange={handleChange}
           required
           />
         
-                <label htmlFor="confirmPassword">Confirm Password*</label>
-                <input
-                  type="password"
-                  id="confirmPassword"
-                  value={confirmPassword}
-                  onChange={handleConfirmPasswordChange}
-                  required
-                />
-        
-                <label htmlFor="ProfileImage">Upload Profile Image (optional)</label>
-                <input
-                  type="file"
-                  id="ProfileImage"
-                  accept="image/*"
-                  onChange={handleProfileImageChange}
-                />
-        
-                <label>
-                  <input
-                    type="checkbox"
-                    id="termsConditions"
-                    checked={termsConditions}
-                    onChange={handleTermsConditionsChange}
-                  />
-                  <span>I have read and accept the terms and agreements</span>
-                </label>
-        
-                <button type="submit" id="btn-submit">Submit</button>
+          <label htmlFor="confirmPassword">Confirm Password*</label>
+          <input
+            type="password"
+            id="confirmPassword"
+            name="confirmPassword"
+            value={formData.confirmPassword}
+            onChange={handleChange}
+            required
+          />
+
+          <label htmlFor="profileImage">Profile Image (optional)</label>
+          <input
+            type="text"
+            id="profileImage"
+            name="profileImage"
+            value={formData.profileImage}
+            onChange={handleChange}
+          />
+  
+          <label></label>
+            <input
+              type="checkbox"
+              id="termsConditions"
+              name="termsConditions"
+              checked={termsConditions}
+              onChange={handleTermsConditionsChange}
+            />
+            <span>I have read and accept the terms and agreements</span>
+          
+  
+          <button type="submit" id="btn-submit">Submit</button>
               </form>
             </div>
           );

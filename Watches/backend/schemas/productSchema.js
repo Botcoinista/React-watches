@@ -26,12 +26,6 @@ const productSchema = new Schema(
       type: String,
       required: true,
     },
-
-    // //Is this necessery? In that case, why?
-    // quantity: {
-    //   type: Number,
-    //   required: true,
-    // },
   },
 
   { timestamps: true }

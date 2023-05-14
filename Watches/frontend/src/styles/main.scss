@@ -11,17 +11,14 @@
 @import "./partials/watchCollection";
 @import "./partials/selectedProduct";
 @import "./partials/ratings";
-@import "./partials/footer";
-@import "./partials/loginForm";
-@import "./partials/productDetailsHero";
-@import "./partials/footer";
-@import "./partials/productDetailsHero";
-@import "./partials/loginForm";
 @import "./partials/productDetailsSection";
 @import "./partials/description";
 @import "./partials/relatedProducts";
 @import "./partials/product270";
 @import "./partials/featuredProducts";
+@import "./partials/subscription";
+@import "./partials/shoppingCart";
+
 @import "./partials/carousel";
 @import "./partials/productCard";
 * {
@@ -63,6 +60,10 @@
   @include registerForm;
 }
 
+.shoppingCart {
+  @include shoppingCart;
+}
+
 //Shahriar
 .homeHero {
   @include homeHero;
@@ -74,6 +75,14 @@
   @include selectedProduct;
 }
 
+//Josef
+.subscription {
+  @include subscription;
+}
+
+//Ulrika
+
+//Shahriar
 .ratings {
   @include ratings;
 }
