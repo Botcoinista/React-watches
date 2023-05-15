@@ -88,6 +88,7 @@ const calculateTotal = () => {
       <p className="total-price">Total Price: ${calculateTotal()}</p>
       <button className="clear-cart-btn" onClick={() => setItems([])}>Clear Cart</button>
       <button className="checkout-btn">Proceed to Checkout</button>
+      <button className="continue-btn">Continue Shopping</button>
     </div>
     </div>
   );
