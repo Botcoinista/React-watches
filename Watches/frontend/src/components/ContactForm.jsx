@@ -20,8 +20,8 @@ const ContactForm = () => {
             <input type="text" />
           </div>
         </div>
-        <textarea name="" id="" cols="30" rows="10"></textarea>
         <p className='textarea-text'>Something write*</p>
+        <textarea name="" id="" cols="30" rows="10"></textarea>
         <div className="checkbox">
           <input className='checkbox-box' type="checkbox" />
           <label htmlFor="checkbox">Save my name, email, and website in this browser for the next time I comment</label>
