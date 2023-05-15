@@ -1,15 +1,18 @@
-import React from 'react'
+import { useState, useEffect, json } from 'react'
 import { Link } from 'react-router-dom'
 
-const Product270 = () => {
+const Product270 = ({ prod }) => {
+
+  
   return (
     <div className='product270'>
       <div className='productImg'></div>
       <div className='title'>
-        <Link>Daniel Wellington</Link>
+        <h1>Hej</h1>
+        <Link>{ prod.name }</Link>
       </div>
       <div className='price'>
-        <p>$500</p>
+        <p>{prod.price}</p>
       </div>
     </div>
   )
