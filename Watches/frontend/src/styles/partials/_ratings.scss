@@ -13,15 +13,9 @@
       gap: 1.5rem;
       margin: 4rem 0;
       .card-bg-odd {
-        // width: 369px;
-        // height: 422px;
-        // background-color: white;
-        // border: 1px solid #ece9e9;
-        // padding: 2rem 4rem;
-        // text-align: center;
         .image {
-          width: 369px;
-          //   background-size: cover;
+          // width: 369px;
+          object-fit: cover;
           height: 295px;
           background-color: #c5bebe;
         }
@@ -47,7 +41,6 @@
               text-align: center;
               .p1 {
                 margin-right: 2rem;
-                // text-decoration: line-through;
               }
             }
           }
