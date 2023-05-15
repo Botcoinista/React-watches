@@ -1,14 +1,14 @@
 import React from "react";
 
-const ProductCard = () => {
+const ProductCard = ({ item }) => {
   return (
     <div className="productCard">
       <div className="card-sm">
-        <div className="image">
-          <img src="#" alt="1st image" />
+        <div>
+          <img className="image" src={item.imgURL} alt={item.name} />
         </div>
-        <p>Apple watch series</p>
-        <p>Kr 3000</p>
+        <p>{item.name}</p>
+        <p>{item.price}</p>
       </div>
     </div>
   );
