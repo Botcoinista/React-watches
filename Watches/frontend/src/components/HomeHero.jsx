@@ -9,8 +9,8 @@ const HomeHero = () => {
           <h1>Exclusive Watch Collection.</h1>
           <button className="btn btn-hero">Shop Now</button>
         </div>
-        <div className="rightImage">
-          <img src="https://codegeex.cn" />
+        <div>
+          <img className="rightImage" src="https://images.pexels.com/photos/1137061/pexels-photo-1137061.jpeg?auto=compress&cs=tinysrgb&w=1600" />
         </div>
       </div>
     </section>

@@ -37,6 +37,7 @@ const Carousel = () => {
     const container = containerRef.current;
     container.scrollLeft = currentIndex * container.clientWidth;
   }, [currentIndex]);
+  
 
   return (
     <section className="carousel">

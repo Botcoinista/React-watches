@@ -1,11 +1,13 @@
 @mixin watchCollection {
   .container {
     padding: 0 8rem;
+    margin-left: 8rem;
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    align-content: center;
 
     .upperText {
       display: flex;
@@ -41,11 +43,11 @@
       gap: 1.5rem;
       margin-top: 2rem;
       .card-sm {
-        // border: 1px solid black;
+        border: 1px solid black;
         margin: 0.8rem 0;
         .image {
-          // width: 270px;
-          object-fit: contain;
+          width: 270px;
+          object-fit: cover;
           height: 295px;
           background-color: #c5bebe;
         }
