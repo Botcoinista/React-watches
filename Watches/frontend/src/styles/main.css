@@ -578,8 +578,8 @@
   margin-top: 2rem;
 }
 .watchCollection .container .product-list .card-sm {
-  border: 1px solid black;
   margin: 0.8rem 0;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 .watchCollection .container .product-list .card-sm .image {
   width: 270px;
@@ -598,9 +598,12 @@
   text-transform: uppercase;
   border: 1px solid black;
   padding: 15px 25px;
+  cursor: pointer;
 }
 .watchCollection .container .btn-load:hover {
-  background-color: #ebd5d5;
+  background-color: #000000;
+  color: #fff;
+  transition: ease-out 0.3s;
 }
 
 .selectedProduct .container {
@@ -698,8 +701,13 @@
   gap: 1.5rem;
   margin: 4rem 0;
 }
+.ratings .container .product-list .card-bg-odd {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
 .ratings .container .product-list .card-bg-odd .image {
   width: 369px;
+  -o-object-fit: cover;
+     object-fit: cover;
   height: 295px;
   background-color: #c5bebe;
 }
