@@ -1,11 +1,13 @@
 @mixin watchCollection {
   .container {
     padding: 0 8rem;
+    margin-left: 8rem;
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    align-content: center;
 
     .upperText {
       display: flex;
@@ -43,9 +45,10 @@
       .card-sm {
         // border: 1px solid black;
         margin: 0.8rem 0;
+       box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
         .image {
-          // width: 270px;
-          object-fit: contain;
+          width: 270px;
+          object-fit: cover;
           height: 295px;
           background-color: #c5bebe;
         }
@@ -62,10 +65,13 @@
       text-transform: uppercase;
       border: 1px solid black;
       padding: 15px 25px;
+      cursor: pointer;
     }
 
     .btn-load:hover {
-      background-color: #ebd5d5;
+      background-color: #000000;
+      color: #fff;
+      transition: ease-out .3s;
     }
   }
 }

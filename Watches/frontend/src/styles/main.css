@@ -540,11 +540,13 @@
 
 .watchCollection .container {
   padding: 0 8rem;
+  margin-left: 8rem;
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  align-content: center;
 }
 .watchCollection .container .upperText {
   display: flex;
@@ -577,9 +579,12 @@
 }
 .watchCollection .container .product-list .card-sm {
   margin: 0.8rem 0;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 .watchCollection .container .product-list .card-sm .image {
   width: 270px;
+  -o-object-fit: cover;
+     object-fit: cover;
   height: 295px;
   background-color: #c5bebe;
 }
@@ -593,9 +598,12 @@
   text-transform: uppercase;
   border: 1px solid black;
   padding: 15px 25px;
+  cursor: pointer;
 }
 .watchCollection .container .btn-load:hover {
-  background-color: #ebd5d5;
+  background-color: #000000;
+  color: #fff;
+  transition: ease-out 0.3s;
 }
 
 .selectedProduct .container {
@@ -614,13 +622,13 @@
   margin: 4rem 0;
 }
 .selectedProduct .container .product-list .card-bg-odd .image {
-  width: 369px;
+  -o-object-fit: contain;
+     object-fit: contain;
   height: 310px;
   background-color: #c5bebe;
 }
 .selectedProduct .container .product-list .card-bg-odd .product-brief {
   background-color: #F8F8F8;
-  height: 7rem;
   padding: 0 1rem;
 }
 .selectedProduct .container .product-list .card-bg-odd .product-brief .p-text {
@@ -693,8 +701,13 @@
   gap: 1.5rem;
   margin: 4rem 0;
 }
+.ratings .container .product-list .card-bg-odd {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
 .ratings .container .product-list .card-bg-odd .image {
   width: 369px;
+  -o-object-fit: cover;
+     object-fit: cover;
   height: 295px;
   background-color: #c5bebe;
 }
