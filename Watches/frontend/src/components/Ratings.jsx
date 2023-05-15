@@ -6,7 +6,7 @@ const Ratings = () => {
   const [product, setProduct] = useState([]);
 
   useEffect(() => {
-    axios.get("http://localhost:8080/api/products?limit=3").then((res) => {
+    axios.get("http://localhost:8080/api/products").then((res) => {
       console.log(res.data.allProducts);
       setProduct(res.data.allProducts);
     });
