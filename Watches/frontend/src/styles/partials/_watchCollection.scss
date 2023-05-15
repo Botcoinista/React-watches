@@ -44,7 +44,8 @@
         // border: 1px solid black;
         margin: 0.8rem 0;
         .image {
-          width: 270px;
+          // width: 270px;
+          object-fit: contain;
           height: 295px;
           background-color: #c5bebe;
         }
