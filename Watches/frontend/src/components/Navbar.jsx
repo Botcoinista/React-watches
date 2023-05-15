@@ -22,7 +22,7 @@ const Navbar = ({ user, setuser }) => {
               <li><NavLink to='/login' className='textLight'>Login</NavLink></li>
             )
           }
-          <li><NavLink className='textLight'><i className="fa-solid fa-cart-shopping"></i></NavLink></li>
+          <li><NavLink to='/cart' className='textLight'><i className="fa-solid fa-cart-shopping"></i></NavLink></li>
         </ul>
 
       </div>
