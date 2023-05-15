@@ -8,7 +8,7 @@ const WatchCollection = () => {
   const [product, setProduct] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:8080/watch/products")
+    fetch("http://localhost:8080/api/products")
       .then((res) => res.json())
       .then((data) => {
         setProduct(data.allProducts);
@@ -61,3 +61,5 @@ const WatchCollection = () => {
 };
 
 export default WatchCollection;
+
+
