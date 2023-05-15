@@ -1,6 +1,22 @@
 import React from "react";
+import { useState, useEffect } from "react";
+
+
 
 const WatchCollection = () => {
+
+  const [product, setProduct] = useState([]);
+
+  useEffect(() => {
+    fetch("http://localhost:8080/watch/products")
+      .then((res) => res.json())
+      .then((data) => {
+        setProduct(data.allProducts);
+        console.log(data.allProducts);
+      })
+      .catch((err) => console.log(err));
+  }, []);
+
   return (
     <section className="watchCollection">
       <div className="container">
@@ -28,65 +44,17 @@ const WatchCollection = () => {
           </ul>
         </div>
         <div className="product-list">
-          <div className="card-sm">
-            <div className="image">
-              <img src="#" alt="1st image" />
+          {product.map((item) => (
+            <div className="card-sm" key={item.id}>
+              <div>
+                <img className="image" src={item.imgURL} alt="1st image" />
+              </div>
+              <p>{item.name}</p>
+              <p>{item.price}</p>
             </div>
-            <p>Apple watch series</p>
-            <p>Kr 3000</p>
-          </div>
-          <div className="card-sm">
-            <div className="image">
-              <img src="#" alt="1st image" />
-            </div>
-            <p>Apple watch series</p>
-            <p>Kr 3000</p>
-          </div>
-          <div className="card-sm">
-            <div className="image">
-              <img src="#" alt="1st image" />
-            </div>
-            <p>Apple watch series</p>
-            <p>Kr 3000</p>
-          </div>
-          <div className="card-sm">
-            <div className="image">
-              <img src="#" alt="1st image" />
-            </div>
-            <p>Apple watch series</p>
-            <p>Kr 3000</p>
-          </div>
-          <div className="card-sm">
-            <div className="image">
-              <img src="#" alt="1st image" />
-            </div>
-            <p>Apple watch series</p>
-            <p>Kr 3000</p>
-          </div>
-          <div className="card-sm">
-            <div className="image">
-              <img src="#" alt="1st image" />
-            </div>
-            <p>Apple watch series</p>
-            <p>Kr 3000</p>
-          </div>
-          <div className="card-sm">
-            <div className="image">
-              <img src="#" alt="1st image" />
-            </div>
-            <p>Apple watch series</p>
-            <p>Kr 3000</p>
-          </div>
-          <div className="card-sm">
-            <div className="image">
-              <img src="#" alt="1st image" />
-            </div>
-            <p>Apple watch series</p>
-            <p>Kr 3000</p>
-          </div>
+          ))}
         </div>
         <button className="btn btn-load">Load More</button>
-        {/* <i class="fa fa-redo-alt" aria-hidden="true"></i> */}
       </div>
     </section>
   );
