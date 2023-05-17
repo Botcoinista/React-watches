@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
+import UseForms from '../../hooks/UseForms';
 
 function RegisterForm({ user, setUser}) {
 
@@ -24,6 +25,8 @@ function RegisterForm({ user, setUser}) {
     profileImage: ''
   })
 
+  const { handleChange } = UseForms(formData, setFormData)
+
     //Toggle value of checkbox
     const handleTermsConditionsChange = () => {   
       setTermsConditions(state => !state)
@@ -31,14 +34,14 @@ function RegisterForm({ user, setUser}) {
   
 
 
-  const handleChange = (e) => {
-    e.preventDefault()
+  // const handleChange = (e) => {
+  //   e.preventDefault()
 
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value    
-    })
-  }
+  //   setFormData({
+  //     ...formData,
+  //     [e.target.name]: e.target.value    
+  //   })
+  // }
 
 
   const handleSubmit = async (e) => {
