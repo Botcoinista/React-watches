@@ -1,18 +1,24 @@
-import { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { useState, useEffect } from 'react'
+import { Link, useParams } from 'react-router-dom'
 
-const ProductDetailsSection = () => {
+const ProductDetailsSection = ({ product }) => {
+
+  // //If product has not been loaded
+  if(!product) return
+
+  //Otherwise show this
   return (
+    
     <div className='productDetailsSection'>
       <div className="row">
         <div className="left">
-          <div className="bigImg">
+          <div className="bigImg" style={{ backgroundImage: `url("${product.imgURL}")` }}>
           </div>
           <div className="imgCarousel">
-            <div className="smallImg"></div>
-            <div className="smallImg"></div>
-            <div className="smallImg"></div>
-            <div className="smallImg"></div>
+            <div className="smallImg" style={{ backgroundImage: `url("${product.imgURL}")` }}></div>
+            <div className="smallImg" style={{ backgroundImage: `url("${product.imgURL}")` }}></div>
+            <div className="smallImg" style={{ backgroundImage: `url("${product.imgURL}")` }}></div>
+            <div className="smallImg" style={{ backgroundImage: `url("${product.imgURL}")` }}></div>
           </div>
 
         </div>
@@ -21,8 +27,8 @@ const ProductDetailsSection = () => {
 {/* RIGHT SIDE */}
         <div className="right">
           <div className="detailsDescription">
-            <h2>Young Star Smart Watch in Fashion</h2>
-            <p>Lirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+            <h2>{product.name}</h2>
+            <p>{product.description}</p>
           </div>
           <div className="stars">
             <i className="fa-solid fa-star fa-sm"></i>
@@ -34,7 +40,7 @@ const ProductDetailsSection = () => {
 
           </div>
           <div className="price">
-            <h2>$30</h2>
+            <h2>€ {product.price}</h2>
           </div>
 
           <form className="addCartQty">
@@ -61,14 +67,14 @@ const ProductDetailsSection = () => {
 
           <div className="categories">
             <p>Category: </p>
-            <Link to='' >Rolex,</Link>
-            <Link to='' >Movado</Link>
+            <Link to='' >{product.category}</Link>
           </div>
 
 
         </div>
       </div>
     </div>
+    
   )
 }
 

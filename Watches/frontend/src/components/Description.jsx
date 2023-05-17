@@ -1,7 +1,11 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 
-const Description = () => {
+const Description = ({ product }) => {
+
+  // //If product has not been loaded
+  if(!product) return
+  
   return (
     <div className='description'>
       <div className="wrapper">
@@ -30,7 +34,7 @@ const Description = () => {
 
           </div>
           <div className="right">
-            <div className="bigImg">
+            <div className="bigImg" style={{ backgroundImage: `url("${product.imgURL}")` }}>
             </div>
 
           </div>

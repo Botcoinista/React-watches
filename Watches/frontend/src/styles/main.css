@@ -888,6 +888,7 @@
   width: 501px;
   height: 430px;
   background-color: rgba(221, 221, 221, 0.762);
+  background-size: cover;
 }
 .productDetailsSection .row .left .imgCarousel {
   display: flex;
@@ -897,6 +898,7 @@
   width: 120px;
   height: 113px;
   background-color: rgba(221, 221, 221, 0.762);
+  background-size: cover;
 }
 .productDetailsSection .row .right {
   padding-inline: 15px;
@@ -1072,6 +1074,7 @@
   width: 469px;
   height: 356px;
   background-color: rgba(221, 221, 221, 0.762);
+  background-size: cover;
 }
 
 .relatedProducts {
@@ -1099,10 +1102,10 @@
   flex: 1;
 }
 .product270 .productImg {
-  width: 270px;
   height: 295px;
   background-image: url("https://images.pexels.com/photos/2494608/pexels-photo-2494608.jpeg");
   background-size: cover;
+  background-position: center;
 }
 .product270 .title {
   padding-block: 1rem 0.5rem;
