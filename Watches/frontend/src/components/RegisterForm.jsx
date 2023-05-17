@@ -58,7 +58,7 @@ function RegisterForm({ user, setUser}) {
         setUser(res.data)
       }
   
-            localStorage.setItem('token', res.data.token)
+      localStorage.setItem('token', res.data.token)
   
       setFormData({
         firstName: '',
