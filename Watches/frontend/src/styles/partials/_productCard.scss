@@ -1,6 +1,6 @@
 @mixin productCard {
   .card-sm {
-    // border: 1px solid black;
+    border: 1px solid black;
     margin: 0.8rem 0.8rem;
     .image {
       width: 270px;
@@ -8,7 +8,7 @@
       background-color: #c5bebe;
     }
     p {
-      padding: 0.4rem 0 0 0;
+      padding: 0.5rem;
     }
   }
 }

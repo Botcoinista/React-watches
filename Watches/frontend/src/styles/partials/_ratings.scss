@@ -13,13 +13,18 @@
       gap: 1.5rem;
       margin: 4rem 0;
       .card-bg-odd {
+        cursor: pointer; 
         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
         .image {
           width: 369px;
           object-fit: cover;
           height: 295px;
           background-color: #c5bebe;
+          transition: transform 0.3s ease; 
         }
+          .image:hover {
+            transform: scale(1.1);
+          }
         .product-brief {
           background-color: $lightestGray;
           width: 369px;
