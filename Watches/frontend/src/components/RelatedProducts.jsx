@@ -6,6 +6,7 @@ import Product270 from "./Product270";
 const RelatedProducts = () => {
   const [products, setProducts] = useState([]);
 
+
   useEffect(() => {
     axios.get("http://localhost:8080/api/products").then((res) => {
       console.log(res.data.allProducts);
@@ -19,7 +20,7 @@ const RelatedProducts = () => {
         <h3>Related Products</h3>
 
         <div className="productCards">
-          {products.map((prod) => (
+          {products.slice(0, 4).map((prod) => (
             <Product270 key={prod.id} prod={prod} />
           ))}
         </div>
