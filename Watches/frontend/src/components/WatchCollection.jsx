@@ -17,6 +17,7 @@ const WatchCollection = () => {
       .catch((err) => console.log(err));
   }, []);
 
+
   return (
     <section className="watchCollection">
       <div className="container">

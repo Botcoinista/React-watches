@@ -14,6 +14,15 @@ const registerNewUser = async (req, res) => {
     });
   }
 
+  const user = await User.findOne({ email });
+
+    if (user) {
+      return res.status(409).json({
+        message: "User allready exists",
+      });
+    }
+  
+
   const salt = bcrypt.genSaltSync(10);
 
 

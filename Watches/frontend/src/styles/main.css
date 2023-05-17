@@ -331,9 +331,18 @@
   margin-bottom: 10px;
   border: none;
 }
-.registerForm #termsConditions {
+.registerForm .row {
+  display: flex;
+  align-items: center;
+}
+.registerForm .row #termsConditions {
   fill: rgb(250, 250, 250);
   width: 15px;
+  margin-bottom: 0;
+  margin-right: 0.5rem;
+}
+.registerForm .error {
+  color: #fa3150;
 }
 .registerForm #btn-submit {
   height: 50px;
