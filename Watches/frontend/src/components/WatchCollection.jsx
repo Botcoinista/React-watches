@@ -1,10 +1,9 @@
 import React from "react";
 import { useState, useEffect } from "react";
-
-
+import { AiOutlineReload } from "react-icons/ai"; //for the clock
+// import { IoReload } from "react-icons/io"; //for the clock
 
 const WatchCollection = () => {
-
   const [product, setProduct] = useState([]);
 
   useEffect(() => {
@@ -46,21 +45,21 @@ const WatchCollection = () => {
         </div>
         <div className="product-list">
           {product.map((item) => (
-            <div className="card-sm" key={item.id}>
-              <div>
+            <div className="card-sm">
+              <div key={item.id}>
                 <img className="image" src={item.imgURL} alt="1st image" />
+                <p>{item.name}</p>
+                <p>kr {item.price}</p>
               </div>
-              <p>{item.name}</p>
-              <p>{item.price}</p>
             </div>
           ))}
         </div>
-        <button className="btn btn-load">Load More</button>
+        <button className="btn btn-load">
+          <span className="btn-text">Load More</span> <AiOutlineReload />
+        </button>
       </div>
     </section>
   );
 };
 
 export default WatchCollection;
-
-
