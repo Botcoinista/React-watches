@@ -587,9 +587,14 @@
      object-fit: cover;
   height: 295px;
   background-color: #c5bebe;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+.watchCollection .container .product-list .card-sm .image:hover {
+  transform: scale(1.1);
 }
 .watchCollection .container .product-list .card-sm p {
-  padding: 0.4rem 0 0 0;
+  padding: 0.5rem;
 }
 .watchCollection .container .btn-load {
   width: 240px;
@@ -626,12 +631,17 @@
 }
 .selectedProduct .container .product-list .card-bg-odd {
   background-color: #f8f8f8;
+  cursor: pointer;
 }
 .selectedProduct .container .product-list .card-bg-odd .image {
   width: 369px;
   height: 310px;
   -o-object-fit: cover;
      object-fit: cover;
+  transition: transform 0.3s ease;
+}
+.selectedProduct .container .product-list .card-bg-odd .image:hover {
+  transform: scale(1.1);
 }
 .selectedProduct .container .product-list .card-bg-odd .product-brief {
   background-color: #F8F8F8;
@@ -713,6 +723,7 @@
   margin: 4rem 0;
 }
 .ratings .container .product-list .card-bg-odd {
+  cursor: pointer;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 .ratings .container .product-list .card-bg-odd .image {
@@ -721,6 +732,10 @@
      object-fit: cover;
   height: 295px;
   background-color: #c5bebe;
+  transition: transform 0.3s ease;
+}
+.ratings .container .product-list .card-bg-odd .image:hover {
+  transform: scale(1.1);
 }
 .ratings .container .product-list .card-bg-odd .product-brief {
   background-color: #F8F8F8;
@@ -791,6 +806,7 @@
 }
 
 .productCard .card-sm {
+  border: 1px solid black;
   margin: 0.8rem 0.8rem;
 }
 .productCard .card-sm .image {
@@ -799,7 +815,7 @@
   background-color: #c5bebe;
 }
 .productCard .card-sm p {
-  padding: 0.4rem 0 0 0;
+  padding: 0.5rem;
 }
 
 .productDetailsHero {
@@ -1071,6 +1087,7 @@
   flex: 1;
 }
 .product270 .productImg {
+  width: 270px;
   height: 295px;
   background-image: url("https://images.pexels.com/photos/2494608/pexels-photo-2494608.jpeg");
   background-size: cover;
