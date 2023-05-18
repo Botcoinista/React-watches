@@ -1,12 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
+import UseForms from '../hooks/UseForms'
 
 function RegisterForm({ user, setUser}) {
 
   const navigate = useNavigate()
 
   const [termsConditions, setTermsConditions] = useState(false);
+
+  const [error, setError] = useState(null)
 
   useEffect(() => {console.log(termsConditions)}, [termsConditions])
   
@@ -24,57 +27,62 @@ function RegisterForm({ user, setUser}) {
     profileImage: ''
   })
 
+  const { handleChange } = UseForms(formData, setFormData)
+
     //Toggle value of checkbox
     const handleTermsConditionsChange = () => {   
       setTermsConditions(state => !state)
     };
-  
-
-
-  const handleChange = (e) => {
-    e.preventDefault()
-
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value    
-    })
-  }
-
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    // Add form submission logic here
+    setError(null)
 
     if(termsConditions == false) {
       console.log('You have to accept terms and conditions.')
+      setError('You have to accept terms and conditions.')
       return
     }
 
     if(password.value !== confirmPassword.value) {
       console.log('Passwords does not match.')
+      setError('Passwords does not match.')
       return
     }
 
-    const res = await axios.post('http://localhost:8080/api/users/register', formData)
+    try {
+      const res = await axios.post('http://localhost:8080/api/users/register', formData)
+  
+  
+      if(res.data) {
+        setUser(res.data)
+      }
+  
+      localStorage.setItem('token', res.data.token)
+  
+      setFormData({
+        firstName: '',
+        lastName: '',
+        streetName: '',
+        postalCode: '',
+        city: '',
+        mobile: '',
+        company: '',
+        email: '',
+        password: '',
+        confirmPassword: '',
+        profileImage: ''
+      })
+      navigate('/')
 
-    console.log(res)
-    if(res.data) {
-      setUser(res.data)
+    } catch (err) {
+      console.log(err)
+
+      if(err.response.status == 409) {
+        console.log('User allready exists')
+        setError('User allready exists')
+      }
     }
-    setFormData({
-      firstName: '',
-      lastName: '',
-      streetName: '',
-      postalCode: '',
-      city: '',
-      mobile: '',
-      company: '',
-      email: '',
-      password: '',
-      confirmPassword: '',
-      profileImage: ''
-    })
-    navigate('/')
 
   };
 
@@ -197,15 +205,19 @@ function RegisterForm({ user, setUser}) {
             onChange={handleChange}
           />
   
-          <label></label>
-            <input
-              type="checkbox"
-              id="termsConditions"
-              name="termsConditions"
-              checked={termsConditions}
-              onChange={handleTermsConditionsChange}
-            />
-            <span>I have read and accept the terms and agreements</span>
+          <div className="row">
+            <label></label>
+              <input
+                type="checkbox"
+                id="termsConditions"
+                name="termsConditions"
+                checked={termsConditions}
+                onChange={handleTermsConditionsChange}
+              />
+              <span>I have read and accept the terms and agreements</span>
+
+          </div>
+          <p className='error'>{error}</p>
           
   
           <button type="submit" id="btn-submit">Submit</button>

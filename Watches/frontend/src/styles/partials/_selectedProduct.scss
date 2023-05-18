@@ -14,14 +14,24 @@
       gap: 1.5rem;
       margin: 4rem 0;
       .card-bg-odd {
+        background-color: #f8f8f8;
+        cursor: pointer;
         .image {
           width: 369px;
           height: 310px;
-          background-color: #c5bebe;
+          // width: 100%;
+          // height: 100%;
+          object-fit: cover;
+          // background-color: #c5bebe;       
+            transition: transform 0.3s ease;      
         }
+        .image:hover {
+          transform: scale(1.1);
+        }
+
         .product-brief {
           background-color: $lightestGray;
-          height: 7rem;
+          // height: 7rem;
           padding: 0 1rem;
           .p-text {
             padding: 1rem 0;
@@ -31,17 +41,26 @@
             justify-content: space-between;
             border-top: 1px solid #ece9e9;
             color: #888181;
-            .p-price {
-              display: flex;
-              padding: 0.8rem 0;
-              text-align: center;
-              .p1 {
+
+            .p-next {
+              margin: 1rem 0;
+
+              del {
                 margin-right: 2rem;
-                text-decoration: line-through;
               }
             }
           }
         }
+      }
+
+      .btn-cart {
+        border: none;
+        background-color: inherit;
+        cursor: pointer;
+        // display: none;
+      }
+      .card-bg-odd:hover .btn-cart {
+        display: inline;
       }
       .card-bg-even {
         width: 369px;

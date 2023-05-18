@@ -16,3 +16,4 @@ const RootLayout = ({ user, setUser }) => {
 }
 
 export default RootLayout
+
