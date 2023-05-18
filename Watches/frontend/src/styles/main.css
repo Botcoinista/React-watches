@@ -301,7 +301,7 @@
 }
 
 .registerForm {
-  height: 478px;
+  height: 1300px;
   width: 1138px;
   background-color: #fff;
   box-shadow: 0 0 30px #f8f8f8;
@@ -314,13 +314,14 @@
   font-weight: 400;
   position: relative;
   font-family: var(--body-font);
-  margin-top: 31rem;
-  margin-bottom: 38rem;
+  margin-top: 10rem;
+  left: 20%;
 }
 .registerForm form {
   display: flex;
   flex-direction: column;
-  align-items: start;
+  align-items: left;
+  justify-content: center;
 }
 .registerForm label {
   margin-bottom: 10px;
@@ -481,7 +482,8 @@
   font-weight: bold;
 }
 .shoppingCart .clear-cart-btn,
-.shoppingCart .checkout-btn {
+.shoppingCart .checkout-btn,
+.shoppingCart .continue-btn {
   display: inline-block;
   align-items: space-between;
   border: none;
@@ -494,13 +496,19 @@
   transition: background-color 0.3s ease;
 }
 .shoppingCart .clear-cart-btn:hover,
-.shoppingCart .checkout-btn:hover {
+.shoppingCart .checkout-btn:hover,
+.shoppingCart .continue-btn:hover {
   background-color: #27ae60;
 }
 .shoppingCart .clear-cart-btn + .shoppingCart .clear-cart-btn,
 .shoppingCart .clear-cart-btn + .shoppingCart .checkout-btn,
+.shoppingCart .clear-cart-btn + .shoppingCart .continue-btn,
 .shoppingCart .checkout-btn + .shoppingCart .clear-cart-btn,
-.shoppingCart .checkout-btn + .shoppingCart .checkout-btn {
+.shoppingCart .checkout-btn + .shoppingCart .checkout-btn,
+.shoppingCart .checkout-btn + .shoppingCart .continue-btn,
+.shoppingCart .continue-btn + .shoppingCart .clear-cart-btn,
+.shoppingCart .continue-btn + .shoppingCart .checkout-btn,
+.shoppingCart .continue-btn + .shoppingCart .continue-btn {
   margin-left: 10px;
 }
 
