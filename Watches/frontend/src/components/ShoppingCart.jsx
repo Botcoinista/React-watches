@@ -6,17 +6,23 @@ import axios from 'axios';
 const ShoppingCart = () => {
   const [items, setItems] = useState([]);
 
+  const [products, setProducts] = useState()
+
   useEffect(() => {
-    axios.get('http://localhost:8080/watch/products') //Is this right??
+    axios.get('http://localhost:8080/api/products') //Is this right??
       .then((res) => {
         const responseData = res.data;
-        console.log(responseData); // Log the response data
-        setProducts(responseData); // Update the products state with the response data
+        setProducts(responseData.allProducts); // Update the products state with the response data
+
       })
       .catch((err) => {
         console.log('Error retrieving data:', err); 
       });
   }, []);
+
+  useEffect(() => {
+    console.log(products)
+  }, [products])
   
 
   //Add a item to the cart, if the item already exists in the cart, increase the quantity by 1
@@ -71,17 +77,17 @@ const calculateTotal = () => {
       <h2 className="cart-title">Shopping Cart</h2>
       <h2 className="item-count">Items in Cart: {items.length}</h2>
       <div className="item-list">
-        {items.map((item) => (
-          <div className="item-card" key={item.id}>
-            <img className="item-image" src={item.image} alt={item.name} />
-            <h3 className="item-name">{item.name}</h3>
+        { products && products.map((product) => (
+          <div className="item-card" key={product._id}>
+            <img className="item-image" src={product.imgURL} alt={product.name} />
+            <h3 className="item-name">{product.name}</h3>
             <div className="item-details">
-              <button className="quantity-btn" onClick={() => decreaseQuantity(item)}>-</button>
-              <span className="item-quantity">{item.quantity}</span>
-              <button className="quantity-btn" onClick={() => addToCart(item)}>+</button>
-              <button className="remove-btn" onClick={() => removeFromCart(item)}>Remove</button>
+              <button className="quantity-btn" onClick={() => decreaseQuantity(product)}>-</button>
+              <span className="item-quantity">{product.quantity}</span>
+              <button className="quantity-btn" onClick={() => addToCart(product)}>+</button>
+              <button className="remove-btn" onClick={() => removeFromCart(product)}>Remove</button>
             </div>
-            <p className="item-price">${item.price}</p>
+            <p className="item-price">${product.price}</p>
           </div>
         ))}
       </div>
