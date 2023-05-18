@@ -6,9 +6,11 @@ import RelatedProducts from '../components/RelatedProducts'
 import FeaturedProducts from '../components/FeaturedProducts'
 import { useParams } from 'react-router-dom'
 
+
 const ProductDetails = () => {
 
   const { id } = useParams()
+
 
   const [product, setProduct] = useState(null)
 

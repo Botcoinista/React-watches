@@ -4,7 +4,7 @@ const FeaturedProducts = () => {
   return (
     <div className='featuredProducts'>
 
-      <i class="fa-solid fa-angle-left fa-sm"></i>
+      <i className="fa-solid fa-angle-left fa-sm"></i>
 
       <div className="wrapper">
         <div className="imgDiv"></div>
@@ -15,7 +15,7 @@ const FeaturedProducts = () => {
 
       </div>
 
-      <i class="fa-solid fa-chevron-right fa-sm"></i>
+      <i className="fa-solid fa-chevron-right fa-sm"></i>
 
     </div>
   )
