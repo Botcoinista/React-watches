@@ -1,6 +1,6 @@
 @mixin registerForm {
   
-    height: 478px;
+    height: 1300px;
     width: 1138px;
     background-color: #fff;
     box-shadow: 0 0 30px #f8f8f8;
@@ -13,13 +13,15 @@
     font-weight: 400;
     position: relative;
     font-family: var(--body-font);
-    margin-top: 31rem;
-    margin-bottom: 38rem;
+    margin-top: 10rem;
+    left:20%;
+   
   
     form {
       display: flex;
       flex-direction: column;
-      align-items: start;
+      align-items: left;
+      justify-content: center;
       }
   
       label {
