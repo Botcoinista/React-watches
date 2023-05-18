@@ -593,6 +593,10 @@
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   cursor: pointer;
 }
+.watchCollection .container .product-list .card-sm a {
+  text-decoration: none;
+  color: black;
+}
 .watchCollection .container .product-list .card-sm .image {
   width: 270px;
   -o-object-fit: cover;
