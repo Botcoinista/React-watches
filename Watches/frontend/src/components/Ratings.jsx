@@ -17,7 +17,7 @@ const Ratings = () => {
       <div className="container">
         <div className="product-list">
           {product.slice(0, 3).map((item) => (
-            <div className="card-bg-odd" key={item.id}>
+            <div className="card-bg-odd" key={item._id}>
               <div>
                 <img className="image" src={item.imgURL} alt={item.name} />
               </div>
