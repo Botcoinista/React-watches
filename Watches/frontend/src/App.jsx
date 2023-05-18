@@ -7,6 +7,7 @@ import Login from './pages/Login'
 import Contact from './pages/Contact'
 import Registration from './pages/Registration'
 import Cart from './pages/Cart'
+import Counter from './components/Counter'
 
 const App = () => {
 
@@ -42,10 +43,14 @@ const App = () => {
 
           element: <Registration user={user} setUser={setUser}/>
         },
-      {
-        path: '/cart',
-        element: <Cart />
-      }
+        {
+          path: '/cart',
+          element: <Cart />
+        },
+        {
+          path: '/counter',
+          element: <Counter />
+        },
       ]
     }
   ])

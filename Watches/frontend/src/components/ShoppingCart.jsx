@@ -26,15 +26,17 @@ const ShoppingCart = () => {
   
 
   //Add a item to the cart, if the item already exists in the cart, increase the quantity by 1
-  const addToCart = (item) => {
-    const existingItem = items.find((cartItem) => cartItem.id === item.id);
-    if (existingItem) {
-      const updatedItems = items.map((cartItem) => 
-      cartItem.id === item.id ? { ...cartItem, quantity: cartItem.quantity + 1 } : cartItem
+  const addToCart = (product) => {
+    //Existing product = serhing in products[]
+    const existingProduct = products.find((cartProduct) => cartProduct._id === product._id);
+    if (existingProduct) {
+
+      const updatedProducts = products.map((cartProduct) => 
+      cartProduct._id === product._id ? { ...cartProduct, quantity: cartProduct.quantity + 1 } : cartProduct
       );
-      setItems(updatedItems);
+      setItems(updatedProducts);
       } else {
-        setItems([...items, { ...item, quantity: 1 }]);
+        setItems([...items, { ...product, quantity: 1 }]);
       }
 };
 
