@@ -166,6 +166,9 @@
 .loginForm form label {
   margin-bottom: 10px;
 }
+.loginForm form .error {
+  color: #fa3150;
+}
 .loginForm form #btn-submit {
   height: 50px;
   width: 142px;
