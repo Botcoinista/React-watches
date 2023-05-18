@@ -649,6 +649,10 @@
   background-color: #f8f8f8;
   cursor: pointer;
 }
+.selectedProduct .container .product-list .card-bg-odd a {
+  text-decoration: none;
+  color: black;
+}
 .selectedProduct .container .product-list .card-bg-odd .image {
   width: 369px;
   height: 310px;
@@ -741,6 +745,10 @@
 .ratings .container .product-list .card-bg-odd {
   cursor: pointer;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.ratings .container .product-list .card-bg-odd a {
+  text-decoration: none;
+  color: black;
 }
 .ratings .container .product-list .card-bg-odd .image {
   width: 369px;
