@@ -21,7 +21,7 @@ const ProductDetails = () => {
         setProduct(data)
       })
       .catch((err) => console.log(err));
-  }, []);
+  }, [id]);
 
   return (
     <div className='productDetails'>

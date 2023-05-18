@@ -8,7 +8,7 @@ const ProductCard = ({ item }) => {
           <img className="image" src={item.imgURL} alt={item.name} />
         </div>
         <p>{item.name}</p>
-        <p>{item.price}</p>
+        <p> € {item.price}</p>
       </div>
     </div>
   );

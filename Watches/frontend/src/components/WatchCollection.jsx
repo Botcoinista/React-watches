@@ -1,6 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import { AiOutlineReload } from "react-icons/ai"; //for the clock
+import { Link } from "react-router-dom";
 // import { IoReload } from "react-icons/io"; //for the clock
 
 const WatchCollection = () => {
@@ -15,7 +16,6 @@ const WatchCollection = () => {
       })
       .catch((err) => console.log(err));
   }, []);
-
 
   return (
     <section className="watchCollection">
@@ -45,11 +45,14 @@ const WatchCollection = () => {
         </div>
         <div className="product-list">
           {product.map((item) => (
-            <div className="card-sm">
-              <div key={item.id}>
-                <img className="image" src={item.imgURL} alt="1st image" />
-                <p>{item.name}</p>
-                <p>kr {item.price}</p>
+            // console.log(item._id)
+            <div className="card-sm" key={item._id}>
+              <div>
+                <Link to={`/products/${item._id}`}>
+                  <img className="image" src={item.imgURL} alt="1st image" />
+                  <p>{item.name}</p>
+                  <p>€ {item.price}</p>
+                </Link>
               </div>
             </div>
           ))}

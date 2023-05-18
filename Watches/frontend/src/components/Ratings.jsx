@@ -19,21 +19,21 @@ const Ratings = () => {
         <div className="product-list">
           {product.slice(0, 3).map((item) => (
             <div className="card-bg-odd" key={item._id}>
-              <div>
-              <Link to={`/product/${item._id}`}>
-                <img className="image" src={item.imgURL} alt={item.name} />
-              </Link >
-              </div>
-              <div className="product-brief">
-                <p className="p-text">{item.name}</p>
-                <p className="p-desc">{item.description}</p>
-                <div className="text-lower">
-                  <div className="p-price">
-                    <p className="p1">Post By: Admin</p>
-                    <p className="p2">Comments 13</p>
+              <Link to={`/products/${item._id}`}>
+                <div>
+                  <img className="image" src={item.imgURL} alt={item.name} />
+                </div>
+                <div className="product-brief">
+                  <p className="p-text">{item.name}</p>
+                  <p className="p-desc">{item.description}</p>
+                  <div className="text-lower">
+                    <div className="p-price">
+                      <p className="p1">Post By: Admin</p>
+                      <p className="p2">Comments 13</p>
+                    </div>
                   </div>
                 </div>
-              </div>
+              </Link>
             </div>
           ))}
         </div>

@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 
 const Product270 = ({ prod }) => {
 
+
   
   return (
     <div className='product270'>
@@ -10,7 +11,7 @@ const Product270 = ({ prod }) => {
       style={{ backgroundImage: `url("${prod.imgURL}")` }}
       ></div>
       <div className='title'>
-        <Link>{ prod.name }</Link>
+        <Link to={`/products/${prod._id}`}>{ prod.name }</Link>
       </div>
       <div className='price'>
         <p>€ {prod.price}</p>
