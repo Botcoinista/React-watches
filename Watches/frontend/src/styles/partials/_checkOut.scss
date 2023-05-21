@@ -4,7 +4,7 @@
     justify-content: center;
 
     .cart-summary {
-        margin: 0 1rem auto 1rem;
+        margin: 3rem 2rem auto 1rem;
         background-color: #f8f9fa;
         padding: 40px;
         box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
@@ -12,6 +12,7 @@
       }
       
       .address-fields {
+        margin-top: 3rem;
         padding: 20px;
         box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
         text-align: start;
