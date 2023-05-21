@@ -6,13 +6,15 @@ import RelatedProducts from '../components/RelatedProducts'
 import FeaturedProducts from '../components/FeaturedProducts'
 import { useParams } from 'react-router-dom'
 
+
 const ProductDetails = () => {
 
   const { id } = useParams()
 
+
   const [product, setProduct] = useState(null)
 
-  console.log('Här är ett id:' +id)
+  console.log('Här är ett id:' + id)
 
   useEffect(() => {
     fetch("http://localhost:8080/api/products/" + id)
@@ -21,7 +23,7 @@ const ProductDetails = () => {
         setProduct(data)
       })
       .catch((err) => console.log(err));
-  }, []);
+  }, [id]);
 
   return (
     <div className='productDetails'>

@@ -45,17 +45,23 @@
         margin-left: 0.8rem;
         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
         cursor: pointer;
+
+        a {
+          text-decoration: none;
+          color: black;
+        }
+
         .image {
           width: 270px;
           object-fit: cover;
           height: 295px;
           background-color: #c5bebe;
-          transition: transform 0.3s ease;  
+          transition: transform 0.3s ease;
           cursor: pointer;
         }
-          .image:hover {
-            transform: scale(1.1);
-          }
+        .image:hover {
+          transform: scale(1.1);
+        }
         p {
           padding: 0.5rem;
         }

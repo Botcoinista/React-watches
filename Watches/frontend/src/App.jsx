@@ -8,39 +8,39 @@ import Contact from './pages/Contact'
 import Registration from './pages/Registration'
 import Cart from './pages/Cart'
 import Checkout from './pages/Checkout'
+import Counter from './components/Counter'
+
 
 const App = () => {
-
-  const [user, setUser] = useState(null)
+  const [user, setUser] = useState(null);
 
   const router = createBrowserRouter([
     {
-      path: '/',
-      element: <RootLayout user={user} setUser={setUser}/>,
+      path: "/",
+      element: <RootLayout user={user} setUser={setUser} />,
       children: [
         {
-          path: '/',
-          element: <Home user={user}/>
+          path: "/",
+          element: <Home user={user} />,
         },
         {
-          path: '/products',
-          element: <ProductDetails />
+          path: "/products",
+          element: <ProductDetails />,
         },
         {
-          path: '/products/:id',
-          element: <ProductDetails />
+          path: "/products/:id",
+          element: <ProductDetails />,
         },
         {
-          path: '/login',
-          element: <Login user={user} setUser={setUser} />
+          path: "/login",
+          element: <Login user={user} setUser={setUser} />,
         },
         {
-          path: '/contact',
-          element: <Contact />
+          path: "/contact",
+          element: <Contact />,
         },
         {
-          path: '/registration',
-
+          path: "/registration",
           element: <Registration user={user} setUser={setUser}/>
         },
       {
@@ -50,14 +50,17 @@ const App = () => {
     {
       path: '/checkout',
       element: <Checkout />
-    }
-      ]
-    }
-  ])
+    },
+      {
+          path: "/counter",
+          element: <Counter />,
+        },
+      ],
+    },
+  ]);
 
-  return (
-    <RouterProvider router={router} />
-  )
-}
 
-export default App
+  return <RouterProvider router={router} />;
+};
+
+export default App;

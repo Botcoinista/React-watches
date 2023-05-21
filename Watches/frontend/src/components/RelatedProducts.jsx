@@ -21,7 +21,7 @@ const RelatedProducts = () => {
 
         <div className="productCards">
           {products.slice(0, 4).map((prod) => (
-            <Product270 key={prod.id} prod={prod} />
+            <Product270 key={prod._id} prod={prod} />
           ))}
         </div>
       </div>

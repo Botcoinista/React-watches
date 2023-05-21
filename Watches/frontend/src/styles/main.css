@@ -662,6 +662,10 @@
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   cursor: pointer;
 }
+.watchCollection .container .product-list .card-sm a {
+  text-decoration: none;
+  color: black;
+}
 .watchCollection .container .product-list .card-sm .image {
   width: 270px;
   -o-object-fit: cover;
@@ -713,6 +717,10 @@
 .selectedProduct .container .product-list .card-bg-odd {
   background-color: #f8f8f8;
   cursor: pointer;
+}
+.selectedProduct .container .product-list .card-bg-odd a {
+  text-decoration: none;
+  color: black;
 }
 .selectedProduct .container .product-list .card-bg-odd .image {
   width: 369px;
@@ -806,6 +814,10 @@
 .ratings .container .product-list .card-bg-odd {
   cursor: pointer;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.ratings .container .product-list .card-bg-odd a {
+  text-decoration: none;
+  color: black;
 }
 .ratings .container .product-list .card-bg-odd .image {
   width: 369px;

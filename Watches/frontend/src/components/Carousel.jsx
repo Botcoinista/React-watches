@@ -48,6 +48,7 @@ const Carousel = () => {
         </h4>
         <div className="product-container" ref={containerRef}>
           {product.map((item) => (
+            
             <ProductCard key={item.id} item={item} />
           ))}
         </div>
