@@ -7,7 +7,9 @@ import Login from './pages/Login'
 import Contact from './pages/Contact'
 import Registration from './pages/Registration'
 import Cart from './pages/Cart'
+import Checkout from './pages/Checkout'
 import Counter from './components/Counter'
+
 
 const App = () => {
   const [user, setUser] = useState(null);
@@ -39,20 +41,24 @@ const App = () => {
         },
         {
           path: "/registration",
-
-          element: <Registration user={user} setUser={setUser} />,
+          element: <Registration user={user} setUser={setUser}/>
         },
-        {
-          path: "/cart",
-          element: <Cart />,
-        },
-        {
+      {
+        path: '/cart',
+        element: <Cart />
+      },
+    {
+      path: '/checkout',
+      element: <Checkout />
+    },
+      {
           path: "/counter",
           element: <Counter />,
         },
       ],
     },
   ]);
+
 
   return <RouterProvider router={router} />;
 };
