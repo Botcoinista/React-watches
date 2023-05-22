@@ -1,5 +1,5 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import { useState} from 'react'
+import { useState, useEffect} from 'react'
 import RootLayout from './layouts/RootLayout'
 import Home from './pages/Home'
 import ProductDetails from './pages/ProductDetails'
@@ -10,10 +10,10 @@ import Cart from './pages/Cart'
 import Checkout from './pages/Checkout'
 import Counter from './components/Counter'
 
-
 const App = () => {
 
   const [user, setUser] = useState(null)
+
 
   const router = createBrowserRouter([
     {

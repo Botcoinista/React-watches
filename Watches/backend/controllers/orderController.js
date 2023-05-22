@@ -9,7 +9,11 @@ router.post('/', auth.verifyToken, orderModel.createNewOrder)
 
 
 //Get all orders, if user is logged in, send token
-router.get('/orders', auth.verifyToken, orderModel.getOrdersByUser)
+router.get('/byid', auth.verifyToken, orderModel.getOrdersByUser)
+
+//Get all orders from all users
+
+//Delete order by id
 
 
 //Export router
