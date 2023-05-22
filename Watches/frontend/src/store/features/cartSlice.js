@@ -22,10 +22,22 @@ export const cartSlice = createSlice({
             ? itemRef.quantity += 1
             //If it doesnt exist, spread out the obj in the cart and add an object from payload.
             : state.cart = [...state.cart, { product: action.payload, quantity: 1 }]
+        },
+        removeOneItem: (state, action) => {
+            const itemRef = state.cart.find(item => item.product._id === action.payload._id)
+
+            itemRef.quantity < 2
+            //Keeps all that does not match the id of the selected product.
+            ? state.cart = state.cart.filter(item => item.product._id !== action.payload._id)
+            : itemRef.quantity -= 1
+
+        },
+        removeFromCart: (state, action) => {
+            state.cart = state.cart.filter(item => item.product._id !== action.payload._id)
         }
     }
 })
 
-export const { addToCart } = cartSlice.actions
+export const { addToCart, removeOneItem, removeFromCart } = cartSlice.actions
 
 export default cartSlice.reducer
