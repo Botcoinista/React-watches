@@ -1,35 +1,24 @@
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { useSelector, useDispatch } from 'react-redux'
 import { increment, decrement } from '../store/features/counterSlice'
+import { addToCart } from '../store/features/cartSlice'
 
 
 const ProductDetailsSection = ({ product }) => {
 
   const { value } = useSelector(state => state.counter)
 
-  const cartArray = []
-  const [cart, setCart] = useState([])
-
   const dispatch = useDispatch()
 
-  const handleSubmit = (e) => {
+  const addProductToCart = (e) => {
     e.preventDefault()
-    console.log(product._id, value)
-    setCart(
-      {
-        _id: product._id,
-        quantity: value
-      }
-    )
+    // console.log(product._id, value)
+  
+    
+    dispatch(addToCart(product))
+
   }
-
-  useEffect(() => {
-    cartArray.push(cart)
-    console.log(cartArray)
-
-  }, [cart])
-
 
   // //If product has not been loaded
   if(!product) return
@@ -71,7 +60,7 @@ const ProductDetailsSection = ({ product }) => {
             <h2>€ {product.price}</h2>
           </div>
 
-          <form className="addCartQty" onSubmit={handleSubmit}>
+          <form className="addCartQty" onSubmit={addProductToCart}>
             <div className="qty">
               <button onClick={(e) => { e.preventDefault(); dispatch(decrement()); }}>-</button>
               <input type="number" value={value} />

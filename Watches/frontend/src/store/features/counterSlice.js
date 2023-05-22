@@ -22,6 +22,7 @@ export const counterSlice = createSlice({
     }
 })
 
+//Here we are exporting the actions/functionality
 export const { increment, decrement } = counterSlice.actions
 
 //Exporting reducer - Should be imported to store/index.
