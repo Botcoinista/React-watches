@@ -7,7 +7,9 @@ import Login from './pages/Login'
 import Contact from './pages/Contact'
 import Registration from './pages/Registration'
 import Cart from './pages/Cart'
+import Checkout from './pages/Checkout'
 import Counter from './components/Counter'
+
 
 const App = () => {
 
@@ -46,11 +48,11 @@ const App = () => {
         {
           path: '/cart',
           element: <Cart />
-        },
+        },  
         {
-          path: '/counter',
-          element: <Counter />
-        },
+          path: '/checkout',
+          element: <Checkout />
+        }
       ]
     }
   ])

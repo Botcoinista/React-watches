@@ -1,8 +1,7 @@
-import React from "react";
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { AiOutlineReload } from "react-icons/ai"; //for the clock
 import { Link } from "react-router-dom";
-// import { IoReload } from "react-icons/io"; //for the clock
+
 
 const WatchCollection = () => {
   const [product, setProduct] = useState([]);
@@ -45,7 +44,6 @@ const WatchCollection = () => {
         </div>
         <div className="product-list">
           {product.map((item) => (
-            // console.log(item._id)
             <div className="card-sm" key={item._id}>
               <div>
                 <Link to={`/products/${item._id}`}>

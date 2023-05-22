@@ -18,9 +18,9 @@
 @import "./partials/featuredProducts";
 @import "./partials/subscription";
 @import "./partials/shoppingCart";
-
 @import "./partials/carousel";
 @import "./partials/productCard";
+@import "./partials/checkOut";
 * {
   margin: 0;
   padding: 0;
@@ -62,6 +62,10 @@
 
 .shoppingCart {
   @include shoppingCart;
+}
+
+.checkOut {
+  @include checkOut;
 }
 
 //Shahriar
