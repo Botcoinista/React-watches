@@ -19,7 +19,9 @@ exports.verifyToken = (req, res, next) => {
   //Bearer token
   try {
     const token = req.headers.authorization.split(" ")[1];
-    req.userData = jwt.verify(token, secretKey);
+    //To get out the id from the decrypted token
+    req.userId = jwt.verify(token, secretKey)._id;
+
     next();
 
   } catch (err) {
@@ -34,3 +36,16 @@ exports.verifyToken = (req, res, next) => {
     });
   }
 };
+
+//UserIds that are admins.
+const admins = ['646b48a853c673e7aed3d80f']
+//req.userId comes from verifyToken
+exports.checkAdmin = (req, res, next) => {
+    if(admins.includes(req.userId)) {
+        next()
+    }
+    else {
+        return res.status(401).json({ message: 'You need be an admin to have access to this.'})
+    }
+}
+
