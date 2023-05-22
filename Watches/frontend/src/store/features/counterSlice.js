@@ -15,6 +15,9 @@ export const counterSlice = createSlice({
         },
         decrement: (state, action) => {
             state.value -= 1
+            if (state.value < 0) { //If the value is less than 0, set it to 0.
+                state.value = 0;
+            }
         }
     }
 })

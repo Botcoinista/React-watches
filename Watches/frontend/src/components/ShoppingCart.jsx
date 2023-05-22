@@ -9,7 +9,9 @@ const ShoppingCart = () => {
   const [products, setProducts] = useState()
 
   useEffect(() => {
-    axios.get('http://localhost:8080/api/products') //Is this right??
+
+    axios.get('http://localhost:8080/api/products') 
+
       .then((res) => {
         const responseData = res.data;
         setProducts(responseData.allProducts); // Update the products state with the response data
@@ -95,8 +97,8 @@ const calculateTotal = () => {
       </div>
       <p className="total-price">Total Price: ${calculateTotal()}</p>
       <button className="clear-cart-btn" onClick={() => setItems([])}>Clear Cart</button>
-      <button className="checkout-btn">Proceed to Checkout</button>
-      <button className="continue-btn">Continue Shopping</button>
+      <NavLink to="/checkout" className="checkout-btn">Proceed to Checkout</NavLink>
+     <button className="continue-btn">Continue Shopping</button>
     </div>
     </div>
   );
