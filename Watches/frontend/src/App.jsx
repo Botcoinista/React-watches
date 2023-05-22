@@ -10,51 +10,54 @@ import Cart from './pages/Cart'
 import Counter from './components/Counter'
 
 const App = () => {
-  const [user, setUser] = useState(null);
+
+  const [user, setUser] = useState(null)
 
   const router = createBrowserRouter([
     {
-      path: "/",
-      element: <RootLayout user={user} setUser={setUser} />,
+      path: '/',
+      element: <RootLayout user={user} setUser={setUser}/>,
       children: [
         {
-          path: "/",
-          element: <Home user={user} />,
+          path: '/',
+          element: <Home user={user}/>
         },
         {
-          path: "/products",
-          element: <ProductDetails />,
+          path: '/products',
+          element: <ProductDetails />
         },
         {
-          path: "/products/:id",
-          element: <ProductDetails />,
+          path: '/products/:id',
+          element: <ProductDetails />
         },
         {
-          path: "/login",
-          element: <Login user={user} setUser={setUser} />,
+          path: '/login',
+          element: <Login user={user} setUser={setUser} />
         },
         {
-          path: "/contact",
-          element: <Contact />,
+          path: '/contact',
+          element: <Contact />
         },
         {
-          path: "/registration",
+          path: '/registration',
 
-          element: <Registration user={user} setUser={setUser} />,
+          element: <Registration user={user} setUser={setUser}/>
         },
         {
-          path: "/cart",
-          element: <Cart />,
+          path: '/cart',
+          element: <Cart />
         },
         {
-          path: "/counter",
-          element: <Counter />,
+          path: '/counter',
+          element: <Counter />
         },
-      ],
-    },
-  ]);
+      ]
+    }
+  ])
 
-  return <RouterProvider router={router} />;
-};
+  return (
+    <RouterProvider router={router} />
+  )
+}
 
-export default App;
+export default App
