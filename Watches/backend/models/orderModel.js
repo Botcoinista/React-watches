@@ -102,11 +102,32 @@ const getAllOrders = async (req, res) => {
   }
 };
 
+//PUT
+const updateOrder = async (req, res) => {
+  const { pending }= req.body
+  try {
+   const updatedOrder = await Order.findByIdAndUpdate(req.params.id, { pending }, { new: true })
+
+   if(!updatedOrder) { 
+        res.status(404).json({ message: 'Could not find any product with this id' })
+        return
+      }
+      res.status(201).json(updatedOrder)
+
+  } catch (err) {
+    res.status(500).json({
+      message: "An error occurred while update the order",
+      err: err.message,
+    });
+  }
+}
+
 
 
 //Export modules
 module.exports = {
   createNewOrder,
   getOrdersByUser,
-  getAllOrders
+  getAllOrders,
+  updateOrder
 };
