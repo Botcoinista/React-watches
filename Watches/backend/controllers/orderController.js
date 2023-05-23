@@ -14,12 +14,11 @@ router.get('/bytoken', auth.verifyToken, orderModel.getOrdersByUser)
 //Get all orders from all users
 router.get('/', auth.verifyToken, auth.checkAdmin, orderModel.getAllOrders)
 
-//Get order by id
-router.get('/', auth.verifyToken, auth.checkAdmin, orderModel.getAllOrders)
-
 //Update order
 router.patch('/:id', orderModel.updateOrder)
 
+//Get Single Order
+router.get('/:id', auth.verifyToken, auth.checkAdmin, orderModel.getSingleOrder)
 
 //Delete order by id
 

@@ -43,7 +43,7 @@ const WatchCollection = () => {
           </ul>
         </div>
         <div className="product-list">
-          {product.map((item) => (
+          {product.slice(0,8).map((item) => (
             <div className="card-sm" key={item._id}>
               <div>
                 <Link to={`/products/${item._id}`}>
