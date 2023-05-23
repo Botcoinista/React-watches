@@ -7,13 +7,13 @@ const Product = require("../schemas/productSchema");
 //Create a new order if the user is logged in
 const createNewOrder = async (req, res) => {
   try {
-    if (!req.userData || !req.userData._id) {
+    if (!req.userId) {
       return res.status(401).json({
         message: "Unauthorized",
       });
     }
 
-    const user = await User.findById(req.userData._id);
+    const user = await User.findById(req.userId);
 
     if (!user) {
       return res.status(404).json({
@@ -67,12 +67,11 @@ const createNewOrder = async (req, res) => {
   }
 };
 
-
-
 //Get all orders for a specific user
 const getOrdersByUser = async (req, res) => {
+  console.log(req)
   try {
-    const userId = req.userData._id;
+    const userId = req.userId;
 
     const orders = await Order.find({ user: userId }).populate({
       path: "orderLines.product",
@@ -87,9 +86,27 @@ const getOrdersByUser = async (req, res) => {
   }
 };
 
+//Get all orders for a specific user
+const getAllOrders = async (req, res) => {
+  try {
+    const allOrders = await Order.find().populate({
+      path: "orderLines.product user",
+      select: "name price _id email",
+    });
+    return res.status(200).json(allOrders);
+
+  } catch (error) {
+    return res.status(500).json({
+      message: "Error getting orders",
+    });
+  }
+};
+
+
 
 //Export modules
 module.exports = {
   createNewOrder,
   getOrdersByUser,
+  getAllOrders
 };

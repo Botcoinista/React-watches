@@ -12,6 +12,11 @@ router.post('/', auth.verifyToken, orderModel.createNewOrder)
 router.get('/byid', auth.verifyToken, orderModel.getOrdersByUser)
 
 //Get all orders from all users
+router.get('/', orderModel.getAllOrders)
+
+//Update order
+// router.put('/:id', orderModel.updateOrder)
+
 
 //Delete order by id
 
