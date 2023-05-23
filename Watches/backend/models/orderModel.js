@@ -102,11 +102,32 @@ const getAllOrders = async (req, res) => {
   }
 };
 
+//Get all details of a single product
+const getSingleOrder = async (req,res) => {
+  try {
+    const singleOrder = await Order.findById(req.params.id)
+
+    if (!singleOrder) {
+      res.status(404).json({
+        message: "Could not find that order"
+      })
+      return
+    }
+    res.status(200).json(singleOrder)
+
+  } catch (error) {
+    res.status(500).json({
+      message: "Error when trying to get that order"
+    })
+  }
+}
+
 
 
 //Export modules
 module.exports = {
   createNewOrder,
   getOrdersByUser,
-  getAllOrders
+  getAllOrders,
+  getSingleOrder
 };
