@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux'
 import { addToCart, removeOneItem, removeFromCart } from '../store/features/cartSlice';
 
@@ -26,7 +26,7 @@ const ShoppingCart = () => {
       
       <div className="cart-container">
       <h2 className="cart-title">Shopping Cart</h2>
-      <h2 className="item-count">Items in Cart: </h2>
+      <h2 className="item-count">Items in Cart:</h2>
       <div className="item-list">
         { cart && cart.map((cartItem) => (
           <div className="item-card" key={cartItem.product._id}>
@@ -44,8 +44,8 @@ const ShoppingCart = () => {
       </div>
       {/* <p className="total-price">Total Price: ${calculateTotal()}</p> */}
       {/* <button className="clear-cart-btn" onClick={() => setItems([])}>Clear Cart</button> */}
-      <button className="checkout-btn">Proceed to Checkout</button>
-      <button className="continue-btn">Continue Shopping</button>
+       <Link to='/checkout'> <button className="checkout-btn">Proceed to Checkout</button></Link>
+     <Link to='/'><button className="continue-btn">Continue Shopping</button></Link>
     </div>
     </div>
   );
