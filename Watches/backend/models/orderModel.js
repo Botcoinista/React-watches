@@ -102,23 +102,23 @@ const getAllOrders = async (req, res) => {
   }
 };
 
-//Get all details of a single product
-const getSingleOrder = async (req,res) => {
+//PUT
+const updateOrder = async (req, res) => {
+  const { pending }= req.body
   try {
-    const singleOrder = await Order.findById(req.params.id)
+   const updatedOrder = await Order.findByIdAndUpdate(req.params.id, { pending }, { new: true })
 
-    if (!singleOrder) {
-      res.status(404).json({
-        message: "Could not find that order"
-      })
-      return
-    }
-    res.status(200).json(singleOrder)
+   if(!updatedOrder) { 
+        res.status(404).json({ message: 'Could not find any product with this id' })
+        return
+      }
+      res.status(201).json(updatedOrder)
 
-  } catch (error) {
+  } catch (err) {
     res.status(500).json({
-      message: "Error when trying to get that order"
-    })
+      message: "An error occurred while update the order",
+      err: err.message,
+    });
   }
 }
 
@@ -128,6 +128,5 @@ const getSingleOrder = async (req,res) => {
 module.exports = {
   createNewOrder,
   getOrdersByUser,
-  getAllOrders,
-  getSingleOrder
+  getAllOrders
 };

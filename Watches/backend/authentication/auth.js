@@ -38,7 +38,9 @@ exports.verifyToken = (req, res, next) => {
 };
 
 //UserIds that are admins.
-const admins = ['646b48a853c673e7aed3d80f', '6464cb312c3ce1d87fdbde79']
+
+const admins = ['6464b795afc711ce49643442', '6464cb312c3ce1d87fdbde79']
+
 //req.userId comes from verifyToken
 exports.checkAdmin = (req, res, next) => {
     if(admins.includes(req.userId)) {
