@@ -29,6 +29,10 @@ const orderSchema = new Schema(
       type: Number,
       required: true,
     },
+    pending: {
+      type: Boolean,
+      default: true,
+    }
   },
 
   { timestamps: true }
