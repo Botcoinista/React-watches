@@ -1,16 +1,55 @@
 import React from 'react'
-//import { useSelector } from 'react-redux'
+import shoppingCart from '../components/shoppingCart'
+import { useSelector } from 'react-redux'
 
+
+//I store / features skapa en mapp/auth och en fil authSlice.js
+//import { createSlice } from '@reduxjs/toolkit'
+
+/*const initialState = {
+  user: null,
+  loading: false,
+  error: null
+}
+export const authSlice = createSlice({
+  name: 'auth',
+  initialState,
+  reducers: {},
+  extraReducers: {builder} => {}
+})
+
+export default authSlice.reducer
+*/
+
+//I store / index.js 
+//lägg till reducer, auth: authSlice
+//importera authSlice från authSlice.js
 
 
 
 const CheckOut = () => {
+
+
+//const { cart } = useSelector(state => state.shoppingCart)
+//const { user } = useSelector(state => state.auth)
+
+//const placeOrder = () => {
+  // Map over the items in the cart and create a new array called order
+  //const order  = cart.map(item => {
+   // return { id: item.product.id, 
+   //quantity: item.quantity 
+  //}
+  //})
+
+ 
+
+
   return (
     <div className="checkOut">
-      <div className="cart-summary">
+      <div className="wrapper-1">
         
           {/* Cart summary */}
-          <h3 className="h4">Your cart contains</h3>
+          <h3 className="cart-header">Your cart contains</h3>
           <br></br>
           <span className="round">3</span>
        
@@ -19,21 +58,21 @@ const CheckOut = () => {
             <div>
               <h5 className="h5">First product</h5>
             </div>
-            <span className="price">$12</span>
+            <span className="price">$0</span>
           </li>
           <li className="list-group-item">
             <div>
               <h5 className="h5">Second product</h5>
               
             </div>
-            <span className="price">$8</span>
+            <span className="price">$0</span>
           </li>
           <li className="list-group-item">
             <div>
               <h5 className="h5">Third item</h5>
             
             </div>
-            <span className="price">$5</span>
+            <span className="price">$0</span>
           </li>
           
           <li className="list-group-item">
@@ -43,65 +82,11 @@ const CheckOut = () => {
         </ul>
       </div>
 
-      {/* Address fields */}
-      <div className="address-fields">
-        <h2 className="h2">Billing address</h2>
-        <hr></hr>
-        <form className="needs-validation" noValidate>
-
-          <div className="row">
-            <div className="col1">
-              <label htmlFor="firstName">First name</label>
-              <input type="text" id="firstName" value="" required />
-            </div>
-            <div className="col1">
-              <label htmlFor="lastName">Last name</label>
-              <input type="text"  id="lastName" value="" required />
-            </div>
-            <div className="col1">
-              <label htmlFor="email">Email <span className="text-description"></span></label>
-              <input type="email"  id="email" />
-            </div>
-            <div className="col1">
-              <label htmlFor="phone">Phone</label>
-              <input type="number"  id="phone" required />
-            </div>
-            <div className="col1">
-              <label htmlFor="address">Address</label>
-              <input type="text"  id="address" required />
-            </div>
-            <div className="col1">
-              <label htmlFor="zip">Zip</label>
-              <input type="text"  id="zip" required />
-            </div>
-          </div>
-           <div className="col1">
-              <label htmlFor="country">Country <span className="text-description"></span></label>
-              <input type="email" id="email" />
-            </div>
-        
-           {/*New div for Payment*/}
-          
-
-          {/* Payment */}
-          
+            {/* Payment */}
+            <div className="wrapper-2">
+          <form>
           <h2 className="h2">Payment</h2>
           <hr></hr>
-          <div className="my-3">
-            <div className="form-check">
-              <input id="credit" name="paymentMethod" type="radio" className="checkbox" checked required />
-              <label className="form-check-label" htmlFor="credit">Credit card</label>
-            </div>
-            <div className="form-check">
-              <input id="debit" name="paymentMethod" type="radio" className="checkbox" required />
-              <label className="form-check-label" htmlFor="debit">Debit card</label>
-            </div>
-            <div className="form-check">
-              <input id="paypal" name="paymentMethod" type="radio" className="checkbox" required />
-              <label className="form-check-label" htmlFor="paypal">PayPal</label>
-            </div>
-          </div>
-
           <div className="row">
             <div className="col1">
               <label htmlFor="cc-name" className="form-label">Name on card</label>
@@ -122,9 +107,10 @@ const CheckOut = () => {
           </div>
 
           <button className="btn-submit" type="submit">Place order</button>
-        </form>
+          </form>
       </div>
-    </div>
+      </div>
+    
   );
 };
 

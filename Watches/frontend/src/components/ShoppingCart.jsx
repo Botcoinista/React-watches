@@ -54,6 +54,31 @@ const ShoppingCart = () => {
 
   } 
 
+ const [totalQuantity, setTotalQuantity] = useState(0)
+ const [totalAmount, setTotalAmount] = useState(0)
+
+  useEffect(() => {
+    let quantity = 0
+    cart.forEach(item => {
+        quantity += item.quantity
+    })
+    setTotalQuantity(quantity)
+    let amount = 0
+    cart.forEach(item => {
+        amount += item.product.price * item.quantity
+    })
+    setTotalAmount(amount)
+  }, [cart])
+
+  console.log(cart);
+
+
+// const getTotalAmount = (cart) => {
+//     let amount = 0
+//     cart.forEach(item => {
+//         amount += item.product.price * item.quantity
+//     })
+// }
 
   return (
     <div className="shoppingCart">
@@ -69,8 +94,8 @@ const ShoppingCart = () => {
 
       <div className="cart-container">
         <h2 className="cart-title">Shopping Cart</h2>
-        <h2 className="item-count">Items in Cart: </h2>
-        <h2 className="item-count">Total amount: </h2>
+        <h2 className="item-count">Items in Cart: {totalQuantity}</h2>
+        <h2 className="item-count">Total Amount: {totalAmount}</h2>
         <div className="item-list">
           {cart &&
             cart.map((cartItem) => (

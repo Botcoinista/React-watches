@@ -3,25 +3,71 @@
     display: flex;
     justify-content: center;
 
-    .cart-summary {
-        margin: 3rem 2rem auto 1rem;
-        background-color: #f8f9fa;
-        padding: 40px;
-        box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
-        
+    .wrapper-1 {
+      height: 300px;
+      width: 400px;
+      background-color: #fff;
+      box-shadow: 0 0 30px #f8f8f8;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #636363;
+      font-size: 16px;
+      font-weight: 400;
+      position: relative;
+      font-family: var(--body-font);
+      margin-top: 10rem;
+      margin-bottom: 38rem;
+  
+      .cart-header {
+      align-self: flex-start;
+      margin-top: 5px;
       }
-      
-      .address-fields {
-        margin-top: 3rem;
-        padding: 20px;
-        box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
-        text-align: start;
+
+      .round {
+        align-self: flex-start;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        margin-left: 10px;
+        background-color: #fff;
+        border: 1px solid #d3cdcd;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+       
       }
-      
-      
-      input {
+
+      }
+
+      .wrapper-2 {
+        height: 700px;
+        width: 600px;
+        background-color: #fff;
+        box-shadow: 0 0 30px #f8f8f8;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        color: #636363;
+        font-size: 16px;
+        font-weight: 400;
+        position: relative;
+        font-family: var(--body-font);
+        margin-top: 30rem;
+        margin-bottom: 29rem;
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        margin-top: 6rem;
+
+      }
+
+        input {
         height: 50px;
-        width: 400px;
+        width: 300px;
         background-color: rgb(250, 250, 250);
         padding: 5px;
         margin-bottom: 10px;
@@ -33,22 +79,9 @@
       }
       
       .form-control {
-        margin-bottom: 32px;
+        margin-bottom: 40px;
       }
 
-      .checkbox {
-        height: 15px;
-        width: 23px;
-        letter-spacing: 0.01em;
-        padding: 0px 45px;
-        border: none;
-        color: #fff;
-        font-size: 16px;
-        font-weight: 450;
-        cursor: pointer;
-        transition: all 0.3s ease-in-out;
-        margin-top: 10px;
-      }
       
       .btn-submit {
         height: 50px;
@@ -63,11 +96,13 @@
         cursor: pointer;
         transition: all 0.3s ease-in-out;
         margin-top: 20px;
+        margin-bottom: 452px;
       }
      
       hr {
-        width: 15%;
+        width: 23%;
+        margin-bottom: 2rem;
       }
 }
-      
+
   
