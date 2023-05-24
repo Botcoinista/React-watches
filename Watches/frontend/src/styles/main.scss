@@ -21,6 +21,8 @@
 @import "./partials/carousel";
 @import "./partials/productCard";
 @import "./partials/checkOut";
+@import "./partials/orderLine";
+
 * {
   margin: 0;
   padding: 0;
@@ -116,4 +118,8 @@
 }
 .featuredProducts {
   @include featuredProducts;
+}
+
+.orderLine {
+  @include orderLine
 }
