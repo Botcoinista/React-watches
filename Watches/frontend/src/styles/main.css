@@ -72,6 +72,7 @@
 .navbar .right-nav .nav-links li {
   list-style: none;
   padding-right: 10px;
+  border-bottom: 2px solid transparent;
 }
 .navbar .right-nav .nav-links li .fa-plus {
   margin-left: 0.2rem;
@@ -84,6 +85,12 @@
 }
 .navbar .right-nav .nav-links .textLight {
   color: #aeaeae;
+}
+.navbar .right-nav .nav-links li:hover {
+  border-bottom: 2px solid #aeaeae;
+}
+.navbar .right-nav .nav-links a:hover {
+  color: #4f4f4f;
 }
 
 .footer {
@@ -198,6 +205,10 @@
   color: black;
   font-size: 1.5rem;
   font-weight: 200;
+  transition: 0.4s;
+}
+.contactHero a:hover {
+  color: #fa3150;
 }
 .contactHero p {
   font-size: 1.5rem;

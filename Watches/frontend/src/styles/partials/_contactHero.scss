@@ -13,6 +13,10 @@
             color: black;
             font-size: 1.5rem;
             font-weight: 200;
+            transition: .4s;
+        }
+        a:hover {
+            color: #fa3150;   
         }
 
         p {
