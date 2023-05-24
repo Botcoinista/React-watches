@@ -1,8 +1,9 @@
 import React from "react";
 import shoppingCart from "../components/shoppingCart";
 import { useSelector } from "react-redux";
-import axios from 'axios'
-import { useState, useEffect } from "react"
+import axios from "axios";
+import { useState, useEffect } from "react";
+import OrderLine from "./OrderLine";
 
 const CheckOut = () => {
   const token = localStorage.getItem("token");
@@ -12,6 +13,9 @@ const CheckOut = () => {
   const [order, setOrder] = useState({
     orderLines: [],
   });
+  const totalPrice = cart
+    .map((item) => item.product.price)
+    .reduce((accumulator, price) => accumulator + price, 0);
 
   //Transforming cart into order structure.
   useEffect(() => {
@@ -48,8 +52,8 @@ const CheckOut = () => {
 
   return (
     <div className="checkOut">
-      <div className="wrapper-1">
-        {/* Cart summary */}
+      {/* <div className="wrapper-1">
+        Cart summary
         <h3 className="cart-header">Your cart contains</h3>
         <br></br>
         <span className="round">3</span>
@@ -79,6 +83,32 @@ const CheckOut = () => {
             <strong>200</strong>
           </li>
         </ul>
+      </div> */}
+      <div className="orderList">
+        <div className="orderLineDescription">
+          <div></div>
+          <div>
+            <p>Product name</p>
+          </div>
+          <div>
+            <p>Price</p>
+          </div>
+          <div>
+            <p>Quantity</p>
+          </div>
+          <div>
+            <p>Total price</p>
+          </div>
+        </div>
+        {cart &&
+          cart.map((item) => <OrderLine key={item.product._id} item={item} />)}
+        {totalPrice > 1 ? (
+          <div className="orderLineTotal">
+            <p>Total: € {totalPrice}</p>
+          </div>
+        ) : (
+          <p></p>
+        )}
       </div>
 
       {/* Payment */}
