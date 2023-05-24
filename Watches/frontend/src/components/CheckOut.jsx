@@ -7,8 +7,9 @@ import React from 'react'
 
 const CheckOut = () => {
 
+
 //const { cart } = useSelector(state => state.shoppingCart)
-//const { user } = useSelector(state => state.?)
+//const { user } = useSelector(state => state.auth)
 
 //const placeOrder = () => {
   // Map over the items in the cart and create a new array called order
@@ -35,21 +36,21 @@ const CheckOut = () => {
             <div>
               <h5 className="h5">First product</h5>
             </div>
-            <span className="price">$12</span>
+            <span className="price">$0</span>
           </li>
           <li className="list-group-item">
             <div>
               <h5 className="h5">Second product</h5>
               
             </div>
-            <span className="price">$8</span>
+            <span className="price">$0</span>
           </li>
           <li className="list-group-item">
             <div>
               <h5 className="h5">Third item</h5>
             
             </div>
-            <span className="price">$5</span>
+            <span className="price">$0</span>
           </li>
           
           <li className="list-group-item">
