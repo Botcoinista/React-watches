@@ -1,14 +1,37 @@
 import React from 'react'
-//import shoppingCart from '../components/shoppingCart'
-//import { useSelector } from 'react-redux'
+import shoppingCart from '../components/shoppingCart'
+import { useSelector } from 'react-redux'
 
+
+//I store / features skapa en mapp/auth och en fil authSlice.js
+//import { createSlice } from '@reduxjs/toolkit'
+
+/*const initialState = {
+  user: null,
+  loading: false,
+  error: null
+}
+export const authSlice = createSlice({
+  name: 'auth',
+  initialState,
+  reducers: {},
+  extraReducers: {builder} => {}
+})
+
+export default authSlice.reducer
+*/
+
+//I store / index.js 
+//lägg till reducer, auth: authSlice
+//importera authSlice från authSlice.js
 
 
 
 const CheckOut = () => {
 
+
 //const { cart } = useSelector(state => state.shoppingCart)
-//const { user } = useSelector(state => state.?)
+//const { user } = useSelector(state => state.auth)
 
 //const placeOrder = () => {
   // Map over the items in the cart and create a new array called order
@@ -35,21 +58,21 @@ const CheckOut = () => {
             <div>
               <h5 className="h5">First product</h5>
             </div>
-            <span className="price">$12</span>
+            <span className="price">$0</span>
           </li>
           <li className="list-group-item">
             <div>
               <h5 className="h5">Second product</h5>
               
             </div>
-            <span className="price">$8</span>
+            <span className="price">$0</span>
           </li>
           <li className="list-group-item">
             <div>
               <h5 className="h5">Third item</h5>
             
             </div>
-            <span className="price">$5</span>
+            <span className="price">$0</span>
           </li>
           
           <li className="list-group-item">
