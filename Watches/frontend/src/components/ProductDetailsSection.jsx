@@ -1,7 +1,24 @@
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
+import { useSelector, useDispatch } from 'react-redux'
+import { increment, decrement } from '../store/features/counterSlice'
+import { addToCart } from '../store/features/cartSlice'
+
 
 const ProductDetailsSection = ({ product }) => {
+
+  const { value } = useSelector(state => state.counter)
+
+  const dispatch = useDispatch()
+
+  const addProductToCart = (e) => {
+    e.preventDefault()
+    // console.log(product._id, value)
+  
+    
+    dispatch(addToCart(product))
+
+  }
 
   // //If product has not been loaded
   if(!product) return
@@ -43,11 +60,11 @@ const ProductDetailsSection = ({ product }) => {
             <h2>€ {product.price}</h2>
           </div>
 
-          <form className="addCartQty">
+          <form className="addCartQty" onSubmit={addProductToCart}>
             <div className="qty">
-              <button>-</button>
-              <input type="number" value='1'/>
-              <button>+</button>
+              <button onClick={(e) => { e.preventDefault(); dispatch(decrement()); }}>-</button>
+              <input type="number" value={value} />
+              <button onClick={(e) => { e.preventDefault(); dispatch(increment()); }}>+</button>
             </div>
             <button className='addToCart'>Add to cart</button>
 

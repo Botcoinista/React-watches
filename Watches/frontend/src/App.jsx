@@ -1,5 +1,5 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import { useState} from 'react'
+import { useState, useEffect} from 'react'
 import RootLayout from './layouts/RootLayout'
 import Home from './pages/Home'
 import ProductDetails from './pages/ProductDetails'
@@ -8,10 +8,12 @@ import Contact from './pages/Contact'
 import Registration from './pages/Registration'
 import Cart from './pages/Cart'
 import Checkout from './pages/Checkout'
+import Counter from './components/Counter'
 
 const App = () => {
 
   const [user, setUser] = useState(null)
+
 
   const router = createBrowserRouter([
     {
@@ -43,14 +45,14 @@ const App = () => {
 
           element: <Registration user={user} setUser={setUser}/>
         },
-      {
-        path: '/cart',
-        element: <Cart />
-      },
-    {
-      path: '/checkout',
-      element: <Checkout />
-    }
+        {
+          path: '/cart',
+          element: <Cart />
+        },  
+        {
+          path: '/checkout',
+          element: <Checkout />
+        }
       ]
     }
   ])

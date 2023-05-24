@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { BiCartAdd } from "react-icons/bi";
+import { Link } from "react-router-dom";
 
 const SelectedProduct = () => {
   const [product, setProduct] = useState([]);
@@ -18,6 +19,7 @@ const SelectedProduct = () => {
         <div className="product-list">
           {product.slice(3, 4).map((item) => (
             <div className="card-bg-odd">
+              <Link to={`/products/${item._id}`}>
               <div>
                 <img className="image" src={item.imgURL} alt={item.name} />
               </div>
@@ -25,13 +27,14 @@ const SelectedProduct = () => {
                 <p className="p-text">{item.name}</p>
                 <div className="text-lower">
                   <p className="p-next">
-                    <del>kr 4000</del>kr {item.price}
+                    <del>€ 4000</del>€ {item.price}
                   </p>
                   <button className="btn btn-cart">
                     <BiCartAdd />
                   </button>
                 </div>
               </div>
+              </Link>
             </div>
           ))}
 
@@ -47,6 +50,7 @@ const SelectedProduct = () => {
           </div>
           {product.slice(5, 6).map((item) => (
             <div className="card-bg-odd">
+              <Link to={`/products/${item._id}`}>
               <div>
                 <img className="image" src={item.imgURL} alt={item.name} />
               </div>
@@ -54,13 +58,14 @@ const SelectedProduct = () => {
                 <p className="p-text">{item.name}</p>
                 <div className="text-lower">
                   <p className="p-next">
-                    <del>kr 4000</del>kr {item.price}
+                    <del>€ 4000</del>€ {item.price}
                   </p>
                   <button className="btn btn-cart">
                     <BiCartAdd />
                   </button>
                 </div>
               </div>
+              </Link>
             </div>
           ))}
         </div>

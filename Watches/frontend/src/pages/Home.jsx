@@ -6,6 +6,7 @@ import Carousel from '../components/Carousel'
 import Ratings from '../components/Ratings'
 import Subscription from '../components/Subscription'
 
+
 const Home = () => {
   return (
     <div>
@@ -15,7 +16,6 @@ const Home = () => {
       <Carousel />
       <Ratings />
       <Subscription />
-
     </div>
   )
 }
