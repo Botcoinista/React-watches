@@ -3,16 +3,8 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 import Product270 from "./Product270";
 
-const RelatedProducts = () => {
-  const [products, setProducts] = useState([]);
-
-
-  useEffect(() => {
-    axios.get("http://localhost:8080/api/products").then((res) => {
-      console.log(res.data.allProducts);
-      setProducts(res.data.allProducts);
-    });
-  }, []);
+const RelatedProducts = ({shuffledArray}) => {
+  
 
   return (
     <div className="relatedProducts">
@@ -20,7 +12,7 @@ const RelatedProducts = () => {
         <h3>Related Products</h3>
 
         <div className="productCards">
-          {products.slice(0, 4).map((prod) => (
+          {shuffledArray.slice(0, 4).map((prod) => (
             <Product270 key={prod._id} prod={prod} />
           ))}
         </div>

@@ -6,10 +6,53 @@ import {
   removeOneItem,
   removeFromCart,
 } from "../store/features/cartSlice";
+import axios from 'axios'
 
 const ShoppingCart = () => {
+
   const dispatch = useDispatch();
   const { cart } = useSelector((state) => state.cart);
+
+  const token = localStorage.getItem('token')
+
+  //Structure of an order.
+  const [order, setOrder] = useState({
+    orderLines: []
+  })
+
+  //Transforming cart into order structure.
+  useEffect(() => {
+    const filteredCart = cart.map(item => ({
+      product: item.product._id,
+      quantity: item.quantity
+    }))
+
+    setOrder(prevOrder => ({
+      ...prevOrder,
+      orderLines: filteredCart
+    }))
+    console.log(order)
+  }, [cart])
+
+
+
+  const submitHandler = (e) => {
+    e.preventDefault()
+
+    const requestBody = order
+    
+    axios.post('http://localhost:8080/api/orders', requestBody, {
+    headers: {
+    'Authorization': `Bearer ${token}`
+    }
+    }).then((res) => {
+      console.log(res.data);
+    })
+    .catch((error) => {
+      console.error(error);
+    });
+
+  } 
 
  const [totalQuantity, setTotalQuantity] = useState(0)
  const [totalAmount, setTotalAmount] = useState(0)
@@ -94,7 +137,7 @@ const ShoppingCart = () => {
         {/* <button className="clear-cart-btn" onClick={() => setItems([])}>Clear Cart</button> */}
         <Link to="/checkout">
           {" "}
-          <button className="checkout-btn">Proceed to Checkout</button>
+          <button className="checkout-btn" onClick={submitHandler}>Proceed to Checkout</button>
         </Link>
         <Link to="/">
           <button className="continue-btn">Continue Shopping</button>
