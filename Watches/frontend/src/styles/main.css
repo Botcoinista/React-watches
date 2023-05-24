@@ -1187,18 +1187,25 @@
   background-image: url("https://images.pexels.com/photos/2494608/pexels-photo-2494608.jpeg");
   background-size: cover;
   background-position: center;
+  transition: ease-in-out 0.2s;
+}
+.product270 .productImg:hover {
+  opacity: 0.8;
+}
+.product270 a {
+  text-decoration: none;
 }
 .product270 .title {
   padding-block: 1rem 0.5rem;
 }
-.product270 .title a {
+.product270 .title h4 {
   font-size: 18px;
   font-weight: 500;
   text-decoration: none;
   color: #292929;
   transition: 0.4s;
 }
-.product270 .title a:hover {
+.product270 .title h4:hover {
   color: #fa3150;
 }
 .product270 .price {

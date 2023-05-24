@@ -17,7 +17,6 @@ const ProductDetailsSection = ({ product }) => {
   
 
     dispatch(addToCart(product))
-
   }
 
   // //If product has not been loaded

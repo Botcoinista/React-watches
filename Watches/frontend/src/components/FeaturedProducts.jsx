@@ -1,5 +1,6 @@
 import React from 'react'
 import Product270 from './Product270'
+import { Link } from 'react-router-dom'
 
 const FeaturedProducts = ({shuffledArray}) => {
 
@@ -11,7 +12,7 @@ const FeaturedProducts = ({shuffledArray}) => {
       <div className="wrapper">
 
       {shuffledArray.slice(5, 10).map((prod) => (
-        <div className="imgDiv" key={prod._id} style={{ backgroundImage: `url("${prod.imgURL}")` }}></div>
+        <div className="imgDiv" key={prod._id} style={{ backgroundImage: `url("${prod.imgURL}")` }}></div>       
           ))}
 
       </div>
