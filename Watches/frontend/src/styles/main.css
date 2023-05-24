@@ -1225,6 +1225,8 @@
 }
 .featuredProducts .imgDiv {
   flex-grow: 1;
+  background-size: cover;
+  background-position: center;
   height: 122px;
   background-color: #e8e6e6;
 }/*# sourceMappingURL=main.css.map */

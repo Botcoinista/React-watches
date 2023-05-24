@@ -7,9 +7,7 @@ const Product270 = ({ prod }) => {
   
   return (
     <div className='product270'>
-      <div className='productImg' 
-      style={{ backgroundImage: `url("${prod.imgURL}")` }}
-      ></div>
+      <div className='productImg' style={{ backgroundImage: `url("${prod.imgURL}")` }}></div>
       <div className='title'>
         <Link to={`/products/${prod._id}`}>{ prod.name }</Link>
       </div>

@@ -1,17 +1,18 @@
 import React from 'react'
+import Product270 from './Product270'
 
-const FeaturedProducts = () => {
+const FeaturedProducts = ({shuffledArray}) => {
+
   return (
     <div className='featuredProducts'>
 
       <i className="fa-solid fa-angle-left fa-sm"></i>
 
       <div className="wrapper">
-        <div className="imgDiv"></div>
-        <div className="imgDiv"></div>
-        <div className="imgDiv"></div>
-        <div className="imgDiv"></div>
-        <div className="imgDiv"></div>
+
+      {shuffledArray.slice(5, 10).map((prod) => (
+        <div className="imgDiv" key={prod._id} style={{ backgroundImage: `url("${prod.imgURL}")` }}></div>
+          ))}
 
       </div>
 

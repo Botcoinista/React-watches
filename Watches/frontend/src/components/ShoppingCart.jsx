@@ -11,7 +11,8 @@ const ShoppingCart = () => {
   const dispatch = useDispatch();
   const { cart } = useSelector((state) => state.cart);
 
-  console.log(cart);
+
+  console.log(cart)
 
   return (
     <div className="shoppingCart">
@@ -27,7 +28,8 @@ const ShoppingCart = () => {
 
       <div className="cart-container">
         <h2 className="cart-title">Shopping Cart</h2>
-        <h2 className="item-count">Items in Cart: {cart.length}</h2>
+        <h2 className="item-count">Items in Cart: </h2>
+        <h2 className="item-count">Total amount: </h2>
         <div className="item-list">
           {cart &&
             cart.map((cartItem) => (

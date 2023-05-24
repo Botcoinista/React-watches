@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { useSelector, useDispatch } from 'react-redux'
 import { increment, decrement } from '../store/features/counterSlice'
@@ -13,9 +13,9 @@ const ProductDetailsSection = ({ product }) => {
 
   const addProductToCart = (e) => {
     e.preventDefault()
-    // console.log(product._id, value)
   
-    
+  
+
     dispatch(addToCart(product))
 
   }
@@ -25,10 +25,10 @@ const ProductDetailsSection = ({ product }) => {
 
   //Otherwise show this
   return (
-    
     <div className='productDetailsSection'>
       <div className="row">
         <div className="left">
+
           <div className="bigImg" style={{ backgroundImage: `url("${product.imgURL}")` }}>
           </div>
           <div className="imgCarousel">
