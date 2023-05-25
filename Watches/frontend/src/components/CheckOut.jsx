@@ -1,29 +1,6 @@
-import React from 'react'
-import shoppingCart from '../components/shoppingCart'
-import { useSelector } from 'react-redux'
+//import React, { useState , useEffect} from 'react';
+//import { useSelector } from 'react-redux'
 
-
-//I store / features skapa en mapp/auth och en fil authSlice.js
-//import { createSlice } from '@reduxjs/toolkit'
-
-/*const initialState = {
-  user: null,
-  loading: false,
-  error: null
-}
-export const authSlice = createSlice({
-  name: 'auth',
-  initialState,
-  reducers: {},
-  extraReducers: {builder} => {}
-})
-
-export default authSlice.reducer
-*/
-
-//I store / index.js 
-//lägg till reducer, auth: authSlice
-//importera authSlice från authSlice.js
 
 
 
