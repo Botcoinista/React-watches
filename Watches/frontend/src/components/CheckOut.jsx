@@ -4,9 +4,12 @@ import { useSelector } from "react-redux";
 import axios from "axios";
 import { useState, useEffect } from "react";
 import OrderLine from "./OrderLine";
+import { useNavigate } from 'react-router-dom'
 
 const CheckOut = () => {
   const token = localStorage.getItem("token");
+
+  const navigate = useNavigate()
 
   const { cart } = useSelector((state) => state.cart);
   //Structure of an order.
@@ -44,6 +47,7 @@ const CheckOut = () => {
       })
       .then((res) => {
         console.log(res.data);
+        navigate("/user")
       })
       .catch((error) => {
         console.error(error);

@@ -6,6 +6,7 @@
     gap: 1rem;
   
     .orderList {
+      text-align: center;
       width: 900px;
       padding: 1rem;
       // border: 1px solid $lightGray;
@@ -20,6 +21,21 @@
       height: 50px;
   
       border-bottom: 1px solid $lightGray;
+      justify-content: space-between;
+      align-items: center;
+      justify-items: center;
+  
+      p {
+        font-size: 18px;
+        font-weight: 600;
+      }
+    }
+    .orderBottomDescription {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+      padding: 1rem;
+      height: 50px;
+  
       justify-content: space-between;
       align-items: center;
       justify-items: center;

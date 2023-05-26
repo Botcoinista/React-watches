@@ -7,7 +7,7 @@ const GetOrder = ({ item }) => {
       <div>{item._id}</div>
       <div>€ {item.totalPrice}</div>
       <div>{item.pending ? "pending" : "transit"}</div>
-      <div>{item.createdAt}</div>
+      <div>{item.createdAt.slice(0,10)}</div>
     </Link>
   );
 };

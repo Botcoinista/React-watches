@@ -27,13 +27,17 @@ const OrderDetails = () => {
       });
   }, []);
 
-    useEffect(() => {
+  useEffect(() => {
     console.log(order);
-    }, [order]);
+  }, [order]);
 
+  if (!order) {
+    return;
+  }
   return (
     <div className="OrderDetails">
       <div className="orderList">
+        <p>Order-ID: #{order._id}</p>
         <div className="orderLineDescription">
           <div></div>
           <div>
@@ -53,23 +57,19 @@ const OrderDetails = () => {
           </div>
         </div>
         {order &&
-        order.orderLines.map((item) => <OneOrderLine key={item._id} item={item} />)}
-           <div className="orderLineDescription">
+          order.orderLines.map((item) => (
+            <OneOrderLine key={item._id} item={item} />
+          ))}
+        <div className="orderBottomDescription">
+          <div></div>
+          <div>Order created:</div>
+          <div>{order.createdAt.slice(0, 10)}</div>
           <div></div>
           <div>
-            <p>Product</p>
+            <p>Total:</p>
           </div>
           <div>
-            <p>Category</p>
-          </div>
-          <div>
-            <p>Price</p>
-          </div>
-          <div>
-            <p>Quantity</p>
-          </div>
-          <div>
-            <p>Total</p>
+            <p>€ {order.totalPrice}</p>
           </div>
         </div>
       </div>
