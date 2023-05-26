@@ -10,6 +10,7 @@ import Cart from './pages/Cart'
 import Checkout from './pages/Checkout'
 import Counter from './components/Counter'
 import User from './pages/User'
+import OrderDetails from './pages/OrderDetails'
 
 const App = () => {
 
@@ -57,6 +58,10 @@ const App = () => {
         {
           path: '/user',
           element: <User />
+        },
+        {
+          path: '/orderdetails/:id',
+          element: <OrderDetails />
         }
       ]
     }

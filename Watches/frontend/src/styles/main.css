@@ -1406,4 +1406,54 @@
   background-size: cover;
   background-position: center;
   overflow: hidden;
+}
+
+.OrderDetails {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.OrderDetails .orderList {
+  width: 900px;
+  padding: 1rem;
+  box-shadow: 0 0 30px #f8f8f8;
+  color: #636363;
+}
+.OrderDetails .orderLineDescription {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  padding: 1rem;
+  height: 50px;
+  border-bottom: 1px solid #e8e6e6;
+  justify-content: space-between;
+  align-items: center;
+  justify-items: center;
+}
+.OrderDetails .orderLineDescription p {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.oneOrderLine {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  padding: 1rem;
+  height: 100px;
+  border-bottom: 1px solid #e8e6e6;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+}
+.oneOrderLine p {
+  font-size: 18px;
+}
+.oneOrderLine .productImg {
+  height: 70px;
+  width: 90px;
+  background-image: url("https://images.pexels.com/photos/2494608/pexels-photo-2494608.jpeg");
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
 }/*# sourceMappingURL=main.css.map */
