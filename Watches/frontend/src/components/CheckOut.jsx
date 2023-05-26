@@ -5,7 +5,6 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 import OrderLine from "./OrderLine";
 
-
 const CheckOut = () => {
   const token = localStorage.getItem("token");
 
@@ -53,38 +52,6 @@ const CheckOut = () => {
 
   return (
     <div className="checkOut">
-      {/* <div className="wrapper-1">
-        Cart summary
-        <h3 className="cart-header">Your cart contains</h3>
-        <br></br>
-        <span className="round">3</span>
-
-        <ul className="list-group mb-3">
-          <li className="list-group-item">
-            <div>
-              <h5 className="h5">First product</h5>
-            </div>
-            <span className="price">$0</span>
-          </li>
-          <li className="list-group-item">
-            <div>
-              <h5 className="h5">Second product</h5>
-            </div>
-            <span className="price">$0</span>
-          </li>
-          <li className="list-group-item">
-            <div>
-              <h5 className="h5">Third item</h5>
-            </div>
-            <span className="price">$0</span>
-          </li>
-
-          <li className="list-group-item">
-            <span>Total (USD)</span>
-            <strong className="totalPrice">200</strong>
-          </li>
-        </ul>
-      </div> */}
       <div className="orderList">
         <div className="orderLineDescription">
           <div></div>

@@ -3,7 +3,6 @@ const Order = require("../schemas/orderSchema");
 const User = require("../schemas/userSchema");
 const Product = require("../schemas/productSchema");
 
-
 //Create a new order if the user is logged in
 const createNewOrder = async (req, res) => {
   try {
@@ -25,8 +24,7 @@ const createNewOrder = async (req, res) => {
 
     let totalPrice = 0;
     for (const orderLine of orderLines) {
-      const product = await Product.findById(orderLine.product)
-      
+      const product = await Product.findById(orderLine.product);
 
       if (!product) {
         return res.status(404).json({
@@ -58,7 +56,6 @@ const createNewOrder = async (req, res) => {
     await user.save();
 
     return res.status(201).json(savedOrder);
-
   } catch (error) {
     console.log(error);
     return res.status(500).json({
@@ -69,13 +66,13 @@ const createNewOrder = async (req, res) => {
 
 //Get all orders for a specific user
 const getOrdersByUser = async (req, res) => {
-  console.log(req)
+  console.log(req);
   try {
     const userId = req.userId;
 
     const orders = await Order.find({ user: userId }).populate({
       path: "orderLines.product",
-      select: "name price _id",
+      select: "name price _id imgURL",
     });
 
     return res.status(200).json(orders);
@@ -94,7 +91,6 @@ const getAllOrders = async (req, res) => {
       select: "name price _id email",
     });
     return res.status(200).json(allOrders);
-
   } catch (error) {
     return res.status(500).json({
       message: "Error getting orders",
@@ -104,46 +100,47 @@ const getAllOrders = async (req, res) => {
 
 //PUT
 const updateOrder = async (req, res) => {
-  const { pending }= req.body
+  const { pending } = req.body;
   try {
-   const updatedOrder = await Order.findByIdAndUpdate(req.params.id, { pending }, { new: true })
+    const updatedOrder = await Order.findByIdAndUpdate(
+      req.params.id,
+      { pending },
+      { new: true }
+    );
 
-   if(!updatedOrder) { 
-        res.status(404).json({ message: 'Could not find any product with this id' })
-        return
-      }
-      res.status(201).json(updatedOrder)
-
+    if (!updatedOrder) {
+      res
+        .status(404)
+        .json({ message: "Could not find any product with this id" });
+      return;
+    }
+    res.status(201).json(updatedOrder);
   } catch (err) {
     res.status(500).json({
       message: "An error occurred while update the order",
       err: err.message,
     });
   }
-}
-
+};
 
 //Get all details of a single product
-const getSingleOrder = async (req,res) => {
+const getSingleOrder = async (req, res) => {
   try {
-    const singleOrder = await Order.findById(req.params.id)
+    const singleOrder = await Order.findById(req.params.id);
 
     if (!singleOrder) {
       res.status(404).json({
-        message: "Could not find that order"
-      })
-      return
+        message: "Could not find that order",
+      });
+      return;
     }
-    res.status(200).json(singleOrder)
-
+    res.status(200).json(singleOrder);
   } catch (error) {
     res.status(500).json({
-      message: "Error when trying to get that order"
-    })
+      message: "Error when trying to get that order",
+    });
   }
-}
-
-
+};
 
 //Export modules
 module.exports = {
@@ -151,5 +148,5 @@ module.exports = {
   getOrdersByUser,
   getAllOrders,
   updateOrder,
-  getSingleOrder
+  getSingleOrder,
 };
