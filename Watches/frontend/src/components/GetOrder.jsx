@@ -1,13 +1,14 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const GetOrder = ({ item }) => {
   return (
-    <div className="getOrder">
+    <Link to={`/orderdetails/${item._id}`} className='getOrder'>
       <div>{item._id}</div>
-      <div>{item.totalPrice}</div>
+      <div>€ {item.totalPrice}</div>
       <div>{item.pending ? "pending" : "transit"}</div>
       <div>{item.createdAt}</div>
-    </div>
+    </Link>
   );
 };
 

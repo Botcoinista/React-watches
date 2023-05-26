@@ -23,9 +23,10 @@ const UserCom = () => {
       });
   }, []);
 
-  // useEffect(() => {
-  //   console.log(getOrder.map((item) => item._id));
-  // }, [getOrder]);
+  useEffect(() => {
+    console.log(getOrder);
+  }, [getOrder]);
+
 
   return (
     <div className="userCom">

@@ -18,7 +18,7 @@ router.get('/', auth.verifyToken, auth.checkAdmin, orderModel.getAllOrders)
 router.patch('/:id', orderModel.updateOrder)
 
 //Get Single Order
-router.get('/:id', auth.verifyToken, auth.checkAdmin, orderModel.getSingleOrder)
+router.get('/:id', auth.verifyToken, orderModel.getSingleOrder)
 
 //Delete order by id
 

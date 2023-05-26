@@ -24,6 +24,8 @@
 @import "./partials/orderLine";
 @import "./partials/getOrder";
 @import "./partials/userCom";
+@import "./partials/orderDetails";
+@import "./partials/oneOrderLine";
 
 * {
   margin: 0;
@@ -142,4 +144,12 @@
 
 .orderLine {
   @include orderLine;
+}
+
+.OrderDetails {
+  @include OrderDetails;
+}
+
+.oneOrderLine {
+  @include oneOrderLine;
 }
