@@ -53,3 +53,7 @@ exports.checkAdmin = (req, res, next) => {
       .json({ message: "You need be an admin to have access to this." });
   }
 };
+
+
+module.exports.admins = admins;
+
