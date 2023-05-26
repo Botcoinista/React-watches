@@ -40,7 +40,19 @@
                         }
                         a:hover {
                                 color: #4f4f4f;
-                        }                    
+                        }
+                        .btn-logout {
+                                background-color: transparent;
+                                border: none;
+                                color: $medGray;
+                                font-size: 15px;
+                                cursor: pointer;
+                                outline: none;
+                                &:hover {
+                                        color: #4f4f4f;
+                                }
+                        }  
+                                                          
                 }        
         }
 }

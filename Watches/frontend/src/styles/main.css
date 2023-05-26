@@ -92,6 +92,17 @@
 .navbar .right-nav .nav-links a:hover {
   color: #4f4f4f;
 }
+.navbar .right-nav .nav-links .btn-logout {
+  background-color: transparent;
+  border: none;
+  color: #aeaeae;
+  font-size: 15px;
+  cursor: pointer;
+  outline: none;
+}
+.navbar .right-nav .nav-links .btn-logout:hover {
+  color: #4f4f4f;
+}
 
 .footer {
   background: #292929;

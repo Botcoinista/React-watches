@@ -1,7 +1,17 @@
 import { useState} from 'react'
-import { NavLink, Link } from 'react-router-dom'
+import { NavLink, Link, useNavigate } from 'react-router-dom'
 
-const Navbar = ({ user, setuser }) => {
+
+const Navbar = ({ user, setUser }) => {
+
+  const navigate = useNavigate()
+  const Logout = () => {
+    setUser(null)
+    localStorage.removeItem('user')
+    
+    navigate('/')
+  }
+
 
  
   
@@ -17,10 +27,15 @@ const Navbar = ({ user, setuser }) => {
           <li><NavLink to='/contact'>CONTACT</NavLink></li>
           <li><NavLink className='textLight'><i className="fa-solid fa-magnifying-glass"></i></NavLink></li>
           {user ? (
-              <li><NavLink to='/login' className='textLight'>User</NavLink></li>
+              <>
+              <li><NavLink to='/user' className='textLight'>User</NavLink></li>
+              <li><button onClick={Logout} className='textLight btn-logout'>Logout</button></li>
+              </>
+
             ) : (
               <li><NavLink to='/login' className='textLight'>Login</NavLink></li>
             )
+
           }
           <li><NavLink to='/cart' className='textLight'><i className="fa-solid fa-cart-shopping"></i></NavLink></li>
         </ul>
