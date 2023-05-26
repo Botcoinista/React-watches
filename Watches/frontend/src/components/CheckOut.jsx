@@ -5,6 +5,7 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 import OrderLine from "./OrderLine";
 
+
 const CheckOut = () => {
   const token = localStorage.getItem("token");
 
@@ -80,7 +81,7 @@ const CheckOut = () => {
 
           <li className="list-group-item">
             <span>Total (USD)</span>
-            <strong>200</strong>
+            <strong className="totalPrice">200</strong>
           </li>
         </ul>
       </div> */}
