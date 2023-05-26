@@ -36,7 +36,7 @@ exports.verifyToken = (req, res, next) => {
 
 //UserIds that are admins.
 
-const admins = [
+exports.admins = [
   "6464b795afc711ce49643442",
   "6464cb312c3ce1d87fdbde79",
   "6465ffb9c01e67bbc5915574",
