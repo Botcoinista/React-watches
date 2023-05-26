@@ -9,13 +9,22 @@
         background-image: url('https://images.pexels.com/photos/2494608/pexels-photo-2494608.jpeg');
         background-size: cover;
         background-position: center;
+        transition: ease-in-out .2s;
+        
+
+        &:hover {
+            opacity: .8;
+        }
+    }
+    a {
+        text-decoration: none;
     }
 
     .title {
 
         padding-block: 1rem .5rem;
 
-        a {
+        h4 {
             font-size: 18px;
             font-weight: 500;
             text-decoration: none;

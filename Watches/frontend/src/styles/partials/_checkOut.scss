@@ -1,7 +1,52 @@
 @mixin checkOut {
 
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
+    gap: 1rem;
+
+
+    .orderList {
+      width: 900px;
+      padding: 1rem;
+      // border: 1px solid $lightGray;
+      box-shadow: 0 0 30px #f8f8f8;
+      color: #636363;
+    }
+
+    .orderLineDescription {
+      display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    padding: 1rem;
+    height: 50px;
+    
+    border-bottom: 1px solid $lightGray;
+    justify-content: space-between;
+    align-items: center;
+    justify-items: center;
+
+    p {
+        font-size: 18px;
+        font-weight: 600;
+    }
+    }
+    .orderLineTotal {
+      display: flex;
+    padding: 1rem;
+    height: 50px;
+    justify-content: flex-end;
+    align-items: center;
+    justify-items: center;
+    margin-right: 3rem;
+
+    p {
+        font-size: 18px;
+        font-weight: 600;
+        color: $plusRed;
+    }
+    }
+   
 
     .wrapper-1 {
       height: 300px;
@@ -42,8 +87,9 @@
 
       .wrapper-2 {
         height: 700px;
-        width: 600px;
+        width: 900px;
         background-color: #fff;
+        // background-color: #b5b5b5;
         box-shadow: 0 0 30px #f8f8f8;
         display: flex;
         align-items: flex-start;
@@ -53,8 +99,8 @@
         font-weight: 400;
         position: relative;
         font-family: var(--body-font);
-        margin-top: 30rem;
-        margin-bottom: 29rem;
+        // margin-top: 30rem;
+        // margin-bottom: 29rem;
       }
 
       form {

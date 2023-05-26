@@ -11,31 +11,30 @@ const ShoppingCart = () => {
   const dispatch = useDispatch();
   const { cart } = useSelector((state) => state.cart);
 
- const [totalQuantity, setTotalQuantity] = useState(0)
- const [totalAmount, setTotalAmount] = useState(0)
+  const [totalQuantity, setTotalQuantity] = useState(0);
+  const [totalAmount, setTotalAmount] = useState(0);
 
   useEffect(() => {
-    let quantity = 0
-    cart.forEach(item => {
-        quantity += item.quantity
-    })
-    setTotalQuantity(quantity)
-    let amount = 0
-    cart.forEach(item => {
-        amount += item.product.price * item.quantity
-    })
-    setTotalAmount(amount)
-  }, [cart])
+    let quantity = 0;
+    cart.forEach((item) => {
+      quantity += item.quantity;
+    });
+    setTotalQuantity(quantity);
+    let amount = 0;
+    cart.forEach((item) => {
+      amount += item.product.price * item.quantity;
+    });
+    setTotalAmount(amount);
+  }, [cart]);
 
   console.log(cart);
 
-
-// const getTotalAmount = (cart) => {
-//     let amount = 0
-//     cart.forEach(item => {
-//         amount += item.product.price * item.quantity
-//     })
-// }
+  // const getTotalAmount = (cart) => {
+  //     let amount = 0
+  //     cart.forEach(item => {
+  //         amount += item.product.price * item.quantity
+  //     })
+  // }
 
   return (
     <div className="shoppingCart">
@@ -94,7 +93,9 @@ const ShoppingCart = () => {
         {/* <button className="clear-cart-btn" onClick={() => setItems([])}>Clear Cart</button> */}
         <Link to="/checkout">
           {" "}
-          <button className="checkout-btn">Proceed to Checkout</button>
+          <button className="checkout-btn">
+            Proceed to Checkout
+          </button>
         </Link>
         <Link to="/">
           <button className="continue-btn">Continue Shopping</button>
