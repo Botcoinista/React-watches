@@ -9,6 +9,7 @@ import Registration from './pages/Registration'
 import Cart from './pages/Cart'
 import Checkout from './pages/Checkout'
 import Counter from './components/Counter'
+import User from './pages/User'
 
 const App = () => {
 
@@ -52,6 +53,10 @@ const App = () => {
         {
           path: '/checkout',
           element: <Checkout />
+        },
+        {
+          path: '/user',
+          element: <User />
         }
       ]
     }

@@ -51,7 +51,7 @@ const ShoppingCart = () => {
       <div className="cart-container">
         <h2 className="cart-title">Shopping Cart</h2>
         <h2 className="item-count">Items in Cart: {totalQuantity}</h2>
-        <h2 className="item-count">Total Amount: {totalAmount}</h2>
+        <h2 className="item-count">Total Amount: € {totalAmount}</h2>
         <div className="item-list">
           {cart &&
             cart.map((cartItem) => (
@@ -85,7 +85,7 @@ const ShoppingCart = () => {
                     Remove
                   </button>
                 </div>
-                <p className="item-price">${cartItem.product.price}</p>
+                <p className="item-price">€ {cartItem.product.price}</p>
               </div>
             ))}
         </div>
