@@ -49,6 +49,11 @@
   width: 80%;
 }
 
+a {
+  text-decoration: none;
+  color: #636363;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -262,17 +267,12 @@
   border-radius: 5px;
   padding: 2rem;
   box-shadow: 0 0 1px rgba(0, 0, 0, 0.2);
-}
-.contactForm p {
-  font-family: "Times New Roman", Times, serif;
+  color: #292929;
 }
 .contactForm hr {
   margin-bottom: 1.5rem;
   width: 5rem;
   color: lightgray;
-}
-.contactForm label {
-  font-family: "Times New Roman", Times, serif;
 }
 .contactForm .leftandright {
   display: flex;
@@ -1416,6 +1416,7 @@
   gap: 1rem;
 }
 .OrderDetails .orderList {
+  text-align: center;
   width: 900px;
   padding: 1rem;
   box-shadow: 0 0 30px #f8f8f8;
@@ -1432,6 +1433,19 @@
   justify-items: center;
 }
 .OrderDetails .orderLineDescription p {
+  font-size: 18px;
+  font-weight: 600;
+}
+.OrderDetails .orderBottomDescription {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  padding: 1rem;
+  height: 50px;
+  justify-content: space-between;
+  align-items: center;
+  justify-items: center;
+}
+.OrderDetails .orderBottomDescription p {
   font-size: 18px;
   font-weight: 600;
 }

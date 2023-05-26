@@ -1,11 +1,13 @@
 import { useEffect, useState } from 'react'
-import { Link, useParams } from 'react-router-dom'
+import { Link, useParams, useNavigate } from 'react-router-dom'
 import { useSelector, useDispatch } from 'react-redux'
 import { increment, decrement } from '../store/features/counterSlice'
 import { addToCart } from '../store/features/cartSlice'
 
 
 const ProductDetailsSection = ({ product }) => {
+
+  const navigate = useNavigate()
 
   const { value } = useSelector(state => state.counter)
 
@@ -14,9 +16,8 @@ const ProductDetailsSection = ({ product }) => {
   const addProductToCart = (e) => {
     e.preventDefault()
   
-  
-
     dispatch(addToCart(product))
+    navigate('/')
   }
 
   // //If product has not been loaded
