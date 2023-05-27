@@ -228,20 +228,20 @@ a {
 }
 .contactHero a {
   text-decoration: none;
-  color: black;
-  font-size: 1.5rem;
-  font-weight: 200;
+  color: #636363;
+  font-size: 18px;
   transition: 0.4s;
 }
 .contactHero a:hover {
   color: #fa3150;
 }
 .contactHero p {
-  font-size: 1.5rem;
-  font-weight: 200;
+  font-size: 18px;
+  color: #636363;
 }
 .contactHero h1 {
   margin-bottom: 1rem;
+  color: #292929;
 }
 .contactHero .separate {
   display: flex;
