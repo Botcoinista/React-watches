@@ -37,6 +37,12 @@ const CheckOut = () => {
   const submitHandler = (e) => {
     e.preventDefault();
 
+     // Validate the order
+     if (order.orderLines.length === 0) {
+      setErrorMessage("Please add items to your order");
+      return;
+    }
+
     const requestBody = order;
 
     axios
@@ -54,7 +60,19 @@ const CheckOut = () => {
       });
   };
 
+  const continueShopping = () => {
+    navigate("/"); 
+  };
+
   return (
+    <div>
+    {/* Render your order items */}
+    {cart.length === 0 ? (
+      <div>
+      <p>Please add items to your order</p>
+      <button className="continue-btn" onClick={continueShopping}>Continue Shopping</button>
+      </div>
+    ) : (
     <div className="checkOut">
       <div className="orderList">
         <div className="orderLineDescription">
@@ -141,7 +159,9 @@ const CheckOut = () => {
         </form>
       </div>
     </div>
+  )}
+  </div>
   );
-};
+        };
 
 export default CheckOut;

@@ -10,9 +10,9 @@
     
         a {
             text-decoration: none;
-            color: black;
-            font-size: 1.5rem;
-            font-weight: 200;
+            color: #636363;
+            font-size: 18px;
+            //font-weight: 200;
             transition: .4s;
         }
         a:hover {
@@ -20,12 +20,14 @@
         }
 
         p {
-            font-size: 1.5rem;
-            font-weight: 200;
+            font-size: 18px;
+            color: #636363;
+            //font-weight: 200;
         }
 
         h1 {
             margin-bottom: 1rem;
+            color: #292929;
         }
         .separate {
             display: flex;
